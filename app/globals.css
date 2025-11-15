@@ -4,8 +4,8 @@
 :root {
   --background: #ffffff;
   --foreground: #666666;
-  --primary-blue: #2ea3f2;
-  --dark-blue: #05346a;
+  --primary-blue: #003067;
+  --dark-blue: #003067;
   --light-blue: #9bd9e4;
   --text-dark: #333333;
   --text-gray: #666666;
@@ -40,22 +40,30 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-dark);
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.4em;
   margin: 0;
   padding-bottom: 10px;
+  text-transform: uppercase;
 }
 
 h1 {
-  font-size: clamp(26px, 5vw, 40px);
+  font-size: clamp(30px, 5vw, 60px);
+  font-weight: 300;
 }
 
 h2 {
-  font-size: clamp(22px, 4vw, 32px);
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: 600;
 }
 
 h3 {
-  font-size: clamp(18px, 3vw, 24px);
+  font-size: clamp(20px, 3vw, 26px);
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 p {
@@ -75,4 +83,63 @@ a {
 
 a:hover {
   color: var(--dark-blue);
+}
+
+/* Bracket Button Styling */
+.bracket-button {
+  background-image: url(/images/bracket-right.svg), url(/images/bracket-left.svg);
+  background-size: contain;
+  background-position: center right, center left;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.bracket-button:hover {
+  background-position: 95% center, 5% center;
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 600px;
+}
+
+@media (max-width: 980px) {
+  .hero-section {
+    min-height: 400px;
+  }
+}
+
+/* Service Cards Hover Effect */
+.service-card {
+  cursor: pointer;
+}
+
+/* Super Text Labels */
+.super-text-left p,
+.super-text-right p {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Floating Image */
+.floating-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-image {
+    animation: none;
+    transform: none !important;
+  }
 }
