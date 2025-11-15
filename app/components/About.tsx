@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section
-      className="who-we-are-section py-16 md:py-20 bg-cover bg-left bg-no-repeat"
+      className="who-we-are-section py-24 md:py-32 bg-cover bg-left bg-no-repeat"
       style={{
         backgroundImage: 'url(/images/graph-rising-loop.svg)',
         backgroundSize: '34%',

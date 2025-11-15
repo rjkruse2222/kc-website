@@ -21,7 +21,7 @@ export default function Insights() {
   ];
 
   return (
-    <section className="insights-section py-16 md:py-20 bg-white">
+    <section className="insights-section py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Label */}
         <div className="super-text-left mb-4 text-center">

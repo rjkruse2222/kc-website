@@ -1,6 +1,6 @@
 export default function Connect() {
   return (
-    <section className="connect-section bg-[#003067] py-12">
+    <section className="connect-section bg-[#003067] py-20 md:py-24">
       <div className="max-w-7xl mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-2xl md:text-3xl font-light text-white uppercase mb-6">

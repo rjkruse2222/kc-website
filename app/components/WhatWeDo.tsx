@@ -1,6 +1,6 @@
 export default function WhatWeDo() {
   return (
-    <section className="what-we-do-section relative bg-[#003067] py-16 md:py-20 overflow-hidden">
+    <section className="what-we-do-section relative bg-[#003067] py-24 md:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column: Content */}
