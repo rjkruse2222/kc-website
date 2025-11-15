@@ -41,7 +41,7 @@ export default function Insights() {
           {/* Left: Decorative Graphic */}
           <div className="lg:col-span-1 flex justify-center">
             <img
-              src="/images/insights-graphic.svg"
+              src="/images/magnifying-glass.svg"
               alt="Insights"
               className="w-64 lg:w-full max-w-xs"
             />

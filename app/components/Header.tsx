@@ -9,7 +9,7 @@ export default function Header() {
           <div className="logo">
             <a href="/">
               <Image
-                src="/images/kruse-crawford-logo.png"
+                src="/images/logo-kruse-and-crawford.svg"
                 alt="Kruse & Crawford CPAs"
                 width={200}
                 height={60}
