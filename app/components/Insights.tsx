@@ -21,20 +21,24 @@ export default function Insights() {
   ];
 
   return (
-    <section className="insights-section py-24 md:py-32 bg-white">
+    <section className="insights-section py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Label */}
-        <div className="super-text-left mb-4 text-center">
-          <p className="text-[#003067] uppercase tracking-[4px] text-sm font-normal">
+        <div className="mb-6 text-center">
+          <span className="inline-block px-4 py-2 bg-[#9bd9e4]/20 text-[#003067] uppercase tracking-[3px] text-xs font-semibold rounded-full">
             What We Think
-          </p>
+          </span>
         </div>
 
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-light text-[#333] leading-tight uppercase max-w-2xl mx-auto">
-            READ OUR EXPERT OPINIONS ON A WIDE VARIETY OF TOPICS
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-light text-[#003067] leading-tight mb-4">
+            Expert Opinions on<br />
+            <span className="font-semibold">Business & Tax Topics</span>
           </h2>
+          <p className="text-lg text-[#666] max-w-2xl mx-auto">
+            Stay informed with our latest insights and guidance
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-center">
@@ -43,7 +47,7 @@ export default function Insights() {
             <img
               src="/images/magnifying-glass.svg"
               alt="Insights"
-              className="w-64 lg:w-full max-w-xs"
+              className="w-48 lg:w-full max-w-xs opacity-80"
             />
           </div>
 
@@ -54,22 +58,30 @@ export default function Insights() {
                 <a
                   key={index}
                   href={article.link}
-                  className="article-card group bg-[#003067] overflow-hidden hover:shadow-xl transition-all duration-300"
+                  className="article-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
                 >
                   {/* Article Image */}
-                  <div className="aspect-video bg-gray-300 overflow-hidden">
+                  <div className="aspect-video bg-gray-200 overflow-hidden">
                     <img
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                   </div>
 
                   {/* Article Content */}
                   <div className="p-6">
-                    <h4 className="text-white text-base font-semibold uppercase leading-tight min-h-[4rem]">
+                    <div className="mb-3">
+                      <span className="inline-block text-xs font-semibold text-[#9bd9e4] uppercase tracking-wide">
+                        {article.category}
+                      </span>
+                    </div>
+                    <h4 className="text-[#003067] text-base font-bold leading-snug min-h-[4rem] group-hover:text-[#9bd9e4] transition-colors duration-300">
                       {article.title}
                     </h4>
+                    <div className="mt-4 flex items-center text-[#003067] font-semibold text-sm group-hover:translate-x-2 transition-transform duration-300">
+                      Read More <span className="ml-1">→</span>
+                    </div>
                   </div>
                 </a>
               ))}
@@ -78,12 +90,12 @@ export default function Insights() {
         </div>
 
         {/* Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="/insights"
-            className="bracket-button inline-block px-8 py-3 text-[#003067] text-base font-normal uppercase border-2 border-[#003067] hover:bg-[#003067] hover:text-white transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-4 bg-[#003067] text-white font-semibold uppercase text-sm tracking-wide rounded-lg hover:bg-[#9bd9e4] hover:text-[#003067] transform hover:-translate-y-0.5 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            OUR INSIGHTS
+            View All Insights
           </a>
         </div>
       </div>
