@@ -36,9 +36,9 @@ export default function About() {
               {/* Left: Heading */}
               <div>
                 <h2 className="text-4xl md:text-5xl font-light text-[#003067] leading-tight mb-4">
-                  Kruse & Crawford<br />
-                  <span className="font-semibold">is Your Cincinnati<br />
-                  Accounting Team</span>
+                  Specialized in<br />
+                  <span className="font-semibold">Outsourced Accounting<br />
+                  & Tax Strategy</span>
                 </h2>
                 <div className="w-24 h-1 bg-[#9bd9e4] rounded-full mt-6"></div>
               </div>
@@ -46,10 +46,10 @@ export default function About() {
               {/* Right: Description */}
               <div className="flex flex-col justify-center">
                 <p className="text-lg text-[#666] leading-relaxed mb-6">
-                  Kruse and Crawford is a <strong className="text-[#003067] font-semibold">Cincinnati based accounting and business advisory firm</strong> that specializes in small to lower middle market companies.
+                  Kruse and Crawford provides <strong className="text-[#003067] font-semibold">outsourced accounting, CFO services, and strategic tax planning</strong> exclusively for small to lower middle market companies in Cincinnati.
                 </p>
                 <p className="text-base text-[#666] leading-relaxed">
-                  Headquartered in historic Longworth Hall since 2005, we offer comprehensive services including accounting, tax preparation, financial statement reporting, and management consulting. Let us be your one-stop shop for all your business needs.
+                  Since 2005, we've helped businesses streamline their financial operations and optimize their tax positions. Whether you need a complete accounting department or strategic CFO guidance, we become your trusted financial partner.
                 </p>
               </div>
             </div>
@@ -57,7 +57,7 @@ export default function About() {
             {/* "OUR SERVICES" Label */}
             <div className="text-right">
               <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#003067] to-[#003067]/80 text-white uppercase tracking-[3px] text-xs font-semibold rounded-full shadow-lg">
-                Our Services Below
+                Two Core Services
               </span>
             </div>
           </div>

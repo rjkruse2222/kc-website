@@ -1,22 +1,16 @@
 export default function Services() {
   const services = [
     {
-      title: 'CONSULTING',
-      image: '/images/home-consulting.jpg',
-      link: '/services#consult',
-      description: 'Strategic business guidance'
-    },
-    {
-      title: 'FINANCIAL REPORTING',
+      title: 'OUTSOURCED ACCOUNTING & CFO',
       image: '/images/home-finacial-reporting.jpg',
-      link: '/services#financial',
-      description: 'Accurate financial insights'
+      link: '/services#accounting',
+      description: 'Complete financial management for your business'
     },
     {
-      title: 'TAX PREPARATION',
+      title: 'TAX STRATEGY',
       image: '/images/home-tax-preparation.jpg',
-      link: '/services#tax',
-      description: 'Expert tax solutions'
+      link: '/services#tax-strategy',
+      description: 'Proactive tax planning and optimization'
     },
   ];
 
@@ -31,7 +25,7 @@ export default function Services() {
           {/* Main 3/4 content area */}
           <div className="md:col-span-3">
             {/* Service Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
               {services.map((service, index) => (
                 <a
                   key={index}

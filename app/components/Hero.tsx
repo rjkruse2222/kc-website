@@ -21,11 +21,11 @@ export default function Hero() {
             </span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-6">
-            Focus on Growing <br className="hidden md:block" />
-            <span className="font-semibold">Your Business</span>
+            Your Outsourced <br className="hidden md:block" />
+            <span className="font-semibold">Accounting & CFO Team</span>
           </h1>
           <p className="text-xl md:text-2xl font-light mb-10 text-white/90 max-w-2xl">
-            Let us be your trusted advisor. Expert accounting and advisory services for Cincinnati businesses.
+            Strategic financial management and tax optimization for Cincinnati businesses.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
