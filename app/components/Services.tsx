@@ -1,31 +1,36 @@
 export default function Services() {
   const services = [
     {
-      title: 'OUTSOURCED ACCOUNTING & CFO',
+      title: 'CONSULTING',
+      image: '/images/home-consulting.jpg',
+      link: '/services#consulting',
+      description: 'Strategic business advisory services'
+    },
+    {
+      title: 'FINANCIAL REPORTING',
       image: '/images/home-finacial-reporting.jpg',
-      link: '/services#accounting',
+      link: '/services#financial-reporting',
       description: 'Complete financial management for your business'
     },
     {
-      title: 'TAX STRATEGY',
+      title: 'TAX PREPARATION',
       image: '/images/home-tax-preparation.jpg',
-      link: '/services#tax-strategy',
-      description: 'Proactive tax planning and optimization'
+      link: '/services#tax-preparation',
+      description: 'Expert tax planning and compliance'
     },
   ];
 
   return (
     <section className="services-section py-20 md:py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Asymmetric Layout: 1/4 empty + 3/4 content */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {/* Empty 1/4 column for spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Left: Empty space for alignment with About section */}
           <div className="hidden md:block"></div>
 
-          {/* Main 3/4 content area */}
-          <div className="md:col-span-3">
-            {/* Service Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+          {/* Right: Service Cards */}
+          <div>
+            {/* Service Cards Grid - 3 cards in a row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {services.map((service, index) => (
                 <a
                   key={index}
