@@ -14,9 +14,7 @@ export default function About() {
                 backgroundImage: 'url(/images/graph-rising-loop.svg)',
                 backgroundSize: 'contain',
                 backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center',
-                filter: 'brightness(0.3) saturate(2)',
-                opacity: 0.9
+                backgroundPosition: 'center'
               }}
             ></div>
           </div>
