@@ -42,16 +42,6 @@ export default function About() {
                 Kruse and Crawford is a Cincinnati based accounting and business advisory firm that specializes in small to lower middle market companies. We are headquartered in historic Longworth Hall. We started in 2005 and offer services such as accounting, tax preparation, financial statement reporting, and management consulting. Let Kruse and Crawford be your one-stop shop for all your business's needs.
               </p>
             </div>
-
-            {/* "OUR SERVICES" Section with horizontal line */}
-            <div className="pt-8">
-              <div className="flex items-center gap-4">
-                <div className="flex-grow h-px bg-[#9bd9e4]"></div>
-                <span className="text-[#003067] uppercase tracking-[4px] text-xs font-semibold whitespace-nowrap">
-                  Our Services
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
