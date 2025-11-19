@@ -21,10 +21,10 @@ export default function About() {
 
           {/* Right: Content */}
           <div className="space-y-8">
-            {/* "Who We Are" Label */}
+            {/* "Our Philosophy" Label */}
             <div className="mb-4">
               <span className="text-[#003067] uppercase tracking-[4px] text-xs font-semibold">
-                Who We Are
+                Our Philosophy
               </span>
             </div>
 
@@ -32,14 +32,13 @@ export default function About() {
             <div className="space-y-6">
               {/* Heading */}
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#003067] leading-tight">
-                KRUSE & CRAWFORD<br />
-                IS YOUR CINCINNATI<br />
-                ACCOUNTING TEAM
+                WE DON'T JUST DO TAXES,<br />
+                WE BUILD FORTUNES
               </h2>
 
               {/* Description */}
               <p className="text-base md:text-lg text-[#666] leading-relaxed max-w-xl">
-                Kruse and Crawford is a Cincinnati based accounting and business advisory firm that specializes in small to lower middle market companies. We are headquartered in historic Longworth Hall. We started in 2005 and offer services such as accounting, tax preparation, financial statement reporting, and management consulting. Let Kruse and Crawford be your one-stop shop for all your business's needs.
+                The traditional CPA model is broken and we believe true value comes from a year-round partnership, not just once-a-year data entry. That's why we take a holistic approach for our clients that revolves around accounting and tax strategy and continuous open communication.
               </p>
             </div>
           </div>
