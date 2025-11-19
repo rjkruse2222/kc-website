@@ -47,7 +47,7 @@ export default function Insights() {
             <img
               src="/images/magnifying-glass.svg"
               alt="Insights"
-              className="w-48 lg:w-full max-w-xs opacity-80"
+              className="w-64 lg:w-full max-w-md opacity-90 hover:opacity-100 transition-opacity duration-300"
             />
           </div>
 
