@@ -22,7 +22,7 @@ export default function About() {
           {/* Right: Content */}
           <div>
             {/* Main Heading */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#003067] leading-[1.3] mb-10">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#003067] leading-[1.3] mb-10">
               WE DON'T JUST DO TAXES,<br />
               WE BUILD FORTUNES
             </h2>
