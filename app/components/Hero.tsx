@@ -37,9 +37,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-6 py-32 md:py-40 flex items-center justify-center text-center min-h-[600px] md:min-h-[700px]">
         <div className="max-w-5xl">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-light leading-tight mb-10 tracking-wide text-white">
-            FOCUS ON GROWING YOUR BUSINESS, LET US<br className="hidden md:block" />
-            BE YOUR TRUSTED ADVISOR
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-light leading-[1.4] mb-10 tracking-wide text-white">
+            FOCUS ON GROWING YOUR BUSINESS,<br />
+            LET US BE YOUR TRUSTED ADVISOR
           </h1>
           <a
             href="/contact-us"
