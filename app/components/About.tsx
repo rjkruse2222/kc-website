@@ -22,14 +22,14 @@ export default function About() {
           {/* Right: Content */}
           <div>
             {/* Main Heading */}
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#003067] leading-[1.3] mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#003067] leading-[1.3] mb-10">
               WE DON'T JUST DO TAXES,<br />
               WE BUILD FORTUNES
             </h2>
 
             {/* Philosophy Section */}
-            <div className="mb-16">
-              <div className="mb-6">
+            <div className="mb-10">
+              <div className="mb-4">
                 <span className="text-[#003067] uppercase tracking-[4px] text-xs font-semibold">
                   Our Philosophy
                 </span>
@@ -41,7 +41,7 @@ export default function About() {
 
             {/* Mission Section */}
             <div>
-              <div className="mb-6">
+              <div className="mb-4">
                 <span className="text-[#003067] uppercase tracking-[4px] text-xs font-semibold">
                   Our Mission
                 </span>
