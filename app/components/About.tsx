@@ -20,27 +20,36 @@ export default function About() {
           </div>
 
           {/* Right: Content */}
-          <div className="space-y-8">
+          <div>
             {/* "Our Philosophy" Label */}
-            <div className="mb-4">
+            <div className="mb-8">
               <span className="text-[#003067] uppercase tracking-[4px] text-xs font-semibold">
                 Our Philosophy
               </span>
             </div>
 
-            {/* Heading and Description in flexible layout */}
-            <div className="space-y-6">
-              {/* Heading */}
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#003067] leading-tight">
-                WE DON'T JUST DO TAXES,<br />
-                WE BUILD FORTUNES
-              </h2>
+            {/* Heading */}
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-[#003067] leading-tight mb-8">
+              WE DON'T JUST DO TAXES,<br />
+              WE BUILD FORTUNES
+            </h2>
 
-              {/* Description */}
-              <p className="text-base md:text-lg text-[#666] leading-relaxed max-w-xl">
-                The traditional CPA model is broken and we believe true value comes from a year-round partnership, not just once-a-year data entry. That's why we take a holistic approach for our clients that revolves around accounting and tax strategy and continuous open communication.
-              </p>
+            {/* Description */}
+            <p className="text-base md:text-lg text-[#666] leading-relaxed max-w-xl mb-12">
+              The traditional CPA model is broken and we believe true value comes from a year round partnership, not just once a year data entry. That's why we take a holistic approach for our clients that revolves around accounting and tax strategy and continuous open communication.
+            </p>
+
+            {/* "Our Mission" Label */}
+            <div className="mb-6">
+              <span className="text-[#003067] uppercase tracking-[4px] text-xs font-semibold">
+                Our Mission
+              </span>
             </div>
+
+            {/* Mission Statement */}
+            <p className="text-base md:text-lg text-[#666] leading-relaxed max-w-xl">
+              We empower small businesses through strategic tax reduction, AI-driven analytics, and cloud solutions. We handle financial complexities so owners can focus on growth. Our client-centric approach is built on trustworthiness, responsiveness, and excellence. We strive to create a thriving workplace while driving our clients' financial success.
+            </p>
           </div>
         </div>
       </div>
