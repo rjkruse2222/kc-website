@@ -17,7 +17,20 @@ export default function VSL4() {
     return () => clearTimeout(timer);
   }, []);
 
-  const quizQuestions = [
+  type QuizOption = {
+    value: string;
+    label: string;
+    icon: string;
+    sublabel?: string;
+  };
+
+  type QuizQuestion = {
+    id: string;
+    question: string;
+    options: QuizOption[];
+  };
+
+  const quizQuestions: QuizQuestion[] = [
     {
       id: 'income_type',
       question: "What's your primary income source?",
