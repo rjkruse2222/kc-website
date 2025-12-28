@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { Metadata } from 'next';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Services | Kruse & Crawford CPAs',
