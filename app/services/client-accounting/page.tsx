@@ -271,7 +271,7 @@ export default function ClientAccountingPage() {
                 </div>
 
                 <a
-                  href="mailto:info@kruseandcrawford.com?subject=Client%20Accounting%20Inquiry%20-%20${tier.name}"
+                  href={`mailto:info@kruseandcrawford.com?subject=Client%20Accounting%20Inquiry%20-%20${tier.name}`}
                   className={`block text-center px-8 py-4 rounded-lg font-semibold uppercase text-sm tracking-wide transition-all duration-300 ${
                     tier.featured
                       ? 'bg-[#9bd9e4] text-[#003067] hover:bg-white hover:shadow-xl'
