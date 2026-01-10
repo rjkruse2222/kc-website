@@ -2,47 +2,47 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#273036] text-gray-300">
+    <footer className="bg-white text-gray-600 border-t border-gray-200">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div>
             <Image
-              src="/images/footer-logo-wht.svg"
+              src="/images/footer-logo-dk-gry.svg"
               alt="Kruse & Crawford CPAs"
               width={180}
               height={54}
               className="mb-4"
             />
-            <p className="text-sm text-gray-400 leading-relaxed">
+            <p className="text-sm text-gray-500 leading-relaxed">
               Focus on growing your business, let us be your trusted advisor
             </p>
           </div>
 
           {/* About Us */}
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase mb-4 tracking-wider">
+            <h3 className="text-[#003067] text-sm font-semibold uppercase mb-4 tracking-wider">
               About Us
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="/about" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/about" className="text-sm hover:text-[#003067] transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="/team" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/team" className="text-sm hover:text-[#003067] transition-colors">
                   Team
                 </a>
               </li>
               <li>
-                <a href="/careers" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/careers" className="text-sm hover:text-[#003067] transition-colors">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="/insights" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/insights" className="text-sm hover:text-[#003067] transition-colors">
                   Insights
                 </a>
               </li>
@@ -51,32 +51,32 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase mb-4 tracking-wider">
+            <h3 className="text-[#003067] text-sm font-semibold uppercase mb-4 tracking-wider">
               Resources
             </h3>
             <ul className="space-y-2">
               <li>
-                <a href="/services" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/services" className="text-sm hover:text-[#003067] transition-colors">
                   Services
                 </a>
               </li>
               <li>
-                <a href="/industries" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/industries" className="text-sm hover:text-[#003067] transition-colors">
                   Industries
                 </a>
               </li>
               <li>
-                <a href="/resources" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/resources" className="text-sm hover:text-[#003067] transition-colors">
                   All Resources
                 </a>
               </li>
               <li>
-                <a href="/privacy-policy" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/privacy-policy" className="text-sm hover:text-[#003067] transition-colors">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/terms-conditions" className="text-sm hover:text-[#9bd9e4] transition-colors">
+                <a href="/terms-conditions" className="text-sm hover:text-[#003067] transition-colors">
                   Terms & Conditions
                 </a>
               </li>
@@ -85,7 +85,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className="text-white text-sm font-semibold uppercase mb-4 tracking-wider">
+            <h3 className="text-[#003067] text-sm font-semibold uppercase mb-4 tracking-wider">
               Connect
             </h3>
             <ul className="space-y-2 mb-6">
@@ -96,12 +96,12 @@ export default function Footer() {
                 Cincinnati, OH 45202
               </li>
               <li className="text-sm mt-3">
-                <a href="tel:+15132722200" className="hover:text-[#9bd9e4] transition-colors">
+                <a href="tel:+15132722200" className="hover:text-[#003067] transition-colors">
                   (513) 272-2200
                 </a>
               </li>
               <li className="text-sm">
-                <a href="mailto:info@kruseandcrawford.com" className="hover:text-[#9bd9e4] transition-colors">
+                <a href="mailto:info@kruseandcrawford.com" className="hover:text-[#003067] transition-colors">
                   info@kruseandcrawford.com
                 </a>
               </li>
@@ -113,7 +113,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/kruse-crawford"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#9bd9e4] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded transition-colors"
+                className="text-gray-400 hover:text-[#003067] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded transition-colors"
                 aria-label="Follow us on LinkedIn (opens in new tab)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -124,7 +124,7 @@ export default function Footer() {
                 href="https://www.facebook.com/kruseandcrawford"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#9bd9e4] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded transition-colors"
+                className="text-gray-400 hover:text-[#003067] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded transition-colors"
                 aria-label="Follow us on Facebook (opens in new tab)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -135,7 +135,7 @@ export default function Footer() {
                 href="https://twitter.com/kruseandcrawfor"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#9bd9e4] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded transition-colors"
+                className="text-gray-400 hover:text-[#003067] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded transition-colors"
                 aria-label="Follow us on Twitter (opens in new tab)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -148,16 +148,16 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700">
+      <div className="border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
             <p>
               ©2025 – All Rights Reserved Kruse & Crawford |{' '}
-              <a href="/privacy-policy" className="hover:text-[#9bd9e4] transition-colors">
+              <a href="/privacy-policy" className="hover:text-[#003067] transition-colors">
                 Privacy Policy
               </a>
               {' | '}
-              <a href="/terms-conditions" className="hover:text-[#9bd9e4] transition-colors">
+              <a href="/terms-conditions" className="hover:text-[#003067] transition-colors">
                 Terms & Conditions
               </a>
             </p>
