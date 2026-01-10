@@ -27,27 +27,27 @@ export default function ServicesPageV4() {
       </div>
 
       {/* Hero - Split layout with lifecycle image */}
-      <section className="relative min-h-[90vh] flex items-center bg-[#003067] overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
         {/* Soft overlay shapes */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#9bd9e4]/5 rounded-bl-[200px]" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#9bd9e4]/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#003067]/5 rounded-bl-[200px]" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#9bd9e4]/10 rounded-full blur-3xl" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text content */}
             <div>
               {/* Friendly badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 mb-8">
+              <div className="inline-flex items-center gap-2 bg-[#003067]/10 rounded-full px-5 py-2 mb-8">
                 <div className="w-2 h-2 bg-[#9bd9e4] rounded-full animate-pulse" />
-                <span className="text-white/90 text-sm">Serving Cincinnati businesses since 2005</span>
+                <span className="text-[#003067] text-sm">Serving Cincinnati businesses since 2005</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003067] leading-tight mb-6">
                 Year-Round
                 <span className="block text-[#9bd9e4]">CPA Partnership</span>
               </h1>
 
-              <p className="text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
+              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg">
                 Outsourced accounting and strategic tax services working together.
                 We provide continuous support, not just seasonal check-ins.
               </p>
@@ -55,13 +55,13 @@ export default function ServicesPageV4() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#our-services"
-                  className="px-8 py-4 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-white transition-colors"
+                  className="px-8 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-colors"
                 >
                   Explore Our Services
                 </a>
                 <a
                   href="/contact-us"
-                  className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-colors"
+                  className="px-8 py-4 border-2 border-[#003067] text-[#003067] font-semibold rounded-full hover:bg-[#003067] hover:text-white transition-colors"
                 >
                   Get in Touch
                 </a>
@@ -82,9 +82,9 @@ export default function ServicesPageV4() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#003067]/50">
           <span className="text-xs tracking-wider">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent" />
+          <div className="w-px h-8 bg-gradient-to-b from-[#003067]/50 to-transparent" />
         </div>
       </section>
 
