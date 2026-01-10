@@ -27,17 +27,11 @@ export default function ServicesPageV4() {
       </div>
 
       {/* Hero - Split layout with lifecycle image */}
-      <section className="relative min-h-[90vh] flex items-center bg-[#003067] overflow-hidden">
-        {/* Decorative elements */}
+      <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
+        {/* Subtle decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#9bd9e4]/10 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 -left-20 w-[400px] h-[400px] bg-[#9bd9e4]/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-white/5 rounded-full blur-2xl" />
-        </div>
-
-        {/* Diagonal accent line */}
-        <div className="absolute top-0 right-0 w-1/2 h-full">
-          <div className="absolute inset-0 bg-gradient-to-bl from-[#9bd9e4]/10 to-transparent" />
+          <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] bg-[#003067]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
@@ -45,17 +39,17 @@ export default function ServicesPageV4() {
             {/* Left: Text content */}
             <div>
               {/* Friendly badge */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
+              <div className="inline-flex items-center gap-2 bg-[#003067]/10 rounded-full px-5 py-2 mb-8">
                 <div className="w-2 h-2 bg-[#9bd9e4] rounded-full animate-pulse" />
-                <span className="text-white/90 text-sm font-medium">Serving Cincinnati businesses since 2005</span>
+                <span className="text-[#003067] text-sm font-medium">Serving Cincinnati businesses since 2005</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003067] leading-tight mb-6">
                 Year-Round
                 <span className="block text-[#9bd9e4] mt-2">CPA Partnership</span>
               </h1>
 
-              <p className="text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
+              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg">
                 Outsourced accounting and strategic tax services working together.
                 We provide continuous support, not just seasonal check-ins.
               </p>
@@ -63,14 +57,14 @@ export default function ServicesPageV4() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#our-services"
-                  className="group px-8 py-4 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-white transition-all duration-300 hover:shadow-lg hover:shadow-[#9bd9e4]/25"
+                  className="group px-8 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-all duration-300 hover:shadow-lg"
                 >
                   Explore Our Services
                   <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                 </a>
                 <a
                   href="/contact-us"
-                  className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white hover:text-[#003067] transition-all duration-300"
+                  className="px-8 py-4 border-2 border-[#003067] text-[#003067] font-semibold rounded-full hover:bg-[#003067] hover:text-white transition-all duration-300"
                 >
                   Get in Touch
                 </a>
@@ -79,11 +73,11 @@ export default function ServicesPageV4() {
 
             {/* Right: Lifecycle Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xl bg-white rounded-3xl p-6 shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <div className="relative w-full max-w-xl hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <img
                   src="/images/services-lifecycle.svg"
                   alt="Year-Round CPA Partnership cycle showing Tax Filings, Strategy, Outsourced Accounting, Business Forecasting, and more"
-                  className="w-full h-auto"
+                  className="w-full h-auto drop-shadow-xl"
                 />
               </div>
             </div>
@@ -91,9 +85,9 @@ export default function ServicesPageV4() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#003067]/40">
           <span className="text-xs tracking-wider uppercase">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent animate-pulse" />
+          <div className="w-px h-8 bg-gradient-to-b from-[#003067]/40 to-transparent animate-pulse" />
         </div>
       </section>
 
