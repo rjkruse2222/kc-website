@@ -70,13 +70,13 @@ export default function ServicesPageV4() {
 
             {/* Right: Lifecycle Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg">
+              <div className="relative w-full max-w-lg bg-[#003067] rounded-3xl p-4">
                 <Image
                   src="/images/services-lifecycle.png"
                   alt="Year-Round CPA Partnership cycle showing Tax Filings, Strategy, Outsourced Accounting, Business Forecasting, and more"
                   width={600}
                   height={600}
-                  className="w-full h-auto drop-shadow-2xl"
+                  className="w-full h-auto"
                   priority
                 />
               </div>
