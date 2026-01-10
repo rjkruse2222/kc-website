@@ -70,14 +70,11 @@ export default function ServicesPageV4() {
 
             {/* Right: Lifecycle Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xl bg-white rounded-3xl p-6 shadow-2xl">
-                <Image
-                  src="/images/services-lifecycle.png"
+              <div className="relative w-full max-w-xl">
+                <img
+                  src="/images/services-lifecycle.svg"
                   alt="Year-Round CPA Partnership cycle showing Tax Filings, Strategy, Outsourced Accounting, Business Forecasting, and more"
-                  width={600}
-                  height={600}
-                  className="w-full h-auto"
-                  priority
+                  className="w-full h-auto hover:scale-105 transition-transform duration-300"
                 />
               </div>
             </div>
