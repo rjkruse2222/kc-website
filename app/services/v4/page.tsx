@@ -37,17 +37,17 @@ export default function ServicesPageV4() {
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003067] leading-tight mb-6">
                 Year-Round
                 <span className="block text-[#9bd9e4] mt-2">CPA Partnership</span>
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
+              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg mx-auto">
                 Your accounting and tax strategy should work as one. We combine proactive tax planning with reliable financial management, giving you clarity and confidence to make smarter business decisions all year long.
               </p>
 
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <a
                   href="#our-services"
                   className="group px-8 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-all duration-300 hover:shadow-lg"
