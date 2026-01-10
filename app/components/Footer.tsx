@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Logo & Description */}
           <div>
             <Image
-              src="/images/footer-logo-dk-gry.svg"
+              src="/images/logo-kruse-and-crawford.svg"
               alt="Kruse & Crawford CPAs"
               width={180}
               height={54}
