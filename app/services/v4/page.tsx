@@ -27,27 +27,35 @@ export default function ServicesPageV4() {
       </div>
 
       {/* Hero - Split layout with lifecycle image */}
-      <section className="relative min-h-[90vh] flex items-center bg-white overflow-hidden">
-        {/* Soft overlay shapes */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-[#003067]/5 rounded-bl-[200px]" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#9bd9e4]/10 rounded-full blur-3xl" />
+      <section className="relative min-h-[90vh] flex items-center bg-[#003067] overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#9bd9e4]/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 -left-20 w-[400px] h-[400px] bg-[#9bd9e4]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-[300px] h-[300px] bg-white/5 rounded-full blur-2xl" />
+        </div>
+
+        {/* Diagonal accent line */}
+        <div className="absolute top-0 right-0 w-1/2 h-full">
+          <div className="absolute inset-0 bg-gradient-to-bl from-[#9bd9e4]/10 to-transparent" />
+        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Text content */}
             <div>
               {/* Friendly badge */}
-              <div className="inline-flex items-center gap-2 bg-[#003067]/10 rounded-full px-5 py-2 mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 mb-8">
                 <div className="w-2 h-2 bg-[#9bd9e4] rounded-full animate-pulse" />
-                <span className="text-[#003067] text-sm">Serving Cincinnati businesses since 2005</span>
+                <span className="text-white/90 text-sm font-medium">Serving Cincinnati businesses since 2005</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003067] leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                 Year-Round
-                <span className="block text-[#9bd9e4]">CPA Partnership</span>
+                <span className="block text-[#9bd9e4] mt-2">CPA Partnership</span>
               </h1>
 
-              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg">
+              <p className="text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
                 Outsourced accounting and strategic tax services working together.
                 We provide continuous support, not just seasonal check-ins.
               </p>
@@ -55,13 +63,14 @@ export default function ServicesPageV4() {
               <div className="flex flex-wrap gap-4">
                 <a
                   href="#our-services"
-                  className="px-8 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-colors"
+                  className="group px-8 py-4 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-white transition-all duration-300 hover:shadow-lg hover:shadow-[#9bd9e4]/25"
                 >
                   Explore Our Services
+                  <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
                 </a>
                 <a
                   href="/contact-us"
-                  className="px-8 py-4 border-2 border-[#003067] text-[#003067] font-semibold rounded-full hover:bg-[#003067] hover:text-white transition-colors"
+                  className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white hover:text-[#003067] transition-all duration-300"
                 >
                   Get in Touch
                 </a>
@@ -71,10 +80,12 @@ export default function ServicesPageV4() {
             {/* Right: Lifecycle Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-xl">
+                {/* Glow effect behind image */}
+                <div className="absolute inset-0 bg-[#9bd9e4]/20 rounded-full blur-3xl scale-75" />
                 <img
                   src="/images/services-lifecycle.svg"
                   alt="Year-Round CPA Partnership cycle showing Tax Filings, Strategy, Outsourced Accounting, Business Forecasting, and more"
-                  className="w-full h-auto"
+                  className="relative w-full h-auto drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -82,9 +93,9 @@ export default function ServicesPageV4() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#003067]/50">
-          <span className="text-xs tracking-wider">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-[#003067]/50 to-transparent" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50">
+          <span className="text-xs tracking-wider uppercase">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-white/50 to-transparent animate-pulse" />
         </div>
       </section>
 
@@ -103,34 +114,19 @@ export default function ServicesPageV4() {
             </p>
           </div>
 
-          {/* Service Cards - Warm, rounded, friendly */}
+          {/* Service Cards */}
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Tax Strategy Card */}
-            <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
-              {/* Image placeholder area */}
-              <div className="h-64 bg-gradient-to-br from-[#003067] to-[#004a8f] relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white">
-                    <svg className="w-20 h-20 mx-auto mb-4 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                    </svg>
-                    <span className="text-sm opacity-50">Strategic tax planning</span>
-                  </div>
-                </div>
-                {/* Decorative curve */}
-                <div className="absolute -bottom-1 left-0 right-0">
-                  <svg viewBox="0 0 1200 120" className="w-full h-16 fill-white">
-                    <path d="M0,60 Q600,120 1200,60 L1200,120 L0,120 Z" />
-                  </svg>
-                </div>
-              </div>
+            <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+              {/* Top accent bar */}
+              <div className="h-2 bg-gradient-to-r from-[#003067] to-[#004a8f]" />
 
               <div className="p-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#9bd9e4]/20 flex items-center justify-center">
-                    <span className="text-[#003067] font-bold">1</span>
-                  </div>
-                  <span className="text-[#9bd9e4] text-sm font-semibold uppercase tracking-wider">Service</span>
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-[#003067] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
                 </div>
 
                 <h3 className="text-3xl font-bold text-[#003067] mb-4">Tax Strategy</h3>
@@ -141,7 +137,7 @@ export default function ServicesPageV4() {
                   not just your preparer.
                 </p>
 
-                {/* Key benefits - friendly format */}
+                {/* Key benefits */}
                 <div className="space-y-3 mb-8">
                   {[
                     'Quarterly check-ins, not just annual filings',
@@ -159,7 +155,7 @@ export default function ServicesPageV4() {
 
                 <Link
                   href="/services/tax-strategy"
-                  className="inline-flex items-center gap-2 text-[#003067] font-semibold group-hover:text-[#9bd9e4] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-all duration-300"
                 >
                   Learn about Tax Strategy
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -167,34 +163,22 @@ export default function ServicesPageV4() {
                   </svg>
                 </Link>
               </div>
+
+              {/* Decorative corner */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#003067]/5 rounded-bl-full" />
             </div>
 
             {/* Client Accounting Card */}
-            <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
-              {/* Image placeholder area */}
-              <div className="h-64 bg-gradient-to-br from-[#9bd9e4] to-[#7bc4d0] relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-[#003067]">
-                    <svg className="w-20 h-20 mx-auto mb-4 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                    <span className="text-sm opacity-50">Financial clarity</span>
-                  </div>
-                </div>
-                {/* Decorative curve */}
-                <div className="absolute -bottom-1 left-0 right-0">
-                  <svg viewBox="0 0 1200 120" className="w-full h-16 fill-white">
-                    <path d="M0,60 Q600,120 1200,60 L1200,120 L0,120 Z" />
-                  </svg>
-                </div>
-              </div>
+            <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100">
+              {/* Top accent bar */}
+              <div className="h-2 bg-gradient-to-r from-[#9bd9e4] to-[#7bc4d0]" />
 
               <div className="p-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#9bd9e4]/20 flex items-center justify-center">
-                    <span className="text-[#003067] font-bold">2</span>
-                  </div>
-                  <span className="text-[#9bd9e4] text-sm font-semibold uppercase tracking-wider">Service</span>
+                {/* Icon */}
+                <div className="w-16 h-16 rounded-2xl bg-[#9bd9e4] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <svg className="w-8 h-8 text-[#003067]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
                 </div>
 
                 <h3 className="text-3xl font-bold text-[#003067] mb-4">Client Accounting</h3>
@@ -207,20 +191,20 @@ export default function ServicesPageV4() {
 
                 {/* Tier preview - friendly pills */}
                 <div className="flex flex-wrap gap-2 mb-8">
-                  <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">
+                  <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700 hover:bg-[#003067] hover:text-white transition-colors cursor-pointer">
                     Essential
                   </span>
                   <span className="px-4 py-2 bg-[#003067] rounded-full text-sm font-medium text-white">
                     Growth
                   </span>
-                  <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700">
+                  <span className="px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700 hover:bg-[#003067] hover:text-white transition-colors cursor-pointer">
                     Enterprise
                   </span>
                 </div>
 
                 <Link
                   href="/services/client-accounting"
-                  className="inline-flex items-center gap-2 text-[#003067] font-semibold group-hover:text-[#9bd9e4] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-[#003067] hover:text-white transition-all duration-300"
                 >
                   View Packages
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -228,6 +212,9 @@ export default function ServicesPageV4() {
                   </svg>
                 </Link>
               </div>
+
+              {/* Decorative corner */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#9bd9e4]/10 rounded-bl-full" />
             </div>
           </div>
         </div>
