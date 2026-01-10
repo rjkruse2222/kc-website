@@ -1,35 +1,39 @@
 # Kruse & Crawford CPAs Website
 
-A [Next.js](https://nextjs.org) website for Kruse & Crawford CPAs, deployed on Vercel.
-
-## Deployment Workflow
-
-This project is deployed automatically via Vercel. To make changes:
-
-1. Make your code changes locally
-2. Commit your changes to git:
-   ```bash
-   git add .
-   git commit -m "Your commit message"
-   ```
-3. Push to GitHub:
-   ```bash
-   git push
-   ```
-
-Vercel will automatically build and deploy your changes when you push to the main branch.
+A [Next.js](https://nextjs.org) website for Kruse & Crawford CPAs, a Cincinnati-based CPA firm serving small to lower middle market businesses.
 
 ## Live Site
 
-View the deployed site at: [kc-website-alpha.vercel.app](https://kc-website-alpha.vercel.app)
+**Production:** [kc-website-alpha.vercel.app](https://kc-website-alpha.vercel.app)
+
+## Deployment
+
+This project uses continuous deployment via Vercel. All changes are pushed to GitHub, which triggers automatic builds and deployment. There is no local development server - all testing and review happens on the live Vercel deployment.
+
+**Workflow:**
+1. Make code changes
+2. Commit and push to GitHub
+3. Vercel automatically builds and deploys
+4. Review changes on the live site
+
+## Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS
+- **Deployment:** Vercel
+- **Repository:** GitHub
 
 ## Project Structure
 
-- `app/` - Next.js App Router pages and layouts
-- `components/` - Reusable React components
-- `public/` - Static assets (images, fonts, etc.)
+```
+kc-website/
+├── app/           # Next.js pages, layouts, and components
+├── public/        # Static assets (images, fonts)
+├── SETUP.md       # Initial setup documentation
+└── IMAGES-NEEDED.md # Tracking needed imagery
+```
 
-## Learn More
+## Related Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - Next.js features and API
-- [Vercel Documentation](https://vercel.com/docs) - Vercel deployment and features
+- [SETUP.md](./SETUP.md) - Initial project setup notes
+- [IMAGES-NEEDED.md](./IMAGES-NEEDED.md) - Required images checklist
