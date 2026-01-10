@@ -72,7 +72,7 @@ export default function ServicesPageV4() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-full max-w-xl">
                 <img
-                  src="/images/services-lifecycle.png"
+                  src="/images/services-lifecycle.svg"
                   alt="Year-Round CPA Partnership cycle showing Tax Filings, Strategy, Outsourced Accounting, Business Forecasting, and more"
                   className="w-full h-auto"
                 />
