@@ -43,7 +43,7 @@ export default function Hero() {
           </h1>
           <a
             href="/contact-us"
-            className="inline-flex items-center justify-center px-10 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold uppercase text-sm tracking-[3px] rounded-md border-2 border-white/40 hover:bg-white hover:text-[#003067] transition-all duration-300"
+            className="inline-flex items-center justify-center px-10 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold uppercase text-sm tracking-[3px] rounded-md border-2 border-white/40 hover:bg-white hover:text-[#003067] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#003067] transition-all duration-300"
           >
             Contact Us
           </a>
