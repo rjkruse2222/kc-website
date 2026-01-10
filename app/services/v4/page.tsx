@@ -79,13 +79,11 @@ export default function ServicesPageV4() {
 
             {/* Right: Lifecycle Image */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xl">
-                {/* Glow effect behind image */}
-                <div className="absolute inset-0 bg-[#9bd9e4]/20 rounded-full blur-3xl scale-75" />
+              <div className="relative w-full max-w-xl bg-white rounded-3xl p-6 shadow-2xl hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <img
                   src="/images/services-lifecycle.svg"
                   alt="Year-Round CPA Partnership cycle showing Tax Filings, Strategy, Outsourced Accounting, Business Forecasting, and more"
-                  className="relative w-full h-auto drop-shadow-2xl"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
