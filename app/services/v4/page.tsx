@@ -27,7 +27,7 @@ export default function ServicesPageV4() {
       </div>
 
       {/* Hero - Split layout with lifecycle image */}
-      <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-[#003067] via-[#00407a] to-[#003067] overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center bg-[#003067] overflow-hidden">
         {/* Soft overlay shapes */}
         <div className="absolute top-0 right-0 w-1/3 h-full bg-[#9bd9e4]/5 rounded-bl-[200px]" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#9bd9e4]/5 rounded-full blur-3xl" />
