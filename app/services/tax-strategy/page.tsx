@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const processSteps = [
   {
@@ -79,9 +80,33 @@ const coreServices = [
 ];
 
 const results = [
-  { metric: '10%', label: 'Average Tax Rate Reduction', sublabel: 'for qualified clients' },
+  { metric: '300%', label: 'Average ROI', sublabel: 'on tax planning engagement' },
   { metric: '20+', label: 'Years Experience', sublabel: 'serving Cincinnati businesses' },
   { metric: '12+', label: 'Touchpoints Per Year', sublabel: 'proactive planning, not reactive filing' }
+];
+
+const caseStudies = [
+  {
+    industry: 'Manufacturing',
+    title: 'S-Corp Election Saves $127K',
+    description: 'A growing manufacturer operating as a sole proprietor was paying excessive self-employment taxes. After restructuring as an S-Corp and implementing reasonable compensation, they saved $127,000 in their first year.',
+    savings: '$127,000',
+    strategy: 'Entity Restructuring'
+  },
+  {
+    industry: 'Professional Services',
+    title: 'R&D Credits Recovered',
+    description: 'A software development firm had no idea they qualified for R&D tax credits. We identified qualifying activities and filed amended returns, recovering credits for the past three years.',
+    savings: '$89,000',
+    strategy: 'R&D Tax Credits'
+  },
+  {
+    industry: 'Construction',
+    title: 'Cost Segregation Study',
+    description: 'A contractor who recently purchased their building was depreciating it over 39 years. A cost segregation study accelerated depreciation and generated immediate tax savings.',
+    savings: '$64,000',
+    strategy: 'Depreciation Strategy'
+  }
 ];
 
 const faqs = [
@@ -112,45 +137,56 @@ export default function TaxStrategyPage() {
 
   return (
     <main className="bg-white">
-      {/* Hero Section */}
-      <section className="relative bg-[#003067] overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0">
-          <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-[#9bd9e4]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#9bd9e4]/5 rounded-full blur-3xl" />
-        </div>
+      {/* Hero Section - Split Layout */}
+      <section className="relative min-h-[80vh] lg:min-h-[90vh]">
+        <div className="grid lg:grid-cols-2 min-h-[80vh] lg:min-h-[90vh]">
+          {/* Left side - Content */}
+          <div className="bg-[#0a1628] flex items-center order-2 lg:order-1">
+            <div className="px-8 md:px-16 lg:px-20 py-20 lg:py-32 max-w-2xl ml-auto">
+              <Link
+                href="/services"
+                className="inline-flex items-center text-white/50 hover:text-white mb-8 transition-colors text-sm"
+              >
+                <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back to Services
+              </Link>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-32">
-          <Link
-            href="/services"
-            className="inline-flex items-center text-white/60 hover:text-white mb-8 transition-colors text-sm"
-          >
-            <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            Back to Services
-          </Link>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                Your Tax Strategy
+                <span className="block text-[#9bd9e4] mt-2">As Unique As You</span>
+              </h1>
 
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Proactive Tax Strategy
-              <span className="block text-[#9bd9e4] mt-2">Not Just Preparation</span>
-            </h1>
+              <p className="text-lg text-white/80 leading-relaxed mb-8">
+                No two financial situations are identical. Your income sources, business structure, family situation, and goals create a tax profile that belongs to you alone. A strategy built for someone else will never fit.
+              </p>
 
-            <p className="text-xl text-white/80 leading-relaxed mb-10 max-w-2xl">
-              Most CPAs wait until April. We work with you year-round to identify opportunities,
-              implement strategies, and minimize your tax burden while there is still time to act.
-            </p>
+              <p className="text-lg text-white/70 leading-relaxed mb-10">
+                Taxes represent the single largest expense most people pay over their lifetime. Yet most business owners treat tax planning as an afterthought. We believe your largest expense deserves your closest attention.
+              </p>
 
-            <div className="flex flex-wrap gap-4">
               <a
                 href="/contact-us"
-                className="group px-8 py-4 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-white transition-all duration-300"
+                className="group inline-flex items-center px-8 py-4 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-white transition-all duration-300"
               >
-                Schedule a Tax Review
+                Build Your Strategy
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>
+          </div>
+
+          {/* Right side - Image */}
+          <div className="relative order-1 lg:order-2 min-h-[40vh] lg:min-h-full">
+            <Image
+              src="/images/tax-strategy-hero.jpg"
+              alt="Night sky with stars"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Gradient overlay to blend with left side */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628] via-transparent to-transparent lg:w-32" />
           </div>
         </div>
       </section>
@@ -170,8 +206,54 @@ export default function TaxStrategyPage() {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Case Studies Section */}
       <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Real Results</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003067] mt-4 mb-6">
+              Client Success Stories
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Every client situation is different. Here is how strategic tax planning made a measurable impact for businesses like yours.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {caseStudies.map((study, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              >
+                {/* Card header */}
+                <div className="bg-[#003067] px-6 py-4">
+                  <span className="text-[#9bd9e4] text-sm font-medium">{study.industry}</span>
+                  <h3 className="text-xl font-bold text-white mt-1">{study.title}</h3>
+                </div>
+
+                {/* Card body */}
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed mb-6">{study.description}</p>
+
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                      <div className="text-sm text-gray-500">Tax Savings</div>
+                      <div className="text-2xl font-bold text-[#003067]">{study.savings}</div>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-sm text-gray-500">Strategy</div>
+                      <div className="text-sm font-medium text-[#9bd9e4]">{study.strategy}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Our Process</span>
@@ -200,7 +282,7 @@ export default function TaxStrategyPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 md:py-32 bg-gray-50">
+      <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">What We Do</span>
@@ -232,7 +314,7 @@ export default function TaxStrategyPage() {
       </section>
 
       {/* Why Year-Round Section */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -305,7 +387,7 @@ export default function TaxStrategyPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 md:py-32 bg-gray-50">
+      <section className="py-24 md:py-32">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-16">
             <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">FAQ</span>
@@ -355,10 +437,10 @@ export default function TaxStrategyPage() {
 
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Minimize<br />Your Tax Burden?
+            Ready to Build Your<br />Custom Tax Strategy?
           </h2>
           <p className="text-xl text-white/80 mb-10">
-            Schedule a complimentary tax strategy review to identify opportunities for your business.
+            Schedule a complimentary tax strategy review to identify opportunities unique to your situation.
           </p>
           <a
             href="/contact-us"
