@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About Us | Kruse & Crawford CPAs',
-  description: 'Learn about Kruse & Crawford CPAs - a Cincinnati-based CPA firm founded in 2005, serving small to mid-market businesses with tax strategy and accounting services.',
+  description: 'Learn about Kruse & Crawford CPAs - a national CPA firm headquartered in Cincinnati, serving small to mid-market businesses across the country with tax strategy and accounting services.',
 };
 
 const timeline = [
   {
     year: '2005',
     title: 'Founded',
-    description: 'Richard Kruse Sr. establishes the firm with a vision of providing personalized, year-round financial guidance to Cincinnati businesses.'
+    description: 'Richard Kruse Sr. establishes the firm in Cincinnati with a vision of providing personalized, year-round financial guidance to growing businesses.'
   },
   {
     year: '2010',
@@ -24,13 +24,13 @@ const timeline = [
   },
   {
     year: '2020',
-    title: 'Technology Forward',
-    description: 'Adoption of cloud-based solutions and AI-driven analytics to better serve clients in a changing business landscape.'
+    title: 'Going National',
+    description: 'Cloud-based solutions enable us to serve clients nationwide while maintaining the personal relationships we are known for.'
   },
   {
     year: 'Today',
-    title: 'Continuing the Legacy',
-    description: 'Serving small to mid-market businesses across Cincinnati and beyond with the same dedication to personal relationships.'
+    title: 'Coast to Coast',
+    description: 'A national firm with team members across the country, headquartered in Cincinnati, serving clients in all 50 states.'
   }
 ];
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
               <span className="block text-[#9bd9e4] mt-2">Driven by Results</span>
             </h1>
             <p className="text-xl text-white/80 leading-relaxed">
-              For nearly two decades, Kruse & Crawford has been more than a CPA firm. We are trusted advisors who treat your business as if it were our own.
+              For nearly two decades, Kruse & Crawford has been more than a CPA firm. Headquartered in Cincinnati with team members across the country, we are trusted advisors who treat your business as if it were our own.
             </p>
           </div>
         </div>
@@ -278,14 +278,18 @@ export default function AboutPage() {
       {/* Stats Section */}
       <section className="py-16 bg-[#003067]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-5 gap-8 text-center">
             <div>
               <div className="text-4xl md:text-5xl font-bold text-[#9bd9e4] mb-2">20+</div>
               <div className="text-white/80">Years of Experience</div>
             </div>
             <div>
+              <div className="text-4xl md:text-5xl font-bold text-[#9bd9e4] mb-2">50</div>
+              <div className="text-white/80">States Served</div>
+            </div>
+            <div>
               <div className="text-4xl md:text-5xl font-bold text-[#9bd9e4] mb-2">150+</div>
-              <div className="text-white/80">Clients Served</div>
+              <div className="text-white/80">Clients Nationwide</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold text-[#9bd9e4] mb-2">$50M+</div>

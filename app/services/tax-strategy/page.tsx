@@ -81,7 +81,7 @@ const coreServices = [
 
 const results = [
   { metric: '300%', label: 'Average ROI', sublabel: 'on tax planning engagement' },
-  { metric: '20+', label: 'Years Experience', sublabel: 'serving Cincinnati businesses' },
+  { metric: '20+', label: 'Years Experience', sublabel: 'serving businesses nationwide' },
   { metric: '12+', label: 'Touchpoints Per Year', sublabel: 'proactive planning, not reactive filing' }
 ];
 
@@ -124,7 +124,7 @@ const faqs = [
   },
   {
     question: 'Do you work with businesses outside Ohio?',
-    answer: 'Yes. While we are based in Cincinnati, we serve clients across multiple states. Our expertise in multi-state taxation makes us well-suited for businesses with operations or customers in multiple jurisdictions.'
+    answer: 'We serve clients in all 50 states. While our headquarters is in Cincinnati, our team works remotely across the country. Our expertise in multi-state taxation makes us well-suited for businesses with operations or customers in multiple jurisdictions.'
   },
   {
     question: 'How do you charge for tax strategy?',
