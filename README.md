@@ -33,7 +33,7 @@ This project uses continuous deployment via Vercel. All changes are pushed to Gi
 | Route | Description | Status |
 |-------|-------------|--------|
 | `/` | Homepage | Complete |
-| `/services` | Services overview (2 services) | Needs redesign |
+| `/services` | Services overview | In Progress (v4 design) |
 | `/services/tax-strategy` | Tax strategy service detail | Complete |
 | `/services/client-accounting` | Client accounting tiers | Complete |
 
@@ -51,18 +51,28 @@ app/
     ├── WhatWeDo.tsx         # Two core services intro
     ├── Insights.tsx         # Blog article cards
     ├── Connect.tsx          # Social links + newsletter signup
-    └── Footer.tsx           # Site footer
+    └── Footer.tsx           # Site footer (white bg, updated Jan 2025)
+```
+
+### Service Pages
+
+```
+app/services/
+├── page.tsx                 # Main services overview
+├── v4/page.tsx              # Services v4 design (lifecycle image + white hero)
+├── tax-strategy/page.tsx    # Tax Strategy (split hero + case studies)
+└── client-accounting/page.tsx # 3-tier pricing page
 ```
 
 ### Experimental/Archive Pages
 
-These are design explorations kept for reference:
+Design explorations kept for reference:
 
 ```
 app/
 ├── home1/ through home14/   # Homepage design variations
 ├── home99/                  # Another homepage variant
-├── vsl1/ through vsl4/      # Video sales letter pages
+├── vsl1/ through vsl4/      # Video sales letter pages (legacy)
 ├── router1/ through router3/ # Router experiments
 ├── services/v1/             # Services page - Editorial style
 ├── services/v2/             # Services page - Geometric style
@@ -75,6 +85,7 @@ app/
 ```css
 --primary-blue: #003067    /* Navy - primary brand color */
 --light-blue: #9bd9e4      /* Teal - accent color */
+--dark-blue: #0a1628       /* Deep blue - used in tax strategy hero */
 --text-dark: #333333
 --text-gray: #666666
 ```
@@ -86,8 +97,14 @@ app/
 ### Completed
 - [x] Homepage design and implementation
 - [x] Header with mobile navigation
-- [x] Footer with social links
+- [x] Footer with social links (white background, Jan 2025)
 - [x] Tax Strategy service page
+  - Split hero layout with starry night image
+  - "Your Tax Strategy As Unique As You" messaging
+  - 300% ROI metric
+  - 3 case study cards (Manufacturing, Prof Services, Construction)
+  - FAQ accordion
+  - Year-round planning timeline
 - [x] Client Accounting service page (3-tier pricing)
 - [x] WCAG 2.1 AA accessibility compliance (Jan 2025)
   - Skip navigation link
@@ -97,20 +114,28 @@ app/
   - Reduced motion support
 
 ### In Progress
-- [ ] **Services page redesign** - Current design feels generic, needs fresh approach
+- [ ] **Services page v4** - White hero with lifecycle diagram, needs finalization
 
 ### Not Started
 - [ ] About page
-- [ ] Industries pages
+- [ ] Team page
+- [ ] Industries pages (multiple)
 - [ ] Careers page
 - [ ] Insights/Blog listing page
 - [ ] Contact page
 - [ ] Individual blog post pages
-- [ ] Team page
+- [ ] VSL/Landing pages for ebooks (2 planned)
 
-### Known Issues
-- Services page (`/services`) needs complete redesign - 3 alternative versions created but none approved
-- Some experimental pages (home1-14, vsl1-4) could be cleaned up
+---
+
+## Key Images
+
+| Image | Location | Usage |
+|-------|----------|-------|
+| `home-hero-tall.jpg` | Homepage hero | Parallax background |
+| `tax-strategy-hero.jpg` | Tax Strategy page | Split hero (starry night) |
+| `services-lifecycle.svg` | Services v4 | Lifecycle diagram |
+| `logo-kruse-and-crawford.svg` | Header/Footer | Main logo |
 
 ---
 
@@ -122,14 +147,17 @@ app/
 - Target audience: Small business owners ($1M-$50M revenue)
 - Two core services: Tax Strategy + Client Accounting (3 tiers)
 
-### Services Page Status
-Three alternative designs were created and rejected:
-- `/services/v1` - Editorial/magazine style
-- `/services/v2` - Geometric/angular style
-- `/services/v3` - Warm/approachable style
-- `/services/compare` - Side-by-side comparison
+### Design Direction
+- Clean, professional aesthetic
+- White and navy color scheme
+- Split hero layouts with imagery work well
+- Case studies and concrete metrics resonate
 
-Need to discuss what direction to take for services page redesign.
+### Services Page Evolution
+- v1: Editorial/magazine style (rejected)
+- v2: Geometric/angular style (rejected)
+- v3: Warm/approachable style (base for v4)
+- v4: White hero with lifecycle diagram (current)
 
 ---
 
@@ -137,3 +165,4 @@ Need to discuss what direction to take for services page redesign.
 
 - [SETUP.md](./SETUP.md) - Initial project setup notes
 - [IMAGES-NEEDED.md](./IMAGES-NEEDED.md) - Required images checklist
+- [WEBSITE-PLAN.md](./WEBSITE-PLAN.md) - Comprehensive completion plan
