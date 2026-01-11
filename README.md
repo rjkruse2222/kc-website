@@ -1,6 +1,6 @@
 # Kruse & Crawford CPAs Website
 
-A [Next.js](https://nextjs.org) website for Kruse & Crawford CPAs, a Cincinnati-based CPA firm serving small to lower middle market businesses ($1M-$50M revenue).
+A [Next.js](https://nextjs.org) website for Kruse & Crawford CPAs, a **national CPA firm headquartered in Cincinnati** with remote team members across the country, serving small to lower middle market businesses ($1M-$50M revenue) in all 50 states.
 
 ## Live Site
 
@@ -33,9 +33,19 @@ This project uses continuous deployment via Vercel. All changes are pushed to Gi
 | Route | Description | Status |
 |-------|-------------|--------|
 | `/` | Homepage | Complete |
-| `/services` | Services overview | In Progress (v4 design) |
+| `/about` | Firm story, founder tribute, managing partner | Complete |
+| `/contact` | 3-step inquiry wizard | Complete |
+| `/services` | Services overview | In Progress (v4) |
 | `/services/tax-strategy` | Tax strategy service detail | Complete |
 | `/services/client-accounting` | Client accounting tiers | Complete |
+| `/industries` | Industries hub (8 cards) | Complete |
+| `/industries/[slug]` | 8 individual industry pages | Complete |
+| `/ebooks/financial-clarity-blueprint` | Ebook 1 landing page | Complete |
+| `/ebooks/tax-saving-secrets` | Ebook 2 landing page | Complete |
+| `/careers` | Careers and culture | Complete |
+| `/insights` | Blog/insights hub | Complete |
+| `/privacy-policy` | Privacy policy | Complete |
+| `/terms-conditions` | Terms of service | Complete |
 
 ### Homepage Components
 
@@ -94,37 +104,43 @@ app/
 
 ## Project Status
 
-### Completed
+### Completed (January 2025)
 - [x] Homepage design and implementation
 - [x] Header with mobile navigation
-- [x] Footer with social links (white background, Jan 2025)
-- [x] Tax Strategy service page
-  - Split hero layout with starry night image
-  - "Your Tax Strategy As Unique As You" messaging
-  - 300% ROI metric
-  - 3 case study cards (Manufacturing, Prof Services, Construction)
-  - FAQ accordion
-  - Year-round planning timeline
+- [x] Footer with social links (white background)
+- [x] Tax Strategy service page (split hero, case studies, FAQ)
 - [x] Client Accounting service page (3-tier pricing)
-- [x] WCAG 2.1 AA accessibility compliance (Jan 2025)
-  - Skip navigation link
-  - Keyboard navigation with focus indicators
-  - Screen reader support (ARIA labels, semantic HTML)
-  - Color contrast fixes
-  - Reduced motion support
+- [x] WCAG 2.1 AA accessibility compliance
+- [x] **About page** - Founder tribute, managing partner, firm philosophy, timeline
+- [x] **Contact page** - 3-step wizard form (service, business details, contact info)
+- [x] **Privacy Policy** - Standard CPA firm privacy policy
+- [x] **Terms & Conditions** - Standard terms of service
+- [x] **Industries hub** (`/industries`) - Grid of 8 industry cards
+- [x] **8 Industry pages:**
+  - Real Estate & Construction (cost segregation, 1031, REPS)
+  - Manufacturing (R&D credits, equipment, IC-DISC)
+  - Food & Beverage (tip credits, multi-location, WOTC)
+  - Technology (R&D, stock options, QSBS, SaaS)
+  - Healthcare (valuations, cash balance plans, retirement)
+  - B2B Services (entity structuring, partner compensation)
+  - Life Sciences (R&D, grant accounting, NOL planning)
+  - High-Income Individuals (estate planning, charitable giving)
+- [x] **Ebook landing pages:**
+  - Financial Clarity Blueprint (light theme, accounting focus)
+  - Tax Saving Secrets of the 1% (dark theme, aggressive conversion)
+- [x] **Careers page** - Remote-first culture, benefits, open positions
+- [x] **Insights hub** - Blog listing with categories, newsletter signup
 
 ### In Progress
 - [ ] **Services page v4** - White hero with lifecycle diagram, needs finalization
 
-### Not Started
-- [ ] About page
-- [ ] Team page
-- [ ] Industries pages (multiple)
-- [ ] Careers page
-- [ ] Insights/Blog listing page
-- [ ] Contact page
-- [ ] Individual blog post pages
-- [ ] VSL/Landing pages for ebooks (2 planned)
+### Pending Content (Awaiting Client Input)
+All pages have placeholder content. See **[CONTENT-QUESTIONS.md](./CONTENT-QUESTIONS.md)** for the 77 questions that need answers to finalize content:
+- Real photos (founder, managing partner, ebook covers)
+- Actual case study numbers and client results
+- Industry-specific expertise details
+- Form integrations (where submissions should go)
+- Metrics and testimonials
 
 ---
 
@@ -143,15 +159,27 @@ app/
 
 ### Key Context
 - No local development - everything goes through GitHub/Vercel
-- Brand voice: Professional but approachable, Cincinnati-focused
+- Brand voice: Professional but approachable
+- **National firm** headquartered in Cincinnati, serving all 50 states
 - Target audience: Small business owners ($1M-$50M revenue)
 - Two core services: Tax Strategy + Client Accounting (3 tiers)
 
+### Content Questions Workflow
+When returning to work on this project:
+1. **Check [CONTENT-QUESTIONS.md](./CONTENT-QUESTIONS.md)** for any new answers from the client
+2. **Use answers to update pages** - Replace placeholder content with real information:
+   - Photos → Update image placeholders in About, Ebooks pages
+   - Case studies → Update numbers in industry pages and service pages
+   - Metrics → Update stats throughout the site
+   - Integrations → Configure form submissions, newsletter signups
+3. **Mark questions as answered** in CONTENT-QUESTIONS.md by adding ✅ or striking through
+
 ### Design Direction
 - Clean, professional aesthetic
-- White and navy color scheme
+- White and navy color scheme (#003067 navy, #9bd9e4 teal)
 - Split hero layouts with imagery work well
 - Case studies and concrete metrics resonate
+- Dark theme for aggressive conversion pages (Tax Secrets ebook)
 
 ### Services Page Evolution
 - v1: Editorial/magazine style (rejected)
@@ -163,6 +191,7 @@ app/
 
 ## Related Documentation
 
+- [CONTENT-QUESTIONS.md](./CONTENT-QUESTIONS.md) - **77 questions for client to answer** (YOUR HOMEWORK!)
+- [WEBSITE-PLAN.md](./WEBSITE-PLAN.md) - Comprehensive completion plan
 - [SETUP.md](./SETUP.md) - Initial project setup notes
 - [IMAGES-NEEDED.md](./IMAGES-NEEDED.md) - Required images checklist
-- [WEBSITE-PLAN.md](./WEBSITE-PLAN.md) - Comprehensive completion plan

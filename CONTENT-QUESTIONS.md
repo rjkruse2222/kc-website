@@ -1,6 +1,37 @@
 # Content Questions for K&C Website
 
+**YOUR HOMEWORK IS HERE!**
+
 Please answer these questions to help fill in content gaps across the website. Skip any that don't apply or that you'd prefer to leave as placeholder text for now.
+
+## How to Use This Document
+
+1. **Answer directly in this file** - Replace the question text with your answer, or add answers below each question
+2. **Save and commit** - Or just tell me your answers in chat
+3. **What happens next** - I will use your answers to:
+   - Replace placeholder text with real content
+   - Update case study numbers with actual client results
+   - Add real photos where indicated
+   - Customize industry pages with your specific expertise
+   - Configure form integrations
+   - Add proper testimonials and social proof
+
+## Priority Answers Needed
+
+**Highest priority (blocking polish):**
+- Questions 1-5, 11: Photos for About page
+- Questions 47, 53: Ebook cover designs
+- Questions 70-73: Real metrics and testimonials
+- Questions 66-69: Form/contact integrations
+
+**Medium priority (content quality):**
+- Questions 18-42: Industry-specific details and case studies
+- Questions 43-54: Ebook content details
+- Questions 55-61: Careers page content
+
+**Lower priority (nice to have):**
+- Questions 62-65: Blog setup
+- Questions 74-77: Technical integrations
 
 ---
 
