@@ -5,55 +5,32 @@ import { useState } from 'react';
 export default function ContactPage() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
-    service: '',
-    revenue: '',
-    industry: '',
-    employees: '',
+    clientType: '',
+    income: '',
     name: '',
     email: '',
     phone: '',
-    preferredContact: '',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
 
-  const services = [
-    { id: 'tax-strategy', label: 'Tax Strategy', description: 'Year-round tax planning and optimization' },
-    { id: 'client-accounting', label: 'Client Accounting', description: 'Bookkeeping, CFO services, financial reporting' },
-    { id: 'both', label: 'Both Services', description: 'Comprehensive tax and accounting partnership' },
-    { id: 'other', label: 'Other / Not Sure', description: 'I have questions or need guidance' }
+  const clientTypes = [
+    { id: 'business-owner', label: 'Business Owner', description: 'I own or operate a business' },
+    { id: 'real-estate-investor', label: 'Real Estate Investor', description: 'I invest in real estate properties' },
+    { id: 'w2-employee', label: 'W-2 Employee', description: 'I am a high-income employee looking for tax strategies' }
   ];
 
-  const revenues = [
-    { id: 'under-1m', label: 'Under $1M' },
-    { id: '1m-5m', label: '$1M - $5M' },
-    { id: '5m-10m', label: '$5M - $10M' },
-    { id: '10m-25m', label: '$10M - $25M' },
-    { id: '25m-50m', label: '$25M - $50M' },
-    { id: 'over-50m', label: 'Over $50M' }
+  const incomeRanges = [
+    { id: 'under-250k', label: 'Under $250K' },
+    { id: '250k-500k', label: '$250K - $500K' },
+    { id: '500k-1m', label: '$500K - $1M' },
+    { id: '1m-2m', label: '$1M - $2M' },
+    { id: '2m-5m', label: '$2M - $5M' },
+    { id: 'over-5m', label: 'Over $5M' }
   ];
 
-  const industries = [
-    'Real Estate & Construction',
-    'Manufacturing',
-    'Food & Beverage',
-    'Technology',
-    'Healthcare',
-    'Professional Services',
-    'Retail & E-commerce',
-    'Other'
-  ];
-
-  const employees = [
-    { id: '1-5', label: '1-5 employees' },
-    { id: '6-20', label: '6-20 employees' },
-    { id: '21-50', label: '21-50 employees' },
-    { id: '51-100', label: '51-100 employees' },
-    { id: 'over-100', label: '100+ employees' }
-  ];
-
-  const handleServiceSelect = (serviceId: string) => {
-    setFormData({ ...formData, service: serviceId });
+  const handleClientTypeSelect = (typeId: string) => {
+    setFormData({ ...formData, clientType: typeId });
   };
 
   const handleNext = () => {
@@ -143,10 +120,10 @@ export default function ContactPage() {
               <div className="mb-10">
                 <div className="flex justify-between text-sm mb-2">
                   <span className={step >= 1 ? 'text-[#003067] font-medium' : 'text-gray-400'}>
-                    Service Interest
+                    I Am A...
                   </span>
                   <span className={step >= 2 ? 'text-[#003067] font-medium' : 'text-gray-400'}>
-                    Business Details
+                    Annual Income
                   </span>
                   <span className={step >= 3 ? 'text-[#003067] font-medium' : 'text-gray-400'}>
                     Contact Info
@@ -160,43 +137,43 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Step 1: Service Interest */}
+              {/* Step 1: Client Type */}
               {step === 1 && (
                 <div className="animate-fadeIn">
                   <h2 className="text-2xl font-bold text-[#003067] mb-2">
-                    What can we help you with?
+                    Which best describes you?
                   </h2>
                   <p className="text-gray-600 mb-8">
-                    Select the service that best matches your needs.
+                    This helps us understand how we can best serve you.
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-4 mb-10">
-                    {services.map((service) => (
+                  <div className="grid md:grid-cols-1 gap-4 mb-10">
+                    {clientTypes.map((type) => (
                       <button
-                        key={service.id}
+                        key={type.id}
                         type="button"
-                        onClick={() => handleServiceSelect(service.id)}
+                        onClick={() => handleClientTypeSelect(type.id)}
                         className={`p-6 rounded-xl border-2 text-left transition-all duration-200 ${
-                          formData.service === service.id
+                          formData.clientType === type.id
                             ? 'border-[#003067] bg-[#003067]/5'
                             : 'border-gray-200 hover:border-[#9bd9e4]'
                         }`}
                       >
                         <div className="flex items-start gap-4">
                           <div className={`w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 ${
-                            formData.service === service.id
+                            formData.clientType === type.id
                               ? 'border-[#003067] bg-[#003067]'
                               : 'border-gray-300'
                           }`}>
-                            {formData.service === service.id && (
+                            {formData.clientType === type.id && (
                               <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                               </svg>
                             )}
                           </div>
                           <div>
-                            <h3 className="font-semibold text-[#003067] mb-1">{service.label}</h3>
-                            <p className="text-sm text-gray-500">{service.description}</p>
+                            <h3 className="font-semibold text-[#003067] mb-1">{type.label}</h3>
+                            <p className="text-sm text-gray-500">{type.description}</p>
                           </div>
                         </div>
                       </button>
@@ -205,7 +182,7 @@ export default function ContactPage() {
 
                   <button
                     onClick={handleNext}
-                    disabled={!formData.service}
+                    disabled={!formData.clientType}
                     className="w-full md:w-auto px-10 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#002050] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                   >
                     Continue
@@ -216,75 +193,35 @@ export default function ContactPage() {
                 </div>
               )}
 
-              {/* Step 2: Business Details */}
+              {/* Step 2: Annual Income */}
               {step === 2 && (
                 <div className="animate-fadeIn">
                   <h2 className="text-2xl font-bold text-[#003067] mb-2">
-                    Tell us about your business
+                    What is your annual income?
                   </h2>
                   <p className="text-gray-600 mb-8">
-                    This helps us understand how we can best serve you.
+                    This helps us recommend the right strategies for your situation.
                   </p>
 
                   <div className="space-y-6 mb-10">
-                    {/* Revenue */}
+                    {/* Income Range */}
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-3">
-                        Annual Revenue
+                        Select your income range
                       </label>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                        {revenues.map((rev) => (
+                        {incomeRanges.map((range) => (
                           <button
-                            key={rev.id}
+                            key={range.id}
                             type="button"
-                            onClick={() => setFormData({ ...formData, revenue: rev.id })}
-                            className={`px-4 py-3 rounded-lg border-2 text-sm font-medium transition-all ${
-                              formData.revenue === rev.id
+                            onClick={() => setFormData({ ...formData, income: range.id })}
+                            className={`px-4 py-4 rounded-lg border-2 text-sm font-medium transition-all ${
+                              formData.income === range.id
                                 ? 'border-[#003067] bg-[#003067] text-white'
                                 : 'border-gray-200 text-gray-700 hover:border-[#9bd9e4]'
                             }`}
                           >
-                            {rev.label}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Industry */}
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-3">
-                        Industry
-                      </label>
-                      <select
-                        value={formData.industry}
-                        onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                        className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#003067] focus:outline-none transition-colors"
-                      >
-                        <option value="">Select your industry</option>
-                        {industries.map((ind) => (
-                          <option key={ind} value={ind}>{ind}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    {/* Employees */}
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-3">
-                        Number of Employees
-                      </label>
-                      <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-                        {employees.map((emp) => (
-                          <button
-                            key={emp.id}
-                            type="button"
-                            onClick={() => setFormData({ ...formData, employees: emp.id })}
-                            className={`px-4 py-3 rounded-lg border-2 text-sm font-medium transition-all ${
-                              formData.employees === emp.id
-                                ? 'border-[#003067] bg-[#003067] text-white'
-                                : 'border-gray-200 text-gray-700 hover:border-[#9bd9e4]'
-                            }`}
-                          >
-                            {emp.label}
+                            {range.label}
                           </button>
                         ))}
                       </div>
@@ -300,7 +237,7 @@ export default function ContactPage() {
                     </button>
                     <button
                       onClick={handleNext}
-                      disabled={!formData.revenue || !formData.industry}
+                      disabled={!formData.income}
                       className="flex-1 md:flex-none px-10 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#002050] disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                     >
                       Continue
@@ -370,41 +307,10 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    {/* Preferred Contact */}
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-3">
-                        Preferred Contact Method
-                      </label>
-                      <div className="flex gap-4">
-                        <button
-                          type="button"
-                          onClick={() => setFormData({ ...formData, preferredContact: 'email' })}
-                          className={`flex-1 px-4 py-3 rounded-lg border-2 text-sm font-medium transition-all ${
-                            formData.preferredContact === 'email'
-                              ? 'border-[#003067] bg-[#003067] text-white'
-                              : 'border-gray-200 text-gray-700 hover:border-[#9bd9e4]'
-                          }`}
-                        >
-                          Email
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => setFormData({ ...formData, preferredContact: 'phone' })}
-                          className={`flex-1 px-4 py-3 rounded-lg border-2 text-sm font-medium transition-all ${
-                            formData.preferredContact === 'phone'
-                              ? 'border-[#003067] bg-[#003067] text-white'
-                              : 'border-gray-200 text-gray-700 hover:border-[#9bd9e4]'
-                          }`}
-                        >
-                          Phone
-                        </button>
-                      </div>
-                    </div>
-
                     {/* Message */}
                     <div>
                       <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                        Anything else we should know? (Optional)
+                        Additional Information (Optional)
                       </label>
                       <textarea
                         id="message"
@@ -412,7 +318,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-[#003067] focus:outline-none transition-colors resize-none"
-                        placeholder="Tell us about your situation or any specific questions you have..."
+                        placeholder="Tell us about your situation, goals, or any specific questions you have..."
                       />
                     </div>
                   </div>

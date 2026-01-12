@@ -38,23 +38,23 @@ Please answer these questions to help fill in content gaps across the website. S
 ## About Page
 
 ### Founder Tribute (Richard Kruse Sr.)
-1. What years did Richard Kruse Sr. live? (I used 1952-2023 as placeholder)
-2. What is a brief personal story or anecdote that captures who he was?
-3. Is there a favorite quote or saying he was known for?
-4. Any specific accomplishments or milestones you'd like highlighted?
-5. Do you have a photo of him to use?
+1. What years did Richard Kruse Sr. live? 1954 - 2023
+2. What is a brief personal story or anecdote that captures who he was? Spent many hours with recovering alcoholics, and changed many lives.  Credits finding AA with saving his.  Was a sponsor for many years.  Helped many others find sobriety.
+3. Is there a favorite quote or saying he was known for? It isn't how much you make, it is how much you keep.
+4. Any specific accomplishments or milestones you'd like highlighted? Partner at two large regional accounting firms, prior to founding K&C. 
+5. Do you have a photo of him to use? Rick Sr.jpg
 
 ### Managing Partner (Richard Kruse)
-6. What is your professional background before K&C?
-7. Any specific certifications, memberships, or credentials to highlight?
-8. What industries or types of clients do you specialize in?
-9. Any community involvement or boards you serve on?
-10. Personal interests outside of work? (optional, for humanization)
-11. Do you have a professional headshot to use?
+6. What is your professional background before K&C? CPA, spent whole professional career post college at K&C. Partner since 2019.
+7. Any specific certifications, memberships, or credentials to highlight? CPA, CTP (certified tax planner)
+8. What industries or types of clients do you specialize in? Food and Beverage, Real Estate, Manufacturing, Technology, Healthcare, B2B Services, Life Sciences, High-Income Individuals
+9. Any community involvement or boards you serve on? Treasurer for Charlie's 3/4 House
+10. Personal interests outside of work? (optional, for humanization) Spend time with family, workout, golf, fishing
+11. Do you have a professional headshot to use? Headshot Rick Jr.png
 
 ### Firm History Timeline
-12. What year was the firm actually founded? (I used 2005)
-13. Any key milestones to add? Examples:
+12. What year was the firm actually founded? 2005
+13. Any key milestones to add? Examples: No I don't think so.  
     - First major client
     - Office moves
     - Technology adoptions
@@ -62,9 +62,9 @@ Please answer these questions to help fill in content gaps across the website. S
     - Notable achievements
 
 ### Team & Remote Staff
-14. How many total employees/team members?
-15. Which states/regions do remote team members work from?
-16. Any team culture points you'd like to highlight?
+14. How many total employees/team members? 8
+15. Which states/regions do remote team members work from? Texas, Georgia, New Jersey, Ohio, Illinois. 
+16. Any team culture points you'd like to highlight? No I don't think so.
 
 ---
 
@@ -81,22 +81,24 @@ Please answer these questions to help fill in content gaps across the website. S
     - Life Sciences
     - High-Income Individuals
 
-    Should any be removed, renamed, or reordered?
+    Should any be removed, renamed, or reordered?  No those are all good.  I also have specific industry pages for a couple of them.  www.foodandbevcfo.com and www.manufacturingcfo.com and youbuildwecount.com
 
-18. Do you have any real case studies or client success stories (anonymized) for each industry?
+Can you use the industry content from kruseandcrawford.com to fill in the gaps for the industries, and I can optimize later.  
+
+18. Do you have any real case studies or client success stories (anonymized) for each industry? I do not have any written out, but definitely can. I will come back to this.  So updated the new homework with instructions on the detailed case studies needed. 
 
 ### Real Estate & Construction
-19. What specific services do you emphasize? (cost segregation, 1031 exchanges, REPS status, etc.)
+19. What specific services do you emphasize? (cost segregation, 1031 exchanges, REPS status, etc.) Job costing, 
 20. Any specific savings examples or results?
 21. Common pain points you solve for these clients?
 
 ### Manufacturing
-22. What specific services matter most? (R&D credits, equipment depreciation, inventory accounting, etc.)
+22. What specific services matter most? (R&D credits, equipment depreciation, inventory accounting, etc.) Unit costing, 
 23. Any specific savings examples?
 24. Common pain points?
 
 ### Food & Beverage
-25. What specific services? (tip credits, inventory, multi-location accounting, etc.)
+25. What specific services? (tip credits, inventory, multi-location accounting, etc.) realtime food costing, 
 26. Any specific savings examples?
 27. Common pain points?
 
@@ -121,13 +123,13 @@ Please answer these questions to help fill in content gaps across the website. S
 39. Any specific savings examples?
 
 ### High-Income Individuals
-40. What income threshold defines this segment?
+40. What income threshold defines this segment? 400k
 41. What specific services? (personal tax strategy, estate planning, investments, etc.)
 42. Any specific savings examples?
 
 ---
 
-## Ebook Landing Pages
+## Ebook Landing Pages - DONT put the ebooks on the website yet.  I am going to create landing pages through GHL that feeds directly into the CRM to start the nurture process.
 
 ### Ebook 1: "The 8-Week Financial Clarity Blueprint"
 43. What are the actual chapter titles or sections?
@@ -149,6 +151,8 @@ Please answer these questions to help fill in content gaps across the website. S
 
 ## Careers Page
 
+FOR The careers page, I want to post job openings, and have a form to apply and send a resume. 
+
 55. What is your company culture like? Key values?
 56. What benefits do you offer? (remote work, flexible hours, health insurance, 401k, PTO, etc.)
 57. What does professional development look like?
@@ -162,24 +166,24 @@ Please answer these questions to help fill in content gaps across the website. S
 ## Insights/Blog
 
 62. What categories should blog posts fall into?
-    - Tax Tips
-    - Business Advisory
-    - Industry News
-    - Company Updates
-    - Other?
+    - Tax Tips Yes
+    - Business Advisory Yes
+    - Industry News Yes
+    - Company Updates Yes
+    - Other? No
 
-63. Do you have any existing blog posts or articles to migrate?
-64. Who will be writing content? (for author attribution)
-65. How often do you plan to publish?
+63. Do you have any existing blog posts or articles to migrate? yes, they are on kruseandcrawford.com
+64. Who will be writing content? (for author attribution) I will
+65. How often do you plan to publish? Weekly
 
 ---
 
 ## Contact & Forms
 
-66. Where should contact form submissions go? (email address, CRM, etc.)
-67. Do you use any scheduling tools? (Calendly, etc.)
-68. Should there be a phone number specifically for new inquiries?
-69. Any specific intake questions you need answered before first call?
+66. Where should contact form submissions go? (email address, CRM, etc.) Email and CRM.  
+67. Do you use any scheduling tools? (Calendly, etc.) YES, GHL Scheduler
+68. Should there be a phone number specifically for new inquiries? just the main number for now.
+69. Any specific intake questions you need answered before first call? Yeah.  I want them to Answer whether they are a business owner, Real Estate Investor, or W-2 Employee.  What their annual income is.  And then a box to add any info. 
 
 ---
 
@@ -197,7 +201,7 @@ Please provide or source these images:
 - [ ] "8-Week Financial Clarity Blueprint" cover mockup
 - [ ] "Tax Saving Secrets of the 1%" cover mockup
 
-### Industries (optional - can use stock photos)
+### Industries (optional - can use stock photos) Can you use the photos from kruseandcrawford.com?
 - [ ] Real Estate/Construction imagery
 - [ ] Manufacturing imagery
 - [ ] Food & Beverage imagery
@@ -224,22 +228,22 @@ Please provide or source these images:
     - Industries served: ___
 
 71. Any awards, certifications, or memberships to display?
-    - AICPA member?
-    - Ohio Society of CPAs?
-    - BBB accredited?
+    - AICPA member? Yes
+    - Ohio Society of CPAs? Yes
+    - BBB accredited? Yes
     - Other?
 
 72. Any media mentions or press coverage?
 
-73. Client testimonials available? (with permission to use)
+73. Client testimonials available? (with permission to use) Later
 
 ---
 
 ## Technical Integration
 
-74. What email service do you use for newsletters? (Mailchimp, ConvertKit, etc.)
-75. What CRM do you use? (HubSpot, Salesforce, etc.)
-76. Do you need Google Analytics or other tracking?
+74. What email service do you use for newsletters? (Mailchimp, ConvertKit, etc.) GHL
+75. What CRM do you use? (HubSpot, Salesforce, etc.) GHL
+76. Do you need Google Analytics or other tracking? GHL
 77. Any other integrations needed?
 
 ---

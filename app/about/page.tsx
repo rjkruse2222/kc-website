@@ -30,7 +30,7 @@ const timeline = [
   {
     year: 'Today',
     title: 'Coast to Coast',
-    description: 'A national firm with team members across the country, headquartered in Cincinnati, serving clients in all 50 states.'
+    description: 'A national firm with 8 team members across Ohio, Texas, Georgia, New Jersey, and Illinois, serving clients in all 50 states.'
   }
 ];
 
@@ -107,12 +107,13 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/5] bg-gradient-to-br from-[#003067] to-[#002050] rounded-2xl overflow-hidden shadow-2xl">
                 {/* Replace with actual photo */}
+                {/* TODO: Add Rick Sr.jpg here */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-white/60">
                     <svg className="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <p className="text-sm">Photo: Richard Kruse Sr.</p>
+                    <p className="text-sm">Add: Rick Sr.jpg</p>
                   </div>
                 </div>
               </div>
@@ -126,21 +127,21 @@ export default function AboutPage() {
               <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">In Memoriam</span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#003067] mt-4 mb-6">
                 Richard Kruse Sr.
-                <span className="block text-xl font-normal text-gray-500 mt-2">Founder (1952 - 2023)</span>
+                <span className="block text-xl font-normal text-gray-500 mt-2">Founder (1954 - 2023)</span>
               </h2>
 
               <div className="prose prose-lg text-gray-600">
                 <p className="mb-6">
-                  In 2005, Richard Kruse Sr. founded this firm with a simple belief: small business owners deserve the same caliber of financial guidance that large corporations receive. He saw too many entrepreneurs struggling with taxes and finances, not because they lacked intelligence, but because they lacked a trusted advisor in their corner.
+                  Before founding Kruse & Crawford in 2005, Rick Sr. served as a partner at two large regional accounting firms. But he saw something missing in public accounting: genuine, personal relationships with clients. He believed small business owners deserved the same caliber of financial guidance that large corporations receive.
                 </p>
                 <p className="mb-6">
-                  Rick Sr. was not your typical accountant. He sat at kitchen tables and in break rooms. He answered calls on weekends. He treated every client's business as if their success was his own responsibility. Because to him, it was.
+                  Rick Sr. was not your typical accountant. He spent countless hours with those in recovery, crediting Alcoholics Anonymous with saving his own life. As a sponsor for many years, he helped many others find sobriety. He brought that same dedication to service into his professional life, treating every client's success as his personal responsibility.
                 </p>
                 <p className="mb-6 italic border-l-4 border-[#9bd9e4] pl-6">
-                  "Focus on growing your business, let us be your trusted advisor."
+                  "It isn't how much you make, it is how much you keep."
                 </p>
                 <p>
-                  Those words were not a slogan to him. They were a promise. And they remain the foundation of everything we do today.
+                  Those words captured his philosophy perfectly. And they remain the foundation of everything we do today.
                 </p>
               </div>
             </div>
@@ -157,31 +158,34 @@ export default function AboutPage() {
               <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Leadership</span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#003067] mt-4 mb-6">
                 Richard Kruse
-                <span className="block text-xl font-normal text-gray-500 mt-2">Managing Partner, CPA</span>
+                <span className="block text-xl font-normal text-gray-500 mt-2">Managing Partner, CPA, CTP</span>
               </h2>
 
               <div className="prose prose-lg text-gray-600 mb-8">
                 <p className="mb-6">
-                  Rick grew up watching his father build relationships with clients. He learned that accounting is not about numbers on a spreadsheet. It is about the families, employees, and dreams those numbers represent.
+                  Rick grew up watching his father build relationships with clients. He learned that accounting is not about numbers on a spreadsheet. It is about the families, employees, and dreams those numbers represent. He has spent his entire professional career at K&C and became a partner in 2019.
                 </p>
                 <p className="mb-6">
-                  Today, as Managing Partner, Rick carries forward the firm's founding principles while bringing modern tools and strategies to serve clients better. He specializes in tax strategy for small to mid-market businesses, helping owners keep more of what they earn.
+                  Today, as Managing Partner, Rick carries forward the firm's founding principles while bringing modern tools and strategies to serve clients better. He specializes in tax strategy for small to mid-market businesses across Food & Beverage, Real Estate, Manufacturing, Technology, Healthcare, and other industries.
                 </p>
                 <p>
-                  When he is not helping clients save on taxes, Rick is active in the Cincinnati business community and enjoys spending time with his family.
+                  Rick serves as Treasurer for Charlie's 3/4 House and enjoys spending time with his family, working out, golf, and fishing.
                 </p>
               </div>
 
               {/* Credentials */}
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-[#003067]/10 text-[#003067] text-sm font-medium rounded-full">
-                  Certified Public Accountant
+                  Certified Public Accountant (CPA)
                 </span>
                 <span className="px-4 py-2 bg-[#003067]/10 text-[#003067] text-sm font-medium rounded-full">
-                  Tax Strategy
+                  Certified Tax Planner (CTP)
                 </span>
                 <span className="px-4 py-2 bg-[#003067]/10 text-[#003067] text-sm font-medium rounded-full">
-                  Business Advisory
+                  AICPA Member
+                </span>
+                <span className="px-4 py-2 bg-[#003067]/10 text-[#003067] text-sm font-medium rounded-full">
+                  Ohio Society of CPAs
                 </span>
               </div>
             </div>
@@ -189,13 +193,13 @@ export default function AboutPage() {
             {/* Photo placeholder - Right side */}
             <div className="relative order-1 lg:order-2">
               <div className="aspect-[4/5] bg-gradient-to-br from-[#9bd9e4]/30 to-[#003067]/20 rounded-2xl overflow-hidden shadow-2xl">
-                {/* Replace with actual photo */}
+                {/* TODO: Add Headshot Rick Jr.png here */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-[#003067]/40">
                     <svg className="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
-                    <p className="text-sm">Photo: Richard Kruse</p>
+                    <p className="text-sm">Add: Headshot Rick Jr.png</p>
                   </div>
                 </div>
               </div>

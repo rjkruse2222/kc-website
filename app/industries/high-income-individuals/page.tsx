@@ -47,7 +47,7 @@ export default function HighIncomeIndividualsPage() {
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 bg-[#9bd9e4]/20 text-[#9bd9e4] text-sm font-semibold tracking-wider uppercase rounded-full mb-6">High-Income Individuals</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">Earn More,<span className="block text-[#9bd9e4] mt-2">Keep More</span></h1>
-            <p className="text-xl text-white/80 leading-relaxed mb-10">High earners face the highest tax rates and the most complex tax situations. We help executives, entrepreneurs, and high-income professionals minimize taxes and protect wealth.</p>
+            <p className="text-xl text-white/80 leading-relaxed mb-10">Individuals earning $400,000 or more face the highest tax rates and the most complex tax situations. We help executives, entrepreneurs, and high-income professionals minimize taxes and protect wealth.</p>
             <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-[#9bd9e4] text-[#003067] font-semibold rounded-full hover:bg-white transition-colors">Discuss Your Situation<svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></Link>
           </div>
         </div>
