@@ -103,19 +103,16 @@ export default function AboutPage() {
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Photo placeholder */}
+            {/* Photo */}
             <div className="relative">
               <div className="aspect-[4/5] bg-gradient-to-br from-[#003067] to-[#002050] rounded-2xl overflow-hidden shadow-2xl">
-                {/* Replace with actual photo */}
-                {/* TODO: Add Rick Sr.jpg here */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-white/60">
-                    <svg className="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <p className="text-sm">Add: Rick Sr.jpg</p>
-                  </div>
-                </div>
+                <Image
+                  src="/images/rick-sr.jpg"
+                  alt="Richard Kruse Sr., Founder of Kruse & Crawford CPAs"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               {/* Decorative element */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#9bd9e4]/20 rounded-2xl -z-10" />
@@ -190,18 +187,16 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Photo placeholder - Right side */}
+            {/* Photo - Right side */}
             <div className="relative order-1 lg:order-2">
               <div className="aspect-[4/5] bg-gradient-to-br from-[#9bd9e4]/30 to-[#003067]/20 rounded-2xl overflow-hidden shadow-2xl">
-                {/* TODO: Add Headshot Rick Jr.png here */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center text-[#003067]/40">
-                    <svg className="w-24 h-24 mx-auto mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                    <p className="text-sm">Add: Headshot Rick Jr.png</p>
-                  </div>
-                </div>
+                <Image
+                  src="/images/headshot-rick-jr.png"
+                  alt="Richard Kruse, Managing Partner of Kruse & Crawford CPAs"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               {/* Decorative element */}
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-[#003067]/10 rounded-2xl -z-10" />
