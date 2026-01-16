@@ -6,7 +6,7 @@ import Link from 'next/link';
 const tiers = [
   {
     name: 'Essential',
-    tier: 'Good',
+    tier: 'Foundation',
     price: 'Custom',
     bestFor: 'Startups and small businesses needing reliable bookkeeping and financial clarity',
     included: [
@@ -19,11 +19,16 @@ const tiers = [
       'Bank Reconciliations',
       'Tax Preparation'
     ],
-    featured: false
+    featured: false,
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    )
   },
   {
     name: 'Growth',
-    tier: 'Better',
+    tier: 'Most Popular',
     price: 'Custom',
     bestFor: 'Growing businesses requiring deeper financial oversight and operational support',
     included: [
@@ -39,11 +44,16 @@ const tiers = [
       'Class Tracking and Reporting by Department or Region',
       'ERP Optimization'
     ],
-    featured: true
+    featured: true,
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    )
   },
   {
     name: 'Enterprise',
-    tier: 'Best',
+    tier: 'Full CFO',
     price: 'Custom',
     bestFor: 'Established businesses seeking full CFO-level strategic financial guidance',
     included: [
@@ -59,39 +69,65 @@ const tiers = [
       'Scenario and Strategy Planning',
       'Weekly Review Meetings'
     ],
-    featured: false
+    featured: false,
+    icon: (
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    )
   }
 ];
 
 const techStack = [
-  { name: 'QuickBooks Online', abbr: 'QBO' },
-  { name: 'Xero', abbr: 'Xero' },
-  { name: 'Gusto', abbr: 'Gusto' },
-  { name: 'Ramp', abbr: 'Ramp' },
-  { name: 'Bill.com', abbr: 'Bill.com' },
-  { name: 'Expensify', abbr: 'Expensify' }
+  { name: 'QuickBooks Online', color: 'bg-green-50 text-green-700 border-green-200' },
+  { name: 'Xero', color: 'bg-blue-50 text-blue-700 border-blue-200' },
+  { name: 'Gusto', color: 'bg-orange-50 text-orange-700 border-orange-200' },
+  { name: 'Ramp', color: 'bg-yellow-50 text-yellow-700 border-yellow-200' },
+  { name: 'Bill.com', color: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
+  { name: 'Expensify', color: 'bg-emerald-50 text-emerald-700 border-emerald-200' }
 ];
 
 const processSteps = [
   {
     step: '01',
     title: 'Discovery Call',
-    description: 'We learn about your business, current challenges, and goals to recommend the right tier.'
+    description: 'We learn about your business, current challenges, and goals to recommend the right tier.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+    )
   },
   {
     step: '02',
     title: 'Assessment',
-    description: 'We review your existing systems, processes, and financial data to create a transition plan.'
+    description: 'We review your existing systems, processes, and financial data to create a transition plan.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    )
   },
   {
     step: '03',
     title: 'Onboarding',
-    description: 'We set up your accounts, integrate your tools, and establish monthly rhythms.'
+    description: 'We set up your accounts, integrate your tools, and establish monthly rhythms.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    )
   },
   {
     step: '04',
     title: 'Ongoing Partnership',
-    description: 'Regular meetings, real-time reporting, and strategic guidance as your business grows.'
+    description: 'Regular meetings, real-time reporting, and strategic guidance as your business grows.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    )
   }
 ];
 
@@ -123,232 +159,358 @@ export default function ClientAccountingPage() {
   const [expandedTier, setExpandedTier] = useState<number | null>(null);
 
   return (
-    <main>
-      {/* Hero Section */}
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden bg-gradient-to-br from-[#003067] via-[#003067] to-[#002050]">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-[#9bd9e4]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#9bd9e4]/5 rounded-full blur-3xl" />
+    <main className="bg-[#fafafa]">
+      {/* Hero Section - Warm, inviting */}
+      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden bg-white">
+        {/* Soft decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-[700px] h-[700px] bg-[#9bd9e4]/15 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] bg-[#003067]/5 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#9bd9e4]/5 to-transparent rounded-full blur-3xl" />
+        </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-24">
           <Link
             href="/services"
-            className="inline-flex items-center text-white/70 hover:text-white mb-8 transition-colors"
+            className="inline-flex items-center text-[#003067]/60 hover:text-[#003067] mb-8 transition-colors group"
           >
-            <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Services
           </Link>
 
-          <div className="inline-block px-6 py-2 rounded-full bg-[#9bd9e4]/20 border border-white/20 mb-8">
-            <span className="text-[#9bd9e4] text-sm font-semibold uppercase tracking-wider">Client Accounting</span>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-[#9bd9e4]/20 rounded-full px-5 py-2.5 mb-8">
+                <div className="w-2 h-2 bg-[#9bd9e4] rounded-full animate-pulse" />
+                <span className="text-[#003067] text-sm font-semibold">Client Accounting Services</span>
+              </div>
+
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003067] leading-tight mb-6">
+                Accounting that
+                <span className="block text-[#9bd9e4] mt-2">scales with you.</span>
+              </h1>
+
+              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg">
+                From bookkeeping basics to full CFO services. Choose the level that fits your
+                business today and grow from there.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#pricing"
+                  className="group inline-flex items-center px-8 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-all duration-300 hover:shadow-lg"
+                >
+                  View Packages
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </a>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 border-2 border-[#003067] text-[#003067] font-semibold rounded-full hover:bg-[#003067] hover:text-white transition-all duration-300"
+                >
+                  Talk to Us
+                </Link>
+              </div>
+            </div>
+
+            {/* Visual element - tier preview cards */}
+            <div className="hidden lg:block relative">
+              <div className="relative">
+                {/* Stacked card preview */}
+                <div className="absolute top-8 left-8 w-full h-64 bg-gray-100 rounded-3xl transform rotate-3" />
+                <div className="absolute top-4 left-4 w-full h-64 bg-gray-200 rounded-3xl transform rotate-1" />
+                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-2xl bg-[#003067] flex items-center justify-center text-white">
+                      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-sm text-[#9bd9e4] font-semibold">Most Popular</div>
+                      <div className="text-2xl font-bold text-[#003067]">Growth Tier</div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    {['Full accounting department', 'Monthly financial reporting', 'Budget to actual analysis'].map((item, idx) => (
+                      <div key={idx} className="flex items-center gap-3">
+                        <svg className="w-5 h-5 text-[#9bd9e4]" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-gray-600">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-6 tracking-wide uppercase max-w-4xl">
-            Accounting That<br />
-            <span className="font-semibold">Scales With You</span>
-          </h1>
-
-          <p className="text-xl text-white/80 max-w-2xl leading-relaxed mb-10">
-            From bookkeeping basics to full CFO services. Choose the level that fits your
-            business today and grow from there.
-          </p>
-
-          <a
-            href="#pricing"
-            className="inline-flex items-center px-10 py-5 bg-[#9bd9e4] text-[#003067] font-semibold uppercase text-sm tracking-wide rounded-lg hover:bg-white transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            View Packages
-            <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </a>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#003067]/40">
+          <span className="text-xs tracking-wider uppercase">Explore packages</span>
+          <div className="w-px h-8 bg-gradient-to-b from-[#003067]/40 to-transparent animate-pulse" />
         </div>
       </section>
 
-      {/* Tier Overview */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="text-[#9bd9e4] text-xs font-semibold uppercase tracking-[4px] mb-4">Choose Your Level</div>
-            <h2 className="text-3xl md:text-4xl font-light text-[#003067] uppercase tracking-wide mb-6">
-              Three Tiers, One Goal:<br />
-              <span className="font-semibold">Your Financial Success</span>
+      {/* Tier Overview - Warm cards */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-20">
+            <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Choose Your Level</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">
+              Three tiers, one goal
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Every tier includes a dedicated team, monthly reporting, and direct access to CPAs.
               The difference is in the depth of services and strategic support.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <div className="text-center p-6 rounded-xl bg-gray-50">
-              <div className="text-4xl font-light text-[#003067] mb-2">Essential</div>
-              <div className="text-gray-500">Core bookkeeping &amp; compliance</div>
-            </div>
-            <div className="text-center p-6 rounded-xl bg-[#003067] text-white">
-              <div className="text-4xl font-light mb-2">Growth</div>
-              <div className="text-white/70">Full accounting department</div>
-            </div>
-            <div className="text-center p-6 rounded-xl bg-gray-50">
-              <div className="text-4xl font-light text-[#003067] mb-2">Enterprise</div>
-              <div className="text-gray-500">CFO-level strategic guidance</div>
-            </div>
+          {/* Quick tier comparison */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            {tiers.map((tier, idx) => (
+              <div
+                key={idx}
+                className={`group relative rounded-3xl p-8 transition-all duration-500 cursor-pointer ${
+                  tier.featured
+                    ? 'bg-gradient-to-br from-[#003067] to-[#004a8f] text-white shadow-xl'
+                    : 'bg-white hover:shadow-xl border border-gray-100'
+                }`}
+                onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+                  tier.featured ? 'bg-white/20' : 'bg-[#9bd9e4]/20'
+                }`}>
+                  <div className={tier.featured ? 'text-white' : 'text-[#003067]'}>
+                    {tier.icon}
+                  </div>
+                </div>
+                <div className={`text-sm font-semibold mb-2 ${tier.featured ? 'text-[#9bd9e4]' : 'text-[#9bd9e4]'}`}>
+                  {tier.tier}
+                </div>
+                <h3 className={`text-3xl font-bold mb-3 ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
+                  {tier.name}
+                </h3>
+                <p className={`text-sm leading-relaxed ${tier.featured ? 'text-white/80' : 'text-gray-600'}`}>
+                  {tier.bestFor}
+                </p>
+                <div className={`mt-6 flex items-center gap-2 text-sm font-semibold ${
+                  tier.featured ? 'text-[#9bd9e4]' : 'text-[#003067]'
+                }`}>
+                  View details
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Cards Section */}
-      <section id="pricing" className="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
+      {/* Pricing Cards Section - Detailed */}
+      <section id="pricing" className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-16">
+            <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Detailed Packages</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">
+              Everything included
+            </h2>
+          </div>
+
           <div className="grid lg:grid-cols-3 gap-8">
             {tiers.map((tier, idx) => (
               <div
                 key={idx}
-                className={`relative rounded-2xl p-8 transition-all duration-500 ${
+                className={`relative rounded-3xl overflow-hidden transition-all duration-500 ${
                   tier.featured
-                    ? 'bg-[#003067] text-white shadow-2xl lg:scale-105 lg:-my-4'
-                    : 'bg-white shadow-lg hover:shadow-xl'
+                    ? 'bg-gradient-to-br from-[#003067] to-[#004a8f] text-white shadow-2xl lg:scale-105 lg:-my-4'
+                    : 'bg-white shadow-lg hover:shadow-2xl border border-gray-100'
                 }`}
               >
+                {/* Top accent */}
+                <div className={`h-2 ${tier.featured ? 'bg-[#9bd9e4]' : 'bg-gradient-to-r from-[#003067] to-[#004a8f]'}`} />
+
                 {tier.featured && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#9bd9e4] text-[#003067] px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
-                    Most Popular
+                  <div className="absolute top-6 right-6">
+                    <div className="bg-[#9bd9e4] text-[#003067] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">
+                      Recommended
+                    </div>
                   </div>
                 )}
 
-                <div className="mb-8">
-                  <div className={`text-sm font-semibold uppercase tracking-wider mb-2 ${tier.featured ? 'text-[#9bd9e4]' : 'text-gray-500'}`}>
-                    {tier.tier}
+                <div className="p-8 md:p-10">
+                  <div className="mb-8">
+                    <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
+                      tier.featured ? 'bg-white/20' : 'bg-[#9bd9e4]/20'
+                    }`}>
+                      <div className={tier.featured ? 'text-white' : 'text-[#003067]'}>
+                        {tier.icon}
+                      </div>
+                    </div>
+
+                    <div className={`text-sm font-semibold uppercase tracking-wider mb-2 ${tier.featured ? 'text-[#9bd9e4]' : 'text-gray-500'}`}>
+                      {tier.tier}
+                    </div>
+                    <h3 className={`text-3xl font-bold mb-3 ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
+                      {tier.name}
+                    </h3>
+                    <div className="flex items-baseline mb-4">
+                      <span className={`text-4xl font-bold ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
+                        {tier.price}
+                      </span>
+                      <span className={`ml-2 ${tier.featured ? 'text-white/70' : 'text-gray-500'}`}>/month</span>
+                    </div>
+                    <p className={`text-sm leading-relaxed ${tier.featured ? 'text-white/80' : 'text-gray-600'}`}>
+                      {tier.bestFor}
+                    </p>
                   </div>
-                  <h3 className={`text-3xl font-semibold mb-3 ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
-                    {tier.name}
-                  </h3>
-                  <div className="flex items-baseline mb-4">
-                    <span className={`text-4xl font-bold ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
-                      {tier.price}
-                    </span>
-                    <span className={`ml-2 ${tier.featured ? 'text-white/70' : 'text-gray-500'}`}>/month</span>
+
+                  <div className="mb-8">
+                    <h4 className={`text-sm font-semibold mb-4 ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
+                      What&apos;s Included
+                    </h4>
+                    <ul className="space-y-3">
+                      {tier.included.slice(0, expandedTier === idx ? undefined : 6).map((item, itemIdx) => (
+                        <li key={itemIdx} className="flex items-start">
+                          <span className="text-[#9bd9e4] mr-3 mt-0.5 flex-shrink-0">
+                            {item.startsWith('Everything') ? (
+                              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                              </svg>
+                            ) : (
+                              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                              </svg>
+                            )}
+                          </span>
+                          <span className={`text-sm ${tier.featured ? 'text-white/90' : 'text-gray-700'} ${item.startsWith('Everything') ? 'font-semibold' : ''}`}>
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {tier.included.length > 6 && (
+                      <button
+                        onClick={() => setExpandedTier(expandedTier === idx ? null : idx)}
+                        className={`mt-4 text-sm font-medium ${tier.featured ? 'text-[#9bd9e4] hover:text-white' : 'text-[#003067] hover:text-[#9bd9e4]'} transition-colors`}
+                      >
+                        {expandedTier === idx ? 'Show less' : `+ ${tier.included.length - 6} more services`}
+                      </button>
+                    )}
                   </div>
-                  <p className={`text-sm ${tier.featured ? 'text-white/80' : 'text-gray-600'}`}>
-                    {tier.bestFor}
-                  </p>
+
+                  <Link
+                    href="/contact"
+                    className={`block text-center px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
+                      tier.featured
+                        ? 'bg-[#9bd9e4] text-[#003067] hover:bg-white hover:shadow-xl'
+                        : 'bg-[#003067] text-white hover:bg-[#9bd9e4] hover:text-[#003067] hover:shadow-xl'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
                 </div>
-
-                <div className="mb-8">
-                  <h4 className={`text-sm font-semibold mb-4 ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
-                    What&apos;s Included
-                  </h4>
-                  <ul className="space-y-3">
-                    {tier.included.slice(0, expandedTier === idx ? undefined : 6).map((item, itemIdx) => (
-                      <li key={itemIdx} className="flex items-start">
-                        <span className="text-[#9bd9e4] mr-3 mt-0.5 flex-shrink-0">
-                          {item.startsWith('Everything') ? (
-                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                            </svg>
-                          ) : (
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                          )}
-                        </span>
-                        <span className={`text-sm ${tier.featured ? 'text-white/90' : 'text-gray-700'} ${item.startsWith('Everything') ? 'font-semibold' : ''}`}>
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {tier.included.length > 6 && (
-                    <button
-                      onClick={() => setExpandedTier(expandedTier === idx ? null : idx)}
-                      className={`mt-4 text-sm font-medium ${tier.featured ? 'text-[#9bd9e4] hover:text-white' : 'text-[#003067] hover:text-[#9bd9e4]'} transition-colors`}
-                    >
-                      {expandedTier === idx ? 'Show less' : `+ ${tier.included.length - 6} more services`}
-                    </button>
-                  )}
-                </div>
-
-                <a
-                  href={`mailto:info@kruseandcrawford.com?subject=Client%20Accounting%20Inquiry%20-%20${tier.name}`}
-                  className={`block text-center px-8 py-4 rounded-lg font-semibold uppercase text-sm tracking-wide transition-all duration-300 ${
-                    tier.featured
-                      ? 'bg-[#9bd9e4] text-[#003067] hover:bg-white hover:shadow-xl'
-                      : 'bg-[#003067] text-white hover:bg-[#004a8f] hover:shadow-xl'
-                  }`}
-                >
-                  Get Started
-                </a>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 text-center text-sm text-gray-500">
-            <p>*Month-end Close includes bank, credit, and balance sheet reconciliations</p>
-            <p>*Financial Statement Preparation includes balance sheet, P&amp;L, statement of cash flow, and budget variance reporting</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="text-[#9bd9e4] text-xs font-semibold uppercase tracking-[4px] mb-4">Integrations</div>
-            <h2 className="text-3xl md:text-4xl font-light text-[#003067] uppercase tracking-wide mb-6">
-              We Work With Your Tools
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Seamless integration with the platforms you already use.
+          <div className="mt-12 text-center">
+            <p className="text-sm text-gray-500 leading-relaxed">
+              *Month-end Close includes bank, credit, and balance sheet reconciliations<br />
+              *Financial Statement Preparation includes balance sheet, P&amp;L, statement of cash flow, and budget variance reporting
             </p>
           </div>
+        </div>
+      </section>
 
-          <div className="flex flex-wrap justify-center gap-6">
-            {techStack.map((tech, idx) => (
-              <div
-                key={idx}
-                className="px-8 py-4 bg-gray-50 rounded-xl border-2 border-transparent hover:border-[#003067] hover:bg-white transition-all duration-300"
-              >
-                <span className="text-lg font-semibold text-[#003067]">{tech.name}</span>
-              </div>
-            ))}
+      {/* Tech Stack Section - Colorful pills */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="bg-white rounded-3xl p-12 md:p-16 shadow-lg border border-gray-100">
+            <div className="text-center mb-12">
+              <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Integrations</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#003067] mt-4 mb-4">
+                We work with your tools
+              </h2>
+              <p className="text-gray-600 max-w-xl mx-auto">
+                Seamless integration with the platforms you already use.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {techStack.map((tech, idx) => (
+                <div
+                  key={idx}
+                  className={`px-6 py-3 rounded-full border-2 font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-md ${tech.color}`}
+                >
+                  {tech.name}
+                </div>
+              ))}
+            </div>
+
+            <p className="text-center text-sm text-gray-500 mt-8">
+              ...and many more. We adapt to your existing tech stack.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="text-[#9bd9e4] text-xs font-semibold uppercase tracking-[4px] mb-4">How It Works</div>
-            <h2 className="text-3xl md:text-4xl font-light text-[#003067] uppercase tracking-wide">
-              Getting Started Is Easy
+      {/* Process Section - Modern timeline */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="text-center mb-20">
+            <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">How It Works</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">
+              Getting started is easy
             </h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              From first call to ongoing partnership, we make the transition smooth.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="relative">
+              <div key={idx} className="relative group">
+                {/* Connector line */}
                 {idx < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-[#9bd9e4] to-transparent -translate-x-4" />
+                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#9bd9e4] to-[#9bd9e4]/20 -translate-x-4 z-0" />
                 )}
-                <div className="text-6xl font-light text-[#9bd9e4]/30 mb-4">{step.step}</div>
-                <h3 className="text-xl font-semibold text-[#003067] mb-3">{step.title}</h3>
-                <p className="text-gray-600">{step.description}</p>
+
+                <div className="relative z-10 bg-[#fafafa] rounded-3xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
+                  {/* Step number */}
+                  <div className="absolute -top-4 -left-2 text-7xl font-bold text-[#9bd9e4]/20 select-none pointer-events-none">
+                    {step.step}
+                  </div>
+
+                  <div className="relative">
+                    <div className="w-14 h-14 rounded-2xl bg-[#003067] flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                      {step.icon}
+                    </div>
+
+                    <h3 className="text-xl font-bold text-[#003067] mb-3">{step.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* FAQ Section - Soft accordions */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
-            <div className="text-[#9bd9e4] text-xs font-semibold uppercase tracking-[4px] mb-4">FAQ</div>
-            <h2 className="text-3xl md:text-4xl font-light text-[#003067] uppercase tracking-wide">
-              Common Questions
+            <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">FAQ</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">
+              Common questions
             </h2>
           </div>
 
@@ -356,21 +518,27 @@ export default function ClientAccountingPage() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-gray-50 rounded-xl overflow-hidden"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-100 transition-colors"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                 >
                   <span className="text-lg font-semibold text-[#003067] pr-8">{faq.question}</span>
-                  <svg
-                    className={`w-6 h-6 text-[#9bd9e4] flex-shrink-0 transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+                    openFaq === idx ? 'bg-[#003067]' : 'bg-[#9bd9e4]/20'
+                  }`}>
+                    <svg
+                      className={`w-5 h-5 transition-all duration-300 ${
+                        openFaq === idx ? 'text-white rotate-180' : 'text-[#003067]'
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
                 </button>
 
                 <div className={`overflow-hidden transition-all duration-300 ${openFaq === idx ? 'max-h-96' : 'max-h-0'}`}>
@@ -384,28 +552,34 @@ export default function ClientAccountingPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-[#003067] via-[#003067] to-[#002050] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#9bd9e4]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#9bd9e4]/5 rounded-full blur-3xl" />
+      {/* CTA Section - Warm and inviting */}
+      <section className="py-24 md:py-32">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="bg-gradient-to-br from-[#003067] to-[#004a8f] rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+            {/* Soft decorative shapes */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#9bd9e4]/10 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#9bd9e4]/5 rounded-full blur-2xl" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
 
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-light text-white uppercase tracking-wide mb-6">
-            Find Your Perfect Fit
-          </h2>
-          <p className="text-xl text-white/80 mb-10">
-            Not sure which tier is right for you? Let&apos;s talk. We&apos;ll recommend the best
-            starting point based on your business needs and growth plans.
-          </p>
-          <a
-            href="mailto:info@kruseandcrawford.com?subject=Client%20Accounting%20Consultation"
-            className="inline-flex items-center px-10 py-5 bg-[#9bd9e4] text-[#003067] font-semibold uppercase text-sm tracking-wide rounded-lg hover:bg-white transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Schedule a Consultation
-            <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+            <div className="relative">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Find your perfect fit.
+              </h2>
+              <p className="text-white/80 text-lg max-w-xl mx-auto mb-10">
+                Not sure which tier is right for you? Let&apos;s talk. We&apos;ll recommend the best
+                starting point based on your business needs and growth plans.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-[#9bd9e4] text-[#003067] font-bold rounded-full hover:bg-white transition-colors shadow-lg hover:shadow-xl"
+              >
+                Schedule a Consultation
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
