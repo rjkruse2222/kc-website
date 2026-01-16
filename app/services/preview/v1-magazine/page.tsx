@@ -19,12 +19,19 @@ export default function ServicesPageV1() {
         .animate-fade-up { animation: fade-up 0.8s ease-out forwards; }
       `}</style>
 
-      {/* Hero - Clean Light Background */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-white via-gray-50 to-[#9bd9e4]/10">
-        {/* Subtle decorative elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#9bd9e4]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#003067]/5 rounded-full blur-3xl" />
+      {/* Hero - Light Background with Faded Ken Burns Photo */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Ken Burns Photo - Faded */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 animate-ken-burns">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80"
+              alt="Professional team collaboration"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Light overlay to fade the photo */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/85 to-[#9bd9e4]/20" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
