@@ -247,7 +247,7 @@ export default function CareersPage() {
                     <p className="text-gray-600 text-sm">{position.description}</p>
                   </div>
                   <Link
-                    href="/contact"
+                    href="/careers/apply"
                     className="inline-flex items-center px-6 py-3 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#002050] transition-colors whitespace-nowrap"
                   >
                     Apply Now
@@ -265,7 +265,7 @@ export default function CareersPage() {
               Don't see a position that fits? We're always interested in talented people.
             </p>
             <Link
-              href="/contact"
+              href="/careers/apply"
               className="inline-flex items-center text-[#003067] font-semibold hover:text-[#9bd9e4] transition-colors"
             >
               Send us your resume
@@ -287,10 +287,10 @@ export default function CareersPage() {
             We're looking for people who care about doing great work and want flexibility in how they do it.
           </p>
           <Link
-            href="/contact"
+            href="/careers/apply"
             className="inline-flex items-center px-10 py-5 bg-[#9bd9e4] text-[#003067] font-bold rounded-full hover:bg-white transition-colors"
           >
-            Start the Conversation
+            Apply Now
             <svg className="w-5 h-5 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
