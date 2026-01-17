@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -1011,8 +1009,16 @@ const additionalArticles: Record<string, typeof articles[string]> = {
 // Merge all articles
 const allArticles = { ...articles, ...additionalArticles };
 
-export default function ArticlePage({ params }: { params: { slug: string } }) {
-  const article = allArticles[params.slug];
+// Generate static params for all articles
+export async function generateStaticParams() {
+  return Object.keys(allArticles).map((slug) => ({
+    slug,
+  }));
+}
+
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = allArticles[slug];
 
   if (!article) {
     notFound();
@@ -1107,12 +1113,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           <h2 className="text-2xl font-bold text-[#003067] mb-8">Related Articles</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {Object.entries(allArticles)
-              .filter(([slug]) => slug !== params.slug)
+              .filter(([articleSlug]) => articleSlug !== slug)
               .slice(0, 3)
-              .map(([slug, relatedArticle]) => (
+              .map(([relatedSlug, relatedArticle]) => (
                 <Link
-                  key={slug}
-                  href={`/insights/${slug}`}
+                  key={relatedSlug}
+                  href={`/insights/${relatedSlug}`}
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <div className={`h-32 bg-gradient-to-br ${relatedArticle.color}`} />
