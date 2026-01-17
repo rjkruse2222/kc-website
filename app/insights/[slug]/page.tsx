@@ -1065,15 +1065,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       {/* Article Content */}
       <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-8">
-          <article className="prose prose-lg max-w-none prose-headings:text-[#003067] prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#003067] prose-a:text-[#003067] prose-a:no-underline hover:prose-a:underline">
-            <style jsx>{`
-              .lead {
-                font-size: 1.25rem;
-                color: #4a5568;
-                line-height: 1.8;
-                margin-bottom: 2rem;
-              }
-            `}</style>
+          <article className="prose prose-lg max-w-none prose-headings:text-[#003067] prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#003067] prose-a:text-[#003067] prose-a:no-underline hover:prose-a:underline [&_.lead]:text-xl [&_.lead]:text-gray-600 [&_.lead]:leading-relaxed [&_.lead]:mb-8">
             {article.content}
           </article>
         </div>
