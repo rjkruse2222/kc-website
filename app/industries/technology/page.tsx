@@ -5,33 +5,35 @@ import Link from 'next/link';
 import NewsletterSection from '../../components/NewsletterSection';
 
 const challenges = [
-  { title: 'R&D Credit Complexity', description: 'Technology companies often miss qualified research activities because they assume only formal R&D departments qualify.' },
-  { title: 'Stock Compensation', description: 'ISOs, NSOs, and RSUs each have different tax implications that can cost employees and companies thousands if mishandled.' },
-  { title: 'Revenue Recognition', description: 'SaaS and subscription models create complex revenue recognition issues that affect both GAAP and tax reporting.' },
-  { title: 'Multi-State Nexus', description: 'Remote employees and digital sales create nexus in multiple states, triggering filing obligations many tech companies overlook.' }
+  { title: 'Revenue Recognition Complexity', description: 'ASC 606 creates real challenges for SaaS, especially with implementation services, usage-based pricing, and multi-element arrangements.' },
+  { title: 'Burn Rate Management', description: 'Running at a loss while building toward scale requires precise cash forecasting and runway management.' },
+  { title: 'Investor and Board Reporting', description: 'VCs and boards expect specific metrics: MRR, ARR, churn, CAC, LTV. General accountants don\'t speak this language.' },
+  { title: 'Equity Compensation', description: 'Stock options, restricted stock, and other equity instruments create accounting and tax complexity.' },
+  { title: 'Rapid Change', description: 'Business models evolve quickly. Your financial systems need to keep pace.' }
 ];
 
-const solutions = [
-  { title: 'R&D Tax Credit Studies', description: 'Identify qualifying activities including software development, cloud infrastructure improvements, and algorithm development.', savings: 'Up to 10% of qualified expenses', highlight: true },
-  { title: 'Stock Option Planning', description: 'Optimize timing of exercises, elections, and sales to minimize tax burden for founders, executives, and employees.', savings: 'Reduce tax on equity gains' },
-  { title: 'SaaS Revenue Strategy', description: 'Implement proper revenue recognition under ASC 606 and optimize tax timing for subscription-based businesses.', savings: 'Improve cash flow timing' },
-  { title: 'Entity Structuring', description: 'Design optimal corporate structure for fundraising, IP protection, and eventual exit strategy.', savings: 'Maximize exit proceeds' },
-  { title: 'State Tax Optimization', description: 'Manage multi-state nexus, optimize apportionment, and leverage state-specific tech incentives.', savings: 'Reduce effective state tax rate' },
-  { title: 'Qualified Small Business Stock', description: 'Structure investments to qualify for QSBS exclusion, potentially eliminating capital gains on exit.', savings: 'Up to 100% gain exclusion' }
+const cfoServices = [
+  'SaaS metrics dashboard: MRR, ARR, churn, expansion revenue, NRR',
+  'Revenue recognition systems compliant with ASC 606',
+  'Burn rate tracking and runway forecasting',
+  'Board reporting packages with the metrics investors expect',
+  'Financial modeling for fundraising and strategic planning',
+  '409A valuations and cap table management support'
 ];
 
-const caseStudy = {
-  title: 'SaaS Company Captures $215K in R&D Credits',
-  description: 'A growing SaaS company assumed their development work did not qualify for R&D credits because they were not creating "new technology." After our analysis, we identified qualifying activities across product development, infrastructure improvements, and data engineering. We also amended prior returns to capture missed credits.',
-  savings: '$215,000',
-  strategy: 'R&D Credits + Amended Returns'
-};
+const taxStrategies = [
+  'R&D tax credits, including the payroll tax election for pre-revenue companies',
+  'State tax nexus analysis and planning',
+  'Stock option planning (ISOs vs. NSOs, 83(b) elections)',
+  'Entity structure for founder tax efficiency',
+  'M&A and exit planning from a tax perspective'
+];
 
 const faqs = [
-  { question: 'Does software development qualify for R&D credits?', answer: 'Yes, many software development activities qualify for R&D credits. This includes developing new applications, improving existing software, building internal tools, creating algorithms, and optimizing cloud infrastructure. The key is demonstrating technological uncertainty and a process of experimentation.' },
-  { question: 'When should I exercise my stock options?', answer: 'The optimal timing depends on many factors including current stock value, expected growth, your tax bracket, AMT implications, and liquidity needs. ISOs have different rules than NSOs. We analyze your specific situation to recommend the best strategy for your equity compensation.' },
-  { question: 'What is QSBS and how can it help me?', answer: 'Qualified Small Business Stock (QSBS) allows founders and early investors to exclude up to 100% of capital gains when selling C-corporation stock held for more than 5 years. Proper structuring from the start is essential to qualify. The potential tax savings can be substantial on a successful exit.' },
-  { question: 'How do I handle sales tax for SaaS products?', answer: 'SaaS taxability varies significantly by state. Some states tax SaaS as tangible personal property, others exempt it, and some have specific digital services taxes. We help you determine where you have nexus, what is taxable, and how to properly collect and remit sales tax.' }
+  { question: 'Can startups really use R&D credits against payroll taxes?', answer: 'Yes. Qualified small businesses (under $5M revenue, less than 5 years old) can elect to apply up to $500,000 of R&D credits annually against payroll taxes instead of income taxes. This provides real cash value even when you\'re pre-profit.' },
+  { question: 'What SaaS metrics do investors expect to see?', answer: 'At minimum: MRR, ARR, gross and net churn, expansion revenue, CAC, LTV, and LTV:CAC ratio. More sophisticated investors also want to see NRR (Net Revenue Retention), magic number, and burn multiple. We build dashboards that track all of these.' },
+  { question: 'How do you handle ASC 606 for SaaS?', answer: 'We establish revenue recognition policies that comply with ASC 606 while being practical to implement. This includes handling implementation fees, usage-based components, and contract modifications correctly. Getting this wrong creates audit issues and restatement risk.' },
+  { question: 'What is a 409A valuation and when do I need one?', answer: 'A 409A valuation determines the fair market value of your common stock for purposes of issuing stock options. You need one before granting options and should update it annually or after material events like funding rounds. We coordinate with valuation firms and integrate results into your equity management.' }
 ];
 
 export default function TechnologyPage() {
@@ -47,17 +49,17 @@ export default function TechnologyPage() {
         .animate-ken-burns { animation: ken-burns 20s ease-out forwards; }
       `}</style>
 
-      {/* Hero Section - Ken Burns Photo */}
+      {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 animate-ken-burns">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80" alt="Technology circuit board" className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80" alt="Technology" className="w-full h-full object-cover" />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#003067]/95 via-[#003067]/80 to-[#003067]/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
-          <Link href="/industries" className="inline-flex items-center gap-2 text-white/60 hover:text-violet-300 mb-8 transition-colors group">
+          <Link href="/industries" className="inline-flex items-center gap-2 text-white/60 hover:text-cyan-300 mb-8 transition-colors group">
             <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -65,22 +67,22 @@ export default function TechnologyPage() {
           </Link>
 
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-violet-500/20 backdrop-blur-sm rounded-full mb-8 border border-violet-500/30">
-              <div className="w-2.5 h-2.5 bg-violet-400 rounded-full animate-pulse" />
-              <span className="text-violet-300 text-sm font-semibold tracking-wider uppercase">Technology</span>
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-cyan-500/20 backdrop-blur-sm rounded-full mb-8 border border-cyan-400/30">
+              <div className="w-2.5 h-2.5 bg-cyan-400 rounded-full animate-pulse" />
+              <span className="text-cyan-300 text-sm font-semibold tracking-wider uppercase">Technology</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8">
-              Scale Smart,
-              <span className="block text-violet-400 mt-2">Tax Smarter</span>
+              Financial Infrastructure
+              <span className="block text-cyan-400 mt-2">for Scale</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl">
-              From R&D credits to stock option planning, tech companies have unique tax opportunities at every stage of growth. We help you capture credits, optimize equity compensation, and plan for the exit.
+              SaaS metrics, revenue recognition, and growth-stage financial leadership for technology companies building toward profitability or exit.
             </p>
 
-            <Link href="/contact" className="group inline-flex items-center gap-3 px-8 py-4 bg-violet-500 text-white font-bold rounded-full hover:bg-violet-400 transition-all duration-300 shadow-lg">
-              Discuss Your Business
+            <Link href="/contact" className="group inline-flex items-center gap-3 px-8 py-4 bg-cyan-500 text-white font-bold rounded-full hover:bg-cyan-400 transition-all duration-300 shadow-lg">
+              Discuss Your Metrics & Growth
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -89,19 +91,21 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      {/* Challenges Section with Photo */}
+      {/* Challenges Section */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-violet-500 font-semibold tracking-wider text-sm uppercase">Industry Challenges</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">What Tech Companies Face</h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">Technology has unique tax complexities that require specialized knowledge.</p>
+              <span className="text-cyan-500 font-semibold tracking-wider text-sm uppercase">Industry Challenges</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">Tech Finance Is Different</h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Technology companies operate on different economics than traditional businesses. The metrics that matter, the accounting complexities, and the stakeholder expectations all require specialized understanding.
+              </p>
 
               <div className="space-y-4">
                 {challenges.map((c, idx) => (
-                  <div key={idx} className="flex gap-4 p-4 bg-gray-50 rounded-xl hover:bg-violet-50 transition-colors">
-                    <div className="w-2 h-2 bg-violet-500 rounded-full mt-2 flex-shrink-0" />
+                  <div key={idx} className="flex gap-4 p-4 bg-gray-50 rounded-xl hover:bg-cyan-50 transition-colors">
+                    <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-[#003067] mb-1">{c.title}</h4>
                       <p className="text-gray-600 text-sm">{c.description}</p>
@@ -112,61 +116,87 @@ export default function TechnologyPage() {
             </div>
 
             <div className="relative">
-              <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80" alt="Developer coding" className="rounded-3xl shadow-2xl w-full" />
-              <div className="absolute -bottom-6 -left-6 bg-violet-600 text-white p-6 rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold">10%</div>
-                <div className="text-sm opacity-90">R&D Credit Potential</div>
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Tech dashboard" className="rounded-3xl shadow-2xl w-full" />
+              <div className="absolute -bottom-6 -left-6 bg-cyan-500 text-white p-6 rounded-2xl shadow-xl">
+                <div className="text-3xl font-bold">$500K</div>
+                <div className="text-sm opacity-90">R&D Credit Payroll Offset</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Our Approach Section */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-violet-500 font-semibold tracking-wider text-sm uppercase">Our Solutions</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">How We Help Tech Companies</h2>
+            <span className="text-cyan-500 font-semibold tracking-wider text-sm uppercase">Our Approach</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">Financial Leadership for Growth Stage</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((s, idx) => (
-              <div key={idx} className={`group bg-white rounded-3xl p-8 border transition-all duration-300 hover:shadow-xl ${s.highlight ? 'border-violet-200 shadow-lg lg:col-span-2' : 'border-gray-100 hover:border-violet-200'}`}>
-                {s.highlight && <div className="inline-block px-3 py-1 bg-violet-100 text-violet-700 text-xs font-semibold rounded-full mb-4">Most Popular</div>}
-                <h3 className="text-xl font-bold text-[#003067] mb-3">{s.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{s.description}</p>
-                <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
-                  <div className="w-2 h-2 bg-violet-500 rounded-full" />
-                  <span className="text-violet-600 font-semibold text-sm">{s.savings}</span>
-                </div>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* CFO Services */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-lg">
+              <div className="inline-block px-3 py-1 bg-[#003067] text-white text-xs font-semibold rounded-full mb-4">Primary Service</div>
+              <h3 className="text-2xl font-bold text-[#003067] mb-4">Outsourced Controller & CFO Services</h3>
+              <p className="text-gray-600 mb-6">We provide the financial function that growth-stage tech companies need:</p>
+              <ul className="space-y-3">
+                {cfoServices.map((service, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Tax Strategy */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-lg">
+              <div className="inline-block px-3 py-1 bg-cyan-500 text-white text-xs font-semibold rounded-full mb-4">Tax Strategy</div>
+              <h3 className="text-2xl font-bold text-[#003067] mb-4">Tax Strategy for Technology</h3>
+              <p className="text-gray-600 mb-6">With proper financial infrastructure, we optimize your tax position:</p>
+              <ul className="space-y-3">
+                {taxStrategies.map((strategy, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">{strategy}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Case Study with Photo Background */}
+      {/* Key Stats Section */}
       <section className="py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1920&q=80" alt="Tech workspace" className="w-full h-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80" alt="Tech" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-[#003067]/90" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8">
-          <div className="max-w-3xl">
-            <span className="text-violet-400 font-semibold tracking-wider text-sm uppercase">Case Study</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">{caseStudy.title}</h2>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">{caseStudy.description}</p>
-            <div className="flex flex-wrap gap-8">
-              <div>
-                <div className="text-4xl font-bold text-violet-400 mb-1">{caseStudy.savings}</div>
-                <div className="text-white/60 text-sm">Total Credits Captured</div>
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-white mb-1">{caseStudy.strategy}</div>
-                <div className="text-white/60 text-sm">Strategy Used</div>
-              </div>
+          <div className="text-center mb-16">
+            <span className="text-cyan-400 font-semibold tracking-wider text-sm uppercase">By The Numbers</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">Key Statistics</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">$500K</div>
+              <div className="text-white/80">Annual R&D credit payroll tax offset for startups</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">ASC 606</div>
+              <div className="text-white/80">Still creating audit issues 6+ years after implementation</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-cyan-400 mb-2">EGS</div>
+              <div className="text-white/80">Efficient Growth Score tracked by leading SaaS CFOs</div>
             </div>
           </div>
         </div>
@@ -176,17 +206,17 @@ export default function TechnologyPage() {
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-3xl mx-auto px-8">
           <div className="text-center mb-16">
-            <span className="text-violet-500 font-semibold tracking-wider text-sm uppercase">FAQ</span>
+            <span className="text-cyan-500 font-semibold tracking-wider text-sm uppercase">FAQ</span>
             <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4">Common Questions</h2>
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-violet-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-violet-200 transition-colors">
-                <button onClick={() => setOpenFaq(openFaq === idx ? null : idx)} className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-violet-100/50 transition-colors">
+              <div key={idx} className="bg-cyan-50 rounded-2xl overflow-hidden border border-gray-100 hover:border-cyan-200 transition-colors">
+                <button onClick={() => setOpenFaq(openFaq === idx ? null : idx)} className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-cyan-100/50 transition-colors">
                   <span className="font-semibold text-[#003067] pr-8">{faq.question}</span>
-                  <div className={`w-8 h-8 rounded-full bg-violet-200 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openFaq === idx ? 'bg-violet-500 rotate-180' : ''}`}>
-                    <svg className={`w-4 h-4 transition-colors ${openFaq === idx ? 'text-white' : 'text-violet-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className={`w-8 h-8 rounded-full bg-cyan-200 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${openFaq === idx ? 'bg-cyan-500 rotate-180' : ''}`}>
+                    <svg className={`w-4 h-4 transition-colors ${openFaq === idx ? 'text-white' : 'text-cyan-600'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </div>
@@ -209,12 +239,12 @@ export default function TechnologyPage() {
           <div className="relative rounded-3xl overflow-hidden">
             <div className="absolute inset-0">
               <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&q=80" alt="Technology" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-violet-700/90" />
+              <div className="absolute inset-0 bg-cyan-600/90" />
             </div>
             <div className="relative p-12 md:p-16 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Optimize Your Tech Company Taxes?</h2>
-              <p className="text-white/90 text-lg max-w-xl mx-auto mb-10">Schedule a consultation to discover R&D credits and tax strategies you may be missing.</p>
-              <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-violet-600 font-bold rounded-full hover:bg-violet-50 transition-all duration-300">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Discuss Your Metrics & Growth Plan</h2>
+              <p className="text-white/90 text-lg max-w-xl mx-auto mb-10">Schedule a consultation to review your financial infrastructure and growth trajectory.</p>
+              <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-cyan-600 font-bold rounded-full hover:bg-[#003067] hover:text-white transition-all duration-300">
                 Schedule Consultation
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

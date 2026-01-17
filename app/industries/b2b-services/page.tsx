@@ -5,33 +5,35 @@ import Link from 'next/link';
 import NewsletterSection from '../../components/NewsletterSection';
 
 const challenges = [
-  { title: 'Entity Selection', description: 'Choosing between LLC, S-Corp, and C-Corp has major implications for taxation, owner compensation, and eventual exit.' },
-  { title: 'Partner Compensation', description: 'Balancing guaranteed payments, distributions, and profits interests creates complexity and potential disputes.' },
-  { title: 'Project-Based Revenue', description: 'Recognizing revenue across long-term projects while managing tax timing requires careful planning.' },
-  { title: 'Scaling Tax Efficiently', description: 'Growing from solo practitioner to multi-partner firm requires restructuring to remain tax-efficient.' }
+  { title: 'Utilization and Capacity', description: 'Your inventory is people\'s time. Understanding utilization rates, capacity, and pricing to maximize revenue per hour is essential.' },
+  { title: 'Project Profitability', description: 'Which clients and projects actually make money? Many firms don\'t know until they build proper project accounting systems.' },
+  { title: 'Cash Flow Timing', description: 'Milestone billing, retainers, and delayed payments create cash flow patterns that require active management.' },
+  { title: 'Partner Compensation', description: 'Allocating profit among partners fairly while motivating performance requires clear financial data and agreed methodologies.' },
+  { title: 'Scaling Challenges', description: 'Adding headcount requires capital before new revenue materializes. Growing too fast can break cash flow.' }
 ];
 
-const solutions = [
-  { title: 'Entity Structuring', description: 'Design the optimal legal structure for tax efficiency, liability protection, and growth flexibility.', savings: 'Reduce self-employment tax', highlight: true },
-  { title: 'Partner Compensation Planning', description: 'Structure partner draws, guaranteed payments, and profit allocations for tax efficiency and fairness.', savings: 'Align incentives with taxes' },
-  { title: 'Revenue Recognition', description: 'Implement accounting methods that optimize cash flow while properly recognizing project-based revenue.', savings: 'Improve tax timing' },
-  { title: 'Retirement Plan Design', description: 'Design retirement plans that work for partners with different income levels and contribution preferences.', savings: 'Maximize tax-deferred savings' },
-  { title: 'Deferred Compensation', description: 'Structure non-qualified deferred compensation to shift income to lower-tax years.', savings: 'Defer and reduce taxes' },
-  { title: 'Exit Planning', description: 'Plan for partner buy-outs, firm sales, and succession with tax-efficient structures.', savings: 'Maximize exit proceeds' }
+const cfoServices = [
+  'Project accounting with profitability by client, project, and team member',
+  'Utilization tracking and capacity planning',
+  'Revenue recognition compliant with project-based requirements',
+  'Cash flow forecasting accounting for billing cycles',
+  'Partner reporting and allocation calculations',
+  'KPI dashboards: revenue per employee, realization rates, backlog'
 ];
 
-const caseStudy = {
-  title: 'Consulting Firm Restructures, Saves $73K',
-  description: 'A 5-partner consulting firm was structured as a general partnership, exposing partners to maximum self-employment tax. We restructured as an S-Corporation with appropriate partner compensation, implemented a profit-sharing retirement plan, and established a deferred compensation arrangement for senior partners.',
-  savings: '$73,000',
-  strategy: 'S-Corp Election + Retirement Plan'
-};
+const taxStrategies = [
+  'Entity structure optimization for pass-through taxation',
+  'Reasonable compensation planning for S-Corp owners',
+  'State tax nexus analysis for remote work and multi-state clients',
+  'Retirement plan design for maximum owner contributions',
+  'Qualified Business Income deduction optimization'
+];
 
 const faqs = [
   { question: 'When should I convert to an S-Corporation?', answer: 'Generally when your net earnings from self-employment exceed $60,000-$80,000 annually. At that point, the S-Corp structure allows you to pay yourself a reasonable salary and take additional profits as distributions not subject to self-employment tax. We analyze your specific numbers to determine the optimal timing.' },
   { question: 'How should partners be compensated?', answer: 'Partner compensation can include guaranteed payments, profit allocations, and distributions. The optimal mix depends on partner contribution levels, tax situations, and firm cash flow needs. We design structures that balance tax efficiency with fairness and operational needs.' },
-  { question: 'What retirement plan works best for partnerships?', answer: 'It depends on the partners\' ages, income levels, and preferences. Options include SEP-IRAs, SIMPLE IRAs, 401(k) plans with profit sharing, and defined benefit plans. For firms with income disparity between partners, certain designs work better than others.' },
-  { question: 'How do I plan for a partner buy-out?', answer: 'Start planning years in advance. Structure the firm\'s operating agreement to address buy-out mechanics, valuation methods, and payment terms. Consider whether Section 736(b) payments or installment sales provide better tax treatment for both parties.' }
+  { question: 'What retirement plan works best for professional service firms?', answer: 'It depends on partner ages, income levels, and preferences. Options include SEP-IRAs, SIMPLE IRAs, 401(k) plans with profit sharing, and defined benefit plans. For firms with income disparity between partners, certain designs work better than others.' },
+  { question: 'How do I improve project profitability?', answer: 'Start with accurate time tracking and project accounting. Once you can see which clients and projects are profitable, you can adjust pricing, scope management, and staffing. Many firms discover that their biggest clients are actually their least profitable.' }
 ];
 
 export default function B2BServicesPage() {
@@ -47,7 +49,7 @@ export default function B2BServicesPage() {
         .animate-ken-burns { animation: ken-burns 20s ease-out forwards; }
       `}</style>
 
-      {/* Hero Section - Ken Burns Photo */}
+      {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 animate-ken-burns">
@@ -71,16 +73,16 @@ export default function B2BServicesPage() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8">
-              Serve Clients,
-              <span className="block text-blue-400 mt-2">Serve Yourself</span>
+              Financial Clarity
+              <span className="block text-blue-400 mt-2">for Service-Based Growth</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl">
-              Professional service firms face unique challenges from partner compensation to retirement planning. We help consulting firms, agencies, and B2B service providers optimize their tax position.
+              Project accounting, utilization tracking, and strategic financial leadership for consultants, agencies, and professional service firms.
             </p>
 
             <Link href="/contact" className="group inline-flex items-center gap-3 px-8 py-4 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-400 transition-all duration-300 shadow-lg">
-              Discuss Your Firm
+              Analyze Your Project Profitability
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -89,14 +91,16 @@ export default function B2BServicesPage() {
         </div>
       </section>
 
-      {/* Challenges Section with Photo */}
+      {/* Challenges Section */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-blue-500 font-semibold tracking-wider text-sm uppercase">Industry Challenges</span>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">What Service Firms Face</h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-8">Professional services have unique tax complexities that require specialized knowledge.</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">Service Businesses Have Hidden Complexity</h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                Professional service firms look simple on the surface but have distinct financial challenges.
+              </p>
 
               <div className="space-y-4">
                 {challenges.map((c, idx) => (
@@ -114,39 +118,61 @@ export default function B2BServicesPage() {
             <div className="relative">
               <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&q=80" alt="Team collaboration" className="rounded-3xl shadow-2xl w-full" />
               <div className="absolute -bottom-6 -left-6 bg-blue-600 text-white p-6 rounded-2xl shadow-xl">
-                <div className="text-3xl font-bold">15%+</div>
-                <div className="text-sm opacity-90">SE Tax Savings Potential</div>
+                <div className="text-3xl font-bold">15.3%</div>
+                <div className="text-sm opacity-90">S-Corp SE Tax Savings</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Our Approach Section */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-blue-500 font-semibold tracking-wider text-sm uppercase">Our Solutions</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">How We Help Service Firms</h2>
+            <span className="text-blue-500 font-semibold tracking-wider text-sm uppercase">Our Approach</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#003067] mt-4 mb-6">Financial Infrastructure for Professional Services</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((s, idx) => (
-              <div key={idx} className={`group bg-white rounded-3xl p-8 border transition-all duration-300 hover:shadow-xl ${s.highlight ? 'border-blue-200 shadow-lg lg:col-span-2' : 'border-gray-100 hover:border-blue-200'}`}>
-                {s.highlight && <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full mb-4">Most Popular</div>}
-                <h3 className="text-xl font-bold text-[#003067] mb-3">{s.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{s.description}</p>
-                <div className="flex items-center gap-2 pt-4 border-t border-gray-100">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full" />
-                  <span className="text-blue-600 font-semibold text-sm">{s.savings}</span>
-                </div>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* CFO Services */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-lg">
+              <div className="inline-block px-3 py-1 bg-[#003067] text-white text-xs font-semibold rounded-full mb-4">Primary Service</div>
+              <h3 className="text-2xl font-bold text-[#003067] mb-4">Outsourced Controller & CFO Services</h3>
+              <p className="text-gray-600 mb-6">We provide the financial systems that service businesses need to scale:</p>
+              <ul className="space-y-3">
+                {cfoServices.map((service, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Tax Strategy */}
+            <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-lg">
+              <div className="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full mb-4">Tax Strategy</div>
+              <h3 className="text-2xl font-bold text-[#003067] mb-4">Tax Strategy for Professional Services</h3>
+              <p className="text-gray-600 mb-6">With accurate financial data, we optimize your tax position:</p>
+              <ul className="space-y-3">
+                {taxStrategies.map((strategy, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <svg className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-gray-700">{strategy}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Case Study with Photo Background */}
+      {/* Key Stats Section */}
       <section className="py-24 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80" alt="Team strategy session" className="w-full h-full object-cover" />
@@ -154,19 +180,23 @@ export default function B2BServicesPage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-8">
-          <div className="max-w-3xl">
-            <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">Case Study</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6">{caseStudy.title}</h2>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">{caseStudy.description}</p>
-            <div className="flex flex-wrap gap-8">
-              <div>
-                <div className="text-4xl font-bold text-blue-400 mb-1">{caseStudy.savings}</div>
-                <div className="text-white/60 text-sm">Annual Tax Savings</div>
-              </div>
-              <div>
-                <div className="text-lg font-semibold text-white mb-1">{caseStudy.strategy}</div>
-                <div className="text-white/60 text-sm">Strategy Used</div>
-              </div>
+          <div className="text-center mb-16">
+            <span className="text-blue-400 font-semibold tracking-wider text-sm uppercase">By The Numbers</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">Key Statistics</h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">Rev/FTE</div>
+              <div className="text-white/80">Key metric for service firm valuation</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">15.3%</div>
+              <div className="text-white/80">S-Corp SE tax savings on distributions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-400 mb-2">20%</div>
+              <div className="text-white/80">QBI deduction for qualifying income</div>
             </div>
           </div>
         </div>
@@ -209,12 +239,12 @@ export default function B2BServicesPage() {
           <div className="relative rounded-3xl overflow-hidden">
             <div className="absolute inset-0">
               <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=1920&q=80" alt="Business" className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-blue-700/90" />
+              <div className="absolute inset-0 bg-blue-600/90" />
             </div>
             <div className="relative p-12 md:p-16 text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Optimize Your Firm's Taxes?</h2>
-              <p className="text-white/90 text-lg max-w-xl mx-auto mb-10">Schedule a consultation to discover entity structures and strategies designed for professional service firms.</p>
-              <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-600 font-bold rounded-full hover:bg-blue-50 transition-all duration-300">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Let's Analyze Your Project Profitability</h2>
+              <p className="text-white/90 text-lg max-w-xl mx-auto mb-10">Schedule a consultation to build financial systems that help your service firm scale.</p>
+              <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-blue-600 font-bold rounded-full hover:bg-[#003067] hover:text-white transition-all duration-300">
                 Schedule Consultation
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
