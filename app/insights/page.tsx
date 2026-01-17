@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const categories = [
   { name: 'All', slug: 'all' },
@@ -18,7 +19,8 @@ const featuredArticle = {
   date: 'January 8, 2025',
   readTime: '12 min read',
   slug: 'rd-tax-credits-guide-2025',
-  color: 'from-violet-500 to-purple-600'
+  color: 'from-violet-500 to-purple-600',
+  image: '/images/blog-rd-tax-credits.jpg'
 };
 
 const articles = [
@@ -29,7 +31,8 @@ const articles = [
     date: 'January 5, 2025',
     readTime: '8 min read',
     slug: 's-corporation-conversion',
-    color: 'from-blue-500 to-blue-600'
+    color: 'from-blue-500 to-blue-600',
+    image: '/images/blog-s-corp-conversion.jpg'
   },
   {
     title: 'Building a 13-Week Cash Flow Forecast',
@@ -38,7 +41,8 @@ const articles = [
     date: 'December 28, 2024',
     readTime: '10 min read',
     slug: 'cash-flow-forecast-guide',
-    color: 'from-emerald-500 to-teal-600'
+    color: 'from-emerald-500 to-teal-600',
+    image: '/images/blog-cash-flow-forecast.jpg'
   },
   {
     title: 'Cost Segregation: Is It Right for Your Property?',
@@ -47,7 +51,8 @@ const articles = [
     date: 'December 20, 2024',
     readTime: '7 min read',
     slug: 'cost-segregation-guide',
-    color: 'from-amber-500 to-orange-600'
+    color: 'from-amber-500 to-orange-600',
+    image: '/images/blog-cost-segregation.jpg'
   },
   {
     title: 'Year-End Tax Planning Checklist',
@@ -56,7 +61,8 @@ const articles = [
     date: 'December 15, 2024',
     readTime: '6 min read',
     slug: 'year-end-tax-planning',
-    color: 'from-rose-500 to-pink-600'
+    color: 'from-rose-500 to-pink-600',
+    image: '/images/blog-year-end-tax.jpg'
   },
   {
     title: 'Understanding Your Financial Statements',
@@ -65,7 +71,8 @@ const articles = [
     date: 'December 10, 2024',
     readTime: '9 min read',
     slug: 'understanding-financial-statements',
-    color: 'from-cyan-500 to-blue-600'
+    color: 'from-cyan-500 to-blue-600',
+    image: '/images/blog-financial-statements.jpg'
   },
   {
     title: 'Hiring Your First CFO vs. Outsourced CFO Services',
@@ -74,7 +81,8 @@ const articles = [
     date: 'December 5, 2024',
     readTime: '7 min read',
     slug: 'cfo-hiring-decision',
-    color: 'from-indigo-500 to-violet-600'
+    color: 'from-indigo-500 to-violet-600',
+    image: '/images/blog-cfo-decision.jpg'
   }
 ];
 
@@ -176,14 +184,15 @@ export default function InsightsPage() {
             className="group block relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100"
           >
             <div className="grid lg:grid-cols-2">
-              {/* Image/Gradient Side */}
-              <div className={`relative aspect-video lg:aspect-auto lg:min-h-[400px] bg-gradient-to-br ${featuredArticle.color} overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/10" />
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white/20 text-9xl font-bold">R&D</div>
-                </div>
+              {/* Image Side */}
+              <div className="relative aspect-video lg:aspect-auto lg:min-h-[400px] overflow-hidden">
+                <Image
+                  src={featuredArticle.image}
+                  alt={featuredArticle.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${featuredArticle.color} opacity-20`} />
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/30">
                     Featured
@@ -238,10 +247,15 @@ export default function InsightsPage() {
                 href={`/insights/${article.slug}`}
                 className="group relative bg-[#fafafa] rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-gray-200"
               >
-                {/* Gradient Header */}
-                <div className={`relative h-48 bg-gradient-to-br ${article.color} overflow-hidden`}>
-                  <div className="absolute inset-0 bg-black/10" />
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl" />
+                {/* Image Header */}
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={article.image}
+                    alt={article.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${article.color} opacity-20`} />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1.5 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-white/30">
                       {article.category}
