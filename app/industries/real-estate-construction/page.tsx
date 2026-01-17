@@ -71,7 +71,7 @@ export default function RealEstateConstructionPage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-amber-500/20 backdrop-blur-sm rounded-full mb-8 border border-amber-500/30">
               <div className="w-2.5 h-2.5 bg-amber-400 rounded-full animate-pulse" />
-              <span className="text-amber-300 text-sm font-semibold tracking-wider uppercase">Real Estate & Construction</span>
+              <span className="text-amber-300 text-sm font-semibold tracking-wider uppercase">Real Estate, Construction & Trades</span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8">
@@ -80,7 +80,7 @@ export default function RealEstateConstructionPage() {
             </h1>
 
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl">
-              We know how fast-paced the real estate and construction industries are. From cost segregation to 1031 exchanges, we help investors and developers maximize every deduction.
+              We know how fast-paced the real estate, construction, and trades industries are. From cost segregation to 1031 exchanges, we help investors and developers maximize every deduction.
             </p>
 
             <Link href="/contact" className="group inline-flex items-center gap-3 px-8 py-4 bg-amber-500 text-[#003067] font-bold rounded-full hover:bg-amber-400 transition-all duration-300 shadow-lg">

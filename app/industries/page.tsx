@@ -5,9 +5,9 @@ import { useState } from 'react';
 
 const industries = [
   {
-    name: 'Real Estate & Construction',
+    name: 'Real Estate, Construction & Trades',
     slug: 'real-estate-construction',
-    tagline: 'We know how fast-paced the real estate and construction industries are.',
+    tagline: 'We know how fast-paced the real estate, construction, and trades industries are.',
     description: 'Cost segregation, 1031 exchanges, REPS status optimization, and project-based accounting.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
     color: '#f59e0b',
