@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 // Article data
@@ -1027,10 +1028,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <main className="bg-[#fafafa]">
       {/* Hero Section */}
-      <section className={`relative min-h-[50vh] flex items-end bg-gradient-to-br ${article.color} overflow-hidden`}>
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-2xl" />
+      <section className="relative min-h-[50vh] flex items-end overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src={article.image}
+          alt={article.title}
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Gradient Overlay */}
+        <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent`} />
+        <div className={`absolute inset-0 bg-gradient-to-br ${article.color} opacity-40`} />
 
         <div className="relative z-10 max-w-4xl mx-auto px-8 py-16 w-full">
           <Link
@@ -1113,7 +1122,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   href={`/insights/${relatedSlug}`}
                   className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  <div className={`h-32 bg-gradient-to-br ${relatedArticle.color}`} />
+                  <div className="relative h-40 overflow-hidden">
+                    <Image
+                      src={relatedArticle.image}
+                      alt={relatedArticle.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${relatedArticle.color} opacity-30`} />
+                  </div>
                   <div className="p-6">
                     <span className="text-xs font-semibold text-[#9bd9e4] uppercase tracking-wide">
                       {relatedArticle.category}
