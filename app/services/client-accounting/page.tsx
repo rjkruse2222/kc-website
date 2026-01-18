@@ -269,11 +269,11 @@ export default function ClientAccountingPage() {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
             {tiers.map((tier, idx) => (
               <div
                 key={idx}
-                className={`relative rounded-3xl overflow-hidden transition-all duration-500 ${
+                className={`relative rounded-3xl overflow-hidden transition-all duration-500 flex flex-col ${
                   tier.featured
                     ? 'bg-gradient-to-br from-[#003067] to-[#004a8f] text-white shadow-2xl lg:scale-105 lg:-my-4'
                     : 'bg-white shadow-lg hover:shadow-2xl border border-gray-100'
@@ -290,7 +290,7 @@ export default function ClientAccountingPage() {
                   </div>
                 )}
 
-                <div className="p-8 md:p-10">
+                <div className="p-8 md:p-10 flex flex-col flex-grow">
                   <div className="mb-8">
                     <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
                       tier.featured ? 'bg-white/20' : 'bg-[#9bd9e4]/20'
@@ -317,7 +317,7 @@ export default function ClientAccountingPage() {
                     </p>
                   </div>
 
-                  <div className="mb-8">
+                  <div className="mb-8 flex-grow">
                     <h4 className={`text-sm font-semibold mb-4 ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
                       What&apos;s Included
                     </h4>
@@ -345,7 +345,7 @@ export default function ClientAccountingPage() {
 
                   <Link
                     href="/contact"
-                    className={`block text-center px-8 py-4 rounded-full font-semibold transition-all duration-300 ${
+                    className={`block text-center px-8 py-4 rounded-full font-semibold transition-all duration-300 mt-auto ${
                       tier.featured
                         ? 'bg-[#9bd9e4] text-[#003067] hover:bg-white hover:shadow-xl'
                         : 'bg-[#003067] text-white hover:bg-[#9bd9e4] hover:text-[#003067] hover:shadow-xl'
