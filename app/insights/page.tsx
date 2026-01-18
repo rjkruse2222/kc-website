@@ -67,41 +67,35 @@ export default function InsightsPage() {
   return (
     <main className="bg-[#fafafa]">
       <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
+        @keyframes kenburns {
+          0% { transform: scale(1); }
+          100% { transform: scale(1.1); }
         }
-        @keyframes float-slow {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(3deg); }
+        .animate-kenburns {
+          animation: kenburns 20s ease-out forwards;
         }
-        .animate-float { animation: float 5s ease-in-out infinite; }
-        .animate-float-delayed { animation: float 5s ease-in-out infinite; animation-delay: -2.5s; }
-        .animate-float-slow { animation: float-slow 7s ease-in-out infinite; }
       `}</style>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center bg-gradient-to-br from-[#003067] via-[#003067] to-[#002050] overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 right-[10%] w-72 h-72 bg-[#9bd9e4]/20 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-20 left-[5%] w-96 h-96 bg-[#9bd9e4]/10 rounded-full blur-3xl animate-float-delayed" />
-
-          {/* Decorative elements */}
-          <div className="absolute top-[20%] right-[12%] w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/20 animate-float">
-            <svg className="w-8 h-8 text-[#9bd9e4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-          </div>
-          <div className="absolute bottom-[30%] right-[25%] w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center backdrop-blur-sm border border-white/20 animate-float-slow">
-            <svg className="w-6 h-6 text-white/60" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-            </svg>
-          </div>
+      {/* Hero Section with Ken Burns */}
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+        {/* Background Image with Ken Burns */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/tax-strategy-hero.jpg"
+            alt="Insights and Resources"
+            fill
+            className="object-cover animate-kenburns"
+            priority
+          />
         </div>
+
+        {/* Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#003067]/95 via-[#003067]/80 to-[#003067]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#003067]/50 to-transparent" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 rounded-full mb-8 border border-white/20">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-white/10 rounded-full mb-8 border border-white/20 backdrop-blur-sm">
               <div className="w-2.5 h-2.5 bg-[#9bd9e4] rounded-full animate-pulse" />
               <span className="text-[#9bd9e4] text-sm font-semibold tracking-wider uppercase">Insights & Resources</span>
             </div>
@@ -343,16 +337,16 @@ export default function InsightsPage() {
                 key={idx}
                 className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100"
               >
-                {/* Gradient Header */}
-                <div className={`relative h-48 bg-gradient-to-br ${ebook.color} flex items-center justify-center p-8`}>
-                  <div className="absolute inset-0 bg-black/10" />
-                  <div className="relative text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 backdrop-blur-sm border border-white/30">
-                      <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                      </svg>
-                    </div>
-                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold rounded-full border border-white/30">
+                {/* Ebook Cover Image */}
+                <div className="relative aspect-[3/4] max-h-[400px] overflow-hidden bg-gray-100">
+                  <Image
+                    src={ebook.image}
+                    alt={ebook.title}
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className={`px-3 py-1.5 bg-gradient-to-r ${ebook.color} text-white text-xs font-semibold rounded-full shadow-lg`}>
                       {ebook.category}
                     </span>
                   </div>
