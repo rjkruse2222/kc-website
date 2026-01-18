@@ -19,7 +19,7 @@ const ebooks = [
     title: 'The 8-Week Financial Clarity Blueprint',
     description: 'A step-by-step guide to transforming your financial operations and gaining complete visibility into your business performance.',
     category: 'Accounting & Strategy',
-    image: '/images/ebook-financial-clarity.jpg',
+    image: '/images/8-Week Financial Cover.jpg',
     downloadUrl: '#', // Replace with actual download link
     color: 'from-[#003067] to-[#004a8f]'
   },
@@ -27,7 +27,7 @@ const ebooks = [
     title: 'Tax Saving Secrets of the 1%',
     description: 'Discover the legitimate tax strategies that high-net-worth individuals and successful business owners use to minimize their tax burden.',
     category: 'Tax Strategy',
-    image: '/images/ebook-tax-secrets.jpg',
+    image: '/images/Tax Savings Secrets Cover.jpg',
     downloadUrl: '#', // Replace with actual download link
     color: 'from-emerald-600 to-teal-700'
   }
