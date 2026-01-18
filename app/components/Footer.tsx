@@ -32,11 +32,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/team" className="text-sm hover:text-[#003067] transition-colors">
-                  Team
-                </a>
-              </li>
-              <li>
                 <a href="/careers" className="text-sm hover:text-[#003067] transition-colors">
                   Careers
                 </a>
@@ -89,11 +84,16 @@ export default function Footer() {
               Connect
             </h3>
             <ul className="space-y-2 mb-6">
-              <li className="text-sm">
-                105 E 4th St, Suite 1200
-              </li>
-              <li className="text-sm">
-                Cincinnati, OH 45202
+              <li>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=105+E+4th+St+Longworth+Hall+Cincinnati+OH+45202"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-[#003067] transition-colors"
+                >
+                  105 E 4th St, Longworth Hall<br />
+                  Cincinnati, OH 45202
+                </a>
               </li>
               <li className="text-sm mt-3">
                 <a href="tel:+15132722200" className="hover:text-[#003067] transition-colors">
