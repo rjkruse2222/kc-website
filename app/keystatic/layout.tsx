@@ -1,8 +1,4 @@
-import { KeystaticApp } from '@keystatic/next/ui/app';
+import { makeLayout } from '@keystatic/next/ui/app';
 import config from '../../keystatic.config';
 
-export default function Layout() {
-  return (
-    <KeystaticApp config={config} />
-  );
-}
+export default makeLayout(config);
