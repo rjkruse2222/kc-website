@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import NewsletterSection from '../../components/NewsletterSection';
 
 const tiers = [
   {
     name: 'Essential',
     tier: 'Foundation',
-    price: 'Custom',
+    price: 'Starting at $500',
     bestFor: 'Startups and small businesses needing reliable bookkeeping and financial clarity',
     included: [
       'Automated Bookkeeping',
@@ -29,7 +30,7 @@ const tiers = [
   {
     name: 'Growth',
     tier: 'Most Popular',
-    price: 'Custom',
+    price: 'Starting at $1,500',
     bestFor: 'Growing businesses requiring deeper financial oversight and operational support',
     included: [
       'Everything in Essential, plus:',
@@ -54,7 +55,7 @@ const tiers = [
   {
     name: 'Enterprise',
     tier: 'Full CFO',
-    price: 'Custom',
+    price: 'Starting at $3,500',
     bestFor: 'Established businesses seeking full CFO-level strategic financial guidance',
     included: [
       'Everything in Growth, plus:',
@@ -78,56 +79,30 @@ const tiers = [
   }
 ];
 
-const techStack = [
-  { name: 'QuickBooks Online', color: 'bg-green-50 text-green-700 border-green-200' },
-  { name: 'Xero', color: 'bg-blue-50 text-blue-700 border-blue-200' },
-  { name: 'Gusto', color: 'bg-orange-50 text-orange-700 border-orange-200' },
-  { name: 'Ramp', color: 'bg-yellow-50 text-yellow-700 border-yellow-200' },
-  { name: 'Bill.com', color: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
-  { name: 'Expensify', color: 'bg-emerald-50 text-emerald-700 border-emerald-200' }
-];
-
 const processSteps = [
   {
     step: '01',
     title: 'Discovery Call',
     description: 'We learn about your business, current challenges, and goals to recommend the right tier.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-      </svg>
-    )
+    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80'
   },
   {
     step: '02',
     title: 'Assessment',
     description: 'We review your existing systems, processes, and financial data to create a transition plan.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    )
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80'
   },
   {
     step: '03',
     title: 'Onboarding',
     description: 'We set up your accounts, integrate your tools, and establish monthly rhythms.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    )
+    image: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80'
   },
   {
     step: '04',
     title: 'Ongoing Partnership',
     description: 'Regular meetings, real-time reporting, and strategic guidance as your business grows.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    )
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80'
   }
 ];
 
@@ -156,108 +131,79 @@ const faqs = [
 
 export default function ClientAccountingPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [expandedTier, setExpandedTier] = useState<number | null>(null);
 
   return (
     <main className="bg-[#fafafa]">
-      {/* Hero Section - Warm, inviting */}
-      <section className="relative min-h-[600px] md:min-h-[700px] flex items-center overflow-hidden bg-white">
-        {/* Soft decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-[700px] h-[700px] bg-[#9bd9e4]/15 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 -left-20 w-[500px] h-[500px] bg-[#003067]/5 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-[#9bd9e4]/5 to-transparent rounded-full blur-3xl" />
+      <style jsx>{`
+        @keyframes ken-burns {
+          0% { transform: scale(1); }
+          100% { transform: scale(1.1); }
+        }
+        .animate-ken-burns { animation: ken-burns 20s ease-out forwards; }
+      `}</style>
+
+      {/* Hero Section - Ken Burns with blue overlay */}
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 animate-ken-burns">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
+              alt="Financial planning and accounting"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#003067]/95 via-[#003067]/85 to-[#003067]/70" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-8 py-24">
+        <div className="relative z-10 max-w-7xl mx-auto px-8 py-20 w-full">
           <Link
             href="/services"
-            className="inline-flex items-center text-[#003067]/60 hover:text-[#003067] mb-8 transition-colors group"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-[#9bd9e4] mb-8 transition-colors group"
           >
-            <svg className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Services
+            <span>All Services</span>
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-[#9bd9e4]/20 rounded-full px-5 py-2.5 mb-8">
-                <div className="w-2 h-2 bg-[#9bd9e4] rounded-full animate-pulse" />
-                <span className="text-[#003067] text-sm font-semibold">Client Accounting Services</span>
-              </div>
-
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003067] leading-tight mb-6">
-                Accounting that
-                <span className="block text-[#9bd9e4] mt-2">scales with you.</span>
-              </h1>
-
-              <p className="text-xl text-gray-600 leading-relaxed mb-10 max-w-lg">
-                From bookkeeping basics to full CFO services. Choose the level that fits your
-                business today and grow from there.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <a
-                  href="#pricing"
-                  className="group inline-flex items-center px-8 py-4 bg-[#003067] text-white font-semibold rounded-full hover:bg-[#9bd9e4] hover:text-[#003067] transition-all duration-300 hover:shadow-lg"
-                >
-                  View Packages
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-8 py-4 border-2 border-[#003067] text-[#003067] font-semibold rounded-full hover:bg-[#003067] hover:text-white transition-all duration-300"
-                >
-                  Talk to Us
-                </Link>
-              </div>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 bg-[#9bd9e4]/20 backdrop-blur-sm rounded-full mb-8 border border-[#9bd9e4]/30">
+              <div className="w-2.5 h-2.5 bg-[#9bd9e4] rounded-full animate-pulse" />
+              <span className="text-[#9bd9e4] text-sm font-semibold tracking-wider uppercase">Client Accounting Services</span>
             </div>
 
-            {/* Visual element - tier preview cards */}
-            <div className="hidden lg:block relative">
-              <div className="relative">
-                {/* Stacked card preview */}
-                <div className="absolute top-8 left-8 w-full h-64 bg-gray-100 rounded-3xl transform rotate-3" />
-                <div className="absolute top-4 left-4 w-full h-64 bg-gray-200 rounded-3xl transform rotate-1" />
-                <div className="relative bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 rounded-2xl bg-[#003067] flex items-center justify-center text-white">
-                      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <div className="text-sm text-[#9bd9e4] font-semibold">Most Popular</div>
-                      <div className="text-2xl font-bold text-[#003067]">Growth Tier</div>
-                    </div>
-                  </div>
-                  <div className="space-y-3">
-                    {['Full accounting department', 'Monthly financial reporting', 'Budget to actual analysis'].map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-3">
-                        <svg className="w-5 h-5 text-[#9bd9e4]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-gray-600">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] mb-8">
+              Accounting that
+              <span className="block text-[#9bd9e4] mt-2">scales with you.</span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl">
+              From bookkeeping basics to full CFO services. Choose the level that fits your
+              business today and grow from there.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#pricing"
+                className="group inline-flex items-center gap-3 px-8 py-4 bg-[#9bd9e4] text-[#003067] font-bold rounded-full hover:bg-white transition-all duration-300 shadow-lg"
+              >
+                View Packages
+                <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </a>
+              <Link
+                href="/contact"
+                className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+              >
+                Talk to Us
+              </Link>
             </div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#003067]/40">
-          <span className="text-xs tracking-wider uppercase">Explore packages</span>
-          <div className="w-px h-8 bg-gradient-to-b from-[#003067]/40 to-transparent animate-pulse" />
-        </div>
       </section>
 
-      {/* Tier Overview - Warm cards */}
+      {/* Tier Overview - Quick comparison */}
       <section className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-20">
@@ -313,7 +259,7 @@ export default function ClientAccountingPage() {
         </div>
       </section>
 
-      {/* Pricing Cards Section - Detailed */}
+      {/* Pricing Cards Section - Detailed (no expand/collapse) */}
       <section id="pricing" className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-16">
@@ -361,7 +307,7 @@ export default function ClientAccountingPage() {
                       {tier.name}
                     </h3>
                     <div className="flex items-baseline mb-4">
-                      <span className={`text-4xl font-bold ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
+                      <span className={`text-2xl font-bold ${tier.featured ? 'text-white' : 'text-[#003067]'}`}>
                         {tier.price}
                       </span>
                       <span className={`ml-2 ${tier.featured ? 'text-white/70' : 'text-gray-500'}`}>/month</span>
@@ -376,7 +322,7 @@ export default function ClientAccountingPage() {
                       What&apos;s Included
                     </h4>
                     <ul className="space-y-3">
-                      {tier.included.slice(0, expandedTier === idx ? undefined : 6).map((item, itemIdx) => (
+                      {tier.included.map((item, itemIdx) => (
                         <li key={itemIdx} className="flex items-start">
                           <span className="text-[#9bd9e4] mr-3 mt-0.5 flex-shrink-0">
                             {item.startsWith('Everything') ? (
@@ -395,15 +341,6 @@ export default function ClientAccountingPage() {
                         </li>
                       ))}
                     </ul>
-
-                    {tier.included.length > 6 && (
-                      <button
-                        onClick={() => setExpandedTier(expandedTier === idx ? null : idx)}
-                        className={`mt-4 text-sm font-medium ${tier.featured ? 'text-[#9bd9e4] hover:text-white' : 'text-[#003067] hover:text-[#9bd9e4]'} transition-colors`}
-                      >
-                        {expandedTier === idx ? 'Show less' : `+ ${tier.included.length - 6} more services`}
-                      </button>
-                    )}
                   </div>
 
                   <Link
@@ -430,40 +367,8 @@ export default function ClientAccountingPage() {
         </div>
       </section>
 
-      {/* Tech Stack Section - Colorful pills */}
+      {/* Process Section - With images */}
       <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="bg-white rounded-3xl p-12 md:p-16 shadow-lg border border-gray-100">
-            <div className="text-center mb-12">
-              <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">Integrations</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#003067] mt-4 mb-4">
-                We work with your tools
-              </h2>
-              <p className="text-gray-600 max-w-xl mx-auto">
-                Seamless integration with the platforms you already use.
-              </p>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {techStack.map((tech, idx) => (
-                <div
-                  key={idx}
-                  className={`px-6 py-3 rounded-full border-2 font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-md ${tech.color}`}
-                >
-                  {tech.name}
-                </div>
-              ))}
-            </div>
-
-            <p className="text-center text-sm text-gray-500 mt-8">
-              ...and many more. We adapt to your existing tech stack.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section - Modern timeline */}
-      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-8">
           <div className="text-center mb-20">
             <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">How It Works</span>
@@ -480,22 +385,26 @@ export default function ClientAccountingPage() {
               <div key={idx} className="relative group">
                 {/* Connector line */}
                 {idx < processSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#9bd9e4] to-[#9bd9e4]/20 -translate-x-4 z-0" />
+                  <div className="hidden lg:block absolute top-24 left-full w-full h-0.5 bg-gradient-to-r from-[#9bd9e4] to-[#9bd9e4]/20 -translate-x-4 z-0" />
                 )}
 
-                <div className="relative z-10 bg-[#fafafa] rounded-3xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100">
-                  {/* Step number */}
-                  <div className="absolute -top-4 -left-2 text-7xl font-bold text-[#9bd9e4]/20 select-none pointer-events-none">
-                    {step.step}
+                <div className="relative z-10 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#003067]/60 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-5xl font-bold text-white/30">
+                      {step.step}
+                    </div>
                   </div>
 
-                  <div className="relative">
-                    <div className="w-14 h-14 rounded-2xl bg-[#003067] flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                      {step.icon}
-                    </div>
-
+                  <div className="p-6">
                     <h3 className="text-xl font-bold text-[#003067] mb-3">{step.title}</h3>
-                    <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                    <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
                   </div>
                 </div>
               </div>
@@ -504,8 +413,8 @@ export default function ClientAccountingPage() {
         </div>
       </section>
 
-      {/* FAQ Section - Soft accordions */}
-      <section className="py-24 md:py-32">
+      {/* FAQ Section */}
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-8">
           <div className="text-center mb-16">
             <span className="text-[#9bd9e4] font-semibold tracking-wider text-sm uppercase">FAQ</span>
@@ -518,11 +427,11 @@ export default function ClientAccountingPage() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                className="bg-[#9bd9e4]/10 rounded-2xl overflow-hidden border border-gray-100 hover:border-[#9bd9e4]/30 transition-colors"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#9bd9e4]/10 transition-colors"
                 >
                   <span className="text-lg font-semibold text-[#003067] pr-8">{faq.question}</span>
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
@@ -552,7 +461,10 @@ export default function ClientAccountingPage() {
         </div>
       </section>
 
-      {/* CTA Section - Warm and inviting */}
+      {/* Newsletter */}
+      <NewsletterSection variant="light" />
+
+      {/* CTA Section */}
       <section className="py-24 md:py-32">
         <div className="max-w-4xl mx-auto px-8">
           <div className="bg-gradient-to-br from-[#003067] to-[#004a8f] rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
