@@ -84,25 +84,25 @@ const processSteps = [
     step: '01',
     title: 'Discovery Call',
     description: 'We learn about your business, current challenges, and goals to recommend the right tier.',
-    image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80'
+    image: '/images/process-discovery.jpg'
   },
   {
     step: '02',
     title: 'Assessment',
     description: 'We review your existing systems, processes, and financial data to create a transition plan.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80'
+    image: '/images/process-assessment.jpg'
   },
   {
     step: '03',
     title: 'Onboarding',
     description: 'We set up your accounts, integrate your tools, and establish monthly rhythms.',
-    image: 'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80'
+    image: '/images/process-onboarding.jpg'
   },
   {
     step: '04',
     title: 'Ongoing Partnership',
     description: 'Regular meetings, real-time reporting, and strategic guidance as your business grows.',
-    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80'
+    image: '/images/process-partnership.jpg'
   }
 ];
 
