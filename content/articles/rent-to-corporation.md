@@ -1,6 +1,6 @@
 ---
 title: "Consider Renting Your House to Your Corporation"
-category: "Tax Planning"
+category: "Tax Strategy"
 date: "2024-11-15"
 readTime: "5 min read"
 excerpt: "A legitimate tax strategy allows S-Corp owners to rent their home to their corporation for business meetings, creating tax-free income."

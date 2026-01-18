@@ -80,7 +80,6 @@ export const categoryColors: Record<string, string> = {
   'Accounting': 'bg-emerald-100 text-emerald-700',
   'Business Advisory': 'bg-amber-100 text-amber-700',
   'Industry News': 'bg-blue-100 text-blue-700',
-  'Tax Planning': 'bg-rose-100 text-rose-700',
 };
 
 // Get featured article (most recent)

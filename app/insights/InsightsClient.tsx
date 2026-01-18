@@ -14,8 +14,7 @@ const categories = [
   { name: 'All', slug: 'all' },
   { name: 'Tax Strategy', slug: 'tax-strategy' },
   { name: 'Accounting', slug: 'accounting' },
-  { name: 'Business Advisory', slug: 'business-advisory' },
-  { name: 'Tax Planning', slug: 'tax-planning' }
+  { name: 'Business Advisory', slug: 'business-advisory' }
 ];
 
 // Ebooks data
