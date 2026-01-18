@@ -1,24 +1,12 @@
+import { getRecentArticles, getFeaturedArticle } from '../data/articles';
+
 export default function Insights() {
-  const articles = [
-    {
-      title: 'A GUIDE TO CORPORATE ACRONYMS YOU NEED TO KNOW',
-      image: '/images/blog-corporate-acronyms.jpg',
-      link: '/insights/corporate-acronyms',
-      category: 'Business',
-    },
-    {
-      title: 'WHAT ARE BUSINESS OWNERS\' SALARIES AND DEBOUCHABLE?',
-      image: '/images/blog-owners-salary.jpg',
-      link: '/insights/owners-salary',
-      category: 'Tax & Accounting',
-    },
-    {
-      title: 'CONSIDER RENTING YOUR HOUSE TO YOUR CORPORATION',
-      image: '/images/blog-renting-house.jpg',
-      link: '/insights/rent-to-corporation',
-      category: 'Tax Planning',
-    },
-  ];
+  // Get the 3 most recent articles (featured + 2 more recent)
+  const featured = getFeaturedArticle();
+  const recentArticles = getRecentArticles(2);
+
+  // Combine featured with recent for display
+  const articles = [featured, ...recentArticles];
 
   return (
     <section
@@ -60,12 +48,12 @@ export default function Insights() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6" role="list" aria-label="Recent insights">
               {articles.map((article, index) => (
                 <article
-                  key={index}
+                  key={article.slug}
                   role="listitem"
                   className="article-card group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
                 >
                   <a
-                    href={article.link}
+                    href={`/insights/${article.slug}`}
                     className="block focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] focus:ring-inset"
                     aria-label={`Read article: ${article.title}`}
                   >
