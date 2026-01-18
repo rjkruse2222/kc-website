@@ -93,9 +93,27 @@ npm run lint
 
 Blog thumbnail images should be:
 - Size: 660x440px (1.5:1 aspect ratio)
-- Format: JPG
+- Format: JPG/PNG
 - Location: `public/images/`
 - Naming: `blog-descriptive-name.jpg`
+
+### Image Generation Requirement
+
+**Every new blog post MUST have a custom image generated using the nano-banana-pro skill.**
+
+When creating a blog post, generate the image with:
+- Prompt describing the article topic visually
+- Style: Clean, modern, professional
+- Brand colors: Navy blue (#003067) and light blue (#9bd9e4) accents
+- Aspect: landscape (for 660x440px)
+- Output: `public/images/blog-article-slug.jpg`
+
+Example:
+```
+Use nano-banana-pro to generate an image for a blog about S-Corp tax savings.
+Style: Professional, clean, modern with navy blue (#003067) and light blue (#9bd9e4).
+Save to: public/images/blog-s-corp-conversion.jpg
+```
 
 ## Categories
 
