@@ -55,6 +55,14 @@ keywords: "keyword1, keyword2, keyword3, Cincinnati CPA, etc."
 - Keep sentences concise
 - No em dashes (use commas or periods instead)
 
+### Automatic Page Elements
+
+The blog page template automatically adds these after every article. Do NOT add to markdown:
+
+1. **Newsletter Signup** - "Stay Informed" email subscription box
+2. **CTA Section** - "Ready to Put This Into Action?" with "Schedule a Consultation" button (links to /contact)
+3. **Related Articles** - Displays 3 other blog posts
+
 ## File Locations
 
 - **Blog articles**: `content/articles/*.md`
