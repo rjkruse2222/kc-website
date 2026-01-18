@@ -3,9 +3,10 @@ title: "When to Convert to an S-Corporation"
 category: "Tax Strategy"
 date: "2025-01-05"
 readTime: "8 min read"
-excerpt: "The S-Corp election can save significant self-employment taxes, but timing matters. Here is how to know when the switch makes sense."
+excerpt: "The S-Corp election can save thousands in self-employment taxes, but timing matters. Learn how Cincinnati business owners can determine when the switch makes financial sense."
 image: "/images/blog-s-corp-conversion.jpg"
 color: "from-blue-500 to-blue-600"
+keywords: "S-Corporation, S-Corp election, self-employment tax savings, LLC to S-Corp, Cincinnati tax planning, small business tax strategy"
 ---
 
 Every year, business owners leave thousands of dollars on the table by not making the S-Corporation election at the right time. Others jump in too early and waste money on unnecessary administrative costs.
@@ -25,26 +26,25 @@ With an S-Corp election, you become an employee of your own business. You pay yo
 Only the salary portion is subject to payroll taxes. Distributions are not.
 
 **Example:**
+
 - $100,000 in business profit
 - $40,000 reasonable salary (subject to 15.3% payroll tax)
 - $60,000 distribution (not subject to payroll tax)
-- **Savings: 15.3% x $60,000 = $9,180**
+- Savings: 15.3% x $60,000 = $9,180
 
 ## The Income Threshold Question
 
-So when does the switch make sense? The answer depends on your net profit and the additional costs of S-Corp administration.
+When does the switch make sense? The answer depends on your net profit and the additional costs of S-Corp administration.
 
-### General Guidelines:
+Most CPAs recommend converting when taxable income exceeds $50,000. At this level, self-employment tax burden typically exceeds $7,500, which usually outweighs administrative costs.
 
-- Most CPAs recommend switching when taxable income exceeds **$50,000** - at this level, self-employment tax burden typically exceeds $7,500, which usually outweighs administrative costs
-- Businesses earning less than **$40,000** in net profit rarely benefit enough to justify the added complexity
-- California business owners often see benefits once profit exceeds **$70,000** due to higher state taxes
+Businesses earning less than $40,000 in net profit rarely benefit enough to justify the added complexity.
+
+Ohio and Kentucky business owners should also factor in state-specific considerations. California business owners often see benefits once profit exceeds $70,000 due to higher state taxes.
 
 ## The Hidden Costs
 
-S-Corp status adds administrative burden:
-
-### Annual costs typically include:
+S-Corp status adds administrative burden. Annual costs typically include:
 
 - Payroll processing: $500-$1,500/year
 - Additional accounting and bookkeeping: $500-$1,000/year
@@ -52,13 +52,13 @@ S-Corp status adds administrative burden:
 - Annual W-2 and W-3 preparation
 - State compliance requirements (varies by state)
 
-Total administrative costs usually run **$1,000-$3,000 annually**. Your tax savings need to exceed this amount to make the election worthwhile.
+Total administrative costs usually run $1,000-$3,000 annually. Your tax savings need to exceed this amount to make the election worthwhile.
 
 ## The Reasonable Salary Trap
 
 The IRS watches S-Corp owners who try to minimize salary to maximize tax-free distributions.
 
-### Red flags that invite audit scrutiny:
+Red flags that invite audit scrutiny:
 
 - Paying yourself $20,000 while taking $80,000 in distributions
 - Salary significantly below industry standards for your role
@@ -70,9 +70,9 @@ The IRS has disallowed S-Corp elections entirely when owners abused the salary/d
 
 To elect S-Corp status, file IRS Form 2553. Key deadlines:
 
-- **New businesses:** File within 75 days of formation
-- **Existing businesses:** File by March 15 to have the election apply for the full tax year
-- **Late elections:** The IRS may grant relief for late filings if you had reasonable cause
+1. New businesses: File within 75 days of formation
+2. Existing businesses: File by March 15 to have the election apply for the full tax year
+3. Late elections: The IRS may grant relief for late filings if you had reasonable cause
 
 For LLCs, you don't need to change your legal structure. You simply elect to be taxed as an S-Corp while remaining an LLC under state law.
 

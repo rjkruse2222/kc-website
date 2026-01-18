@@ -3,9 +3,10 @@ title: "Hiring Your First CFO vs. Outsourced CFO Services"
 category: "Business Advisory"
 date: "2024-12-05"
 readTime: "7 min read"
-excerpt: "When does it make sense to hire a full-time CFO versus using fractional CFO services? Here is how to decide."
+excerpt: "When does it make sense to hire a full-time CFO versus using fractional CFO services? Learn how growing businesses can make this decision."
 image: "/images/blog-cfo-decision.jpg"
 color: "from-indigo-500 to-violet-600"
+keywords: "fractional CFO, outsourced CFO, CFO services, financial leadership, small business CFO, Cincinnati business advisory"
 ---
 
 Your business is growing. Financial complexity is increasing. You need CFO-level strategic guidance, but does that mean hiring a full-time executive?
@@ -18,7 +19,7 @@ Here's how to decide between a full-time CFO and outsourced (fractional) CFO ser
 
 Let's start with the numbers.
 
-### Full-Time CFO Costs (2025)
+**Full-Time CFO Costs (2025)**
 
 - Base salary: $200,000 - $350,000
 - Benefits, equity, and bonuses: Add 30-50%
@@ -26,7 +27,7 @@ Let's start with the numbers.
 
 That doesn't include recruiting costs (often 20-30% of first-year salary), onboarding time, or the risk of a bad hire.
 
-### Fractional CFO Costs (2025)
+**Fractional CFO Costs (2025)**
 
 - Hourly rates: $175 - $350/hour
 - Monthly retainers: $3,000 - $10,000
@@ -34,18 +35,18 @@ That doesn't include recruiting costs (often 20-30% of first-year salary), onboa
 
 Most early-stage companies need 8-10 hours of CFO support monthly. That's $1,400 - $3,500 per month, or roughly $20,000 - $40,000 annually.
 
-**The savings: 80-90% compared to a full-time hire.**
+The savings: 80-90% compared to a full-time hire.
 
 ## When Each Option Makes Sense
 
-### Fractional CFO is Right When:
+**Fractional CFO is Right When:**
 
 - **Revenue Under $15 Million:** Most businesses at this stage don't have enough financial complexity to keep a full-time CFO occupied. You need strategic guidance, not 40+ hours per week of CFO time.
 - **Specific Project Needs:** Fundraising, financial restructuring, system implementations, or preparing for an acquisition benefit from experienced guidance without permanent overhead.
 - **Scaling Operations:** You're growing but not ready for the commitment of a C-suite hire. A fractional CFO can build the financial infrastructure you'll need.
 - **Testing the Role:** Not sure exactly what you need? Working with a fractional CFO helps you define the role before committing to a full-time search.
 
-### Full-Time CFO is Right When:
+**Full-Time CFO is Right When:**
 
 - **Revenue Exceeds $25 Million:** At this level, financial complexity typically justifies dedicated leadership.
 - **Daily Strategic Decisions:** If major financial decisions happen multiple times per day and require immediate input, you need someone in the building.
@@ -78,6 +79,7 @@ Expect more than number-crunching:
 Many companies start with fractional CFO services and eventually hire full-time.
 
 A good fractional CFO will:
+
 - Help you define the full-time role when you're ready
 - Build systems that a full-time CFO can inherit
 - Assist with the hiring process

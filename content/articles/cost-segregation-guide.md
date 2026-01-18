@@ -3,9 +3,10 @@ title: "Cost Segregation: Is It Right for Your Property?"
 category: "Tax Strategy"
 date: "2024-12-20"
 readTime: "7 min read"
-excerpt: "Cost segregation can dramatically accelerate depreciation on commercial real estate. Here is how to evaluate if it makes sense for you."
+excerpt: "Cost segregation can dramatically accelerate depreciation on commercial real estate. Learn how Cincinnati property owners can evaluate if this tax strategy makes sense."
 image: "/images/blog-cost-segregation.jpg"
 color: "from-amber-500 to-orange-600"
+keywords: "cost segregation study, accelerated depreciation, commercial real estate tax, bonus depreciation, property tax strategy, Cincinnati CPA"
 ---
 
 If you own commercial or investment real estate, you may be leaving significant tax deductions on the table. Cost segregation can dramatically accelerate depreciation and reduce your current tax bill.
@@ -22,19 +23,22 @@ Cost segregation is an engineering-based strategy that breaks down building comp
 
 A cost segregation study examines every component of your building:
 
-### 5-Year Property:
+**5-Year Property:**
+
 - Carpeting and vinyl flooring
 - Decorative lighting
 - Certain electrical outlets
 - Signage
 - Security systems
 
-### 7-Year Property:
+**7-Year Property:**
+
 - Office furniture built into the space
 - Specialty equipment
 - Certain fixtures
 
-### 15-Year Property:
+**15-Year Property:**
+
 - Parking lots and sidewalks
 - Landscaping
 - Fencing
@@ -54,18 +58,21 @@ This means the components identified in your cost segregation study can be fully
 Consider a rental property purchased after January 19, 2025, with $500,000 allocated to the building structure:
 
 **Without Cost Segregation:**
+
 Standard depreciation: $17,425 in year one
 
 **With Cost Segregation (assuming 20% reclassification):**
+
 - Shorter-lived assets: $100,000 x 100% bonus = $100,000 deduction
 - Remaining structure: $400,000 / 27.5 years = $14,545 deduction
-- **Total year one depreciation: $114,545**
+- Total year one depreciation: $114,545
 
 That's a 550% increase in first-year depreciation.
 
 ## Who Should Consider a Study?
 
 Cost segregation typically makes sense for:
+
 - Commercial properties (office, retail, industrial)
 - Apartment buildings and multifamily
 - Hotels and hospitality
