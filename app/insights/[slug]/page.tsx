@@ -128,23 +128,66 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Newsletter Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-8">
-          <div className="relative bg-gradient-to-br from-[#003067] to-[#002050] rounded-3xl p-12 md:p-16 text-center overflow-hidden">
+          <div className="relative bg-gradient-to-br from-[#003067] to-[#002050] rounded-3xl p-12 md:p-16 overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#9bd9e4]/20 rounded-full blur-3xl" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#9bd9e4]/10 rounded-full blur-2xl" />
 
-            <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Put This Into Action?
+            <div className="relative text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-8 border border-white/20">
+                <svg className="w-8 h-8 text-[#9bd9e4]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Stay Informed
               </h2>
               <p className="text-xl text-white/80 mb-10 max-w-lg mx-auto">
+                Get tax strategies and insights delivered to your inbox. No spam, just valuable content.
+              </p>
+
+              <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:ring-2 focus:ring-[#9bd9e4] focus:border-transparent transition-all backdrop-blur-sm"
+                />
+                <button
+                  type="submit"
+                  className="px-8 py-4 bg-[#9bd9e4] text-[#003067] font-bold rounded-xl hover:bg-white transition-all duration-300 hover:shadow-lg whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </form>
+
+              <p className="text-sm text-white/50 mt-6">
+                Unsubscribe anytime. We respect your privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-[#fafafa]">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="relative bg-gradient-to-br from-[#9bd9e4]/20 to-white rounded-3xl p-12 md:p-16 text-center border border-[#9bd9e4]/30 overflow-hidden">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-[#9bd9e4]/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#003067]/10 rounded-full blur-2xl" />
+
+            <div className="relative">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#003067] mb-6">
+                Ready to Put This Into Action?
+              </h2>
+              <p className="text-xl text-gray-600 mb-10 max-w-lg mx-auto">
                 Let's discuss how these strategies apply to your specific situation.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-3 px-10 py-5 bg-[#9bd9e4] text-[#003067] font-bold rounded-full hover:bg-white transition-all duration-300 hover:shadow-xl"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-[#003067] text-white font-bold rounded-full hover:bg-[#002050] transition-all duration-300 hover:shadow-xl"
               >
                 Schedule a Consultation
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
