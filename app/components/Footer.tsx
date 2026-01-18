@@ -86,18 +86,18 @@ export default function Footer() {
             <ul className="space-y-2 mb-6">
               <li>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=105+E+4th+St+Longworth+Hall+Cincinnati+OH+45202"
+                  href="https://www.google.com/maps/search/?api=1&query=120+E+8th+St+Suite+200+Cincinnati+OH+45202"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm hover:text-[#003067] transition-colors"
                 >
-                  105 E 4th St, Longworth Hall<br />
+                  120 E 8th St, Suite 200<br />
                   Cincinnati, OH 45202
                 </a>
               </li>
               <li className="text-sm mt-3">
-                <a href="tel:+15132722200" className="hover:text-[#003067] transition-colors">
-                  (513) 272-2200
+                <a href="tel:+15133812345" className="hover:text-[#003067] transition-colors">
+                  (513) 381-2345
                 </a>
               </li>
               <li className="text-sm">
