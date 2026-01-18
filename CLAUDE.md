@@ -18,6 +18,11 @@ Next.js website for Kruse & Crawford CPAs, a Cincinnati-based CPA firm. The site
    - Unordered lists: Use bullets (`-`)
    - Ordered lists: Use numbers (`1. 2. 3.`)
 
+3. **Final Paragraph**: Always include a passive call to action. Examples:
+   - "Consult with your CPA before implementing to ensure compliance."
+   - "A qualified advisor can help you evaluate whether this strategy fits your situation."
+   - "Work with your tax professional to run the numbers for your specific circumstances."
+
 3. **Text Styling** (handled by CSS):
    - Body text is justified
    - Headers are centered
