@@ -147,8 +147,8 @@ export default function ClientAccountingPage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 animate-ken-burns">
             <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80"
-              alt="Financial planning and accounting"
+              src="/images/client-accounting-hero.jpg"
+              alt="Executive viewing financial analytics dashboard"
               className="w-full h-full object-cover"
             />
           </div>
