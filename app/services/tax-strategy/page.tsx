@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import NewsletterSection from '../../../components/NewsletterSection';
+import NewsletterSection from '../../components/NewsletterSection';
 
 const processSteps = [
   {
