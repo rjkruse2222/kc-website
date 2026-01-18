@@ -54,11 +54,35 @@ keywords: "keyword1, keyword2, keyword3, Cincinnati CPA, etc."
 
 ### Content Style
 
-- Professional tone appropriate for business owners
-- Avoid AI-sounding language and jargon
-- Use active voice
-- Keep sentences concise
-- No em dashes (use commas or periods instead)
+**DO:**
+- Use clear, simple language
+- Be spartan and informative
+- Use short, impactful sentences
+- Use active voice; avoid passive voice
+- Focus on practical, actionable insights
+- Use bullet points or numbered lists when applicable
+- Use data and examples to support claims
+- Use "you" and "your" to directly address the reader
+- Use commas and periods for punctuation
+
+**NEVER USE:**
+- Em dashes (—)
+- Semicolons
+- Hyphens (avoid unless 100% necessary - prefer grammatical incorrectness over AI-sounding hyphen overuse)
+- Emojis
+- Metaphors and clichés
+- Generalizations
+- Hashtags
+
+**BANNED PHRASES:**
+- "Not just this, but also this" constructions
+- "In conclusion" / "In closing" / "In summary"
+- "In today's..."
+- "It's worth noting" / "It's important to note"
+- Output warnings or notes
+
+**BANNED WORDS:**
+can, may, just, that, very, really, literally, actually, certainly, probably, basically, could, maybe, delve, embark, enlightening, esteemed, shed light, craft, crafting, imagine, landscape, navigate, leverage, vital, crucial, important, innovative, transformative, comprehensive, cutting-edge, game-changing, robust, seamless, synergy, utilize, optimal, strategic
 
 ### Automatic Page Elements
 
