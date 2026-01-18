@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { articles, getArticleBySlug, getAllSlugs, categoryColors } from '../../data/articles';
+import { getArticleBySlug, getAllSlugs, getAllArticles, markdownToHtml } from '@/lib/articles';
 
 // YouTube Embed Component
 function YouTubeEmbed({ videoId }: { videoId: string }) {
@@ -27,18 +27,45 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+// Generate metadata for SEO
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
+
+  if (!article) {
+    return {
+      title: 'Article Not Found | Kruse & Crawford CPAs',
+    };
+  }
+
+  return {
+    title: `${article.title} | Kruse & Crawford CPAs`,
+    description: article.excerpt,
+  };
+}
+
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const article = getArticleBySlug(slug, true);
 
   if (!article) {
     notFound();
   }
 
-  // Get related articles (same category, excluding current)
-  const relatedArticles = articles
+  // Convert markdown content to HTML
+  const contentHtml = await markdownToHtml(article.content);
+
+  // Get related articles (excluding current)
+  const allArticles = getAllArticles();
+  const relatedArticles = allArticles
     .filter(a => a.slug !== slug)
     .slice(0, 3);
+
+  // Format date for display
+  const formatDate = (dateStr: string) => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  };
 
   return (
     <main className="bg-[#fafafa]">
@@ -71,7 +98,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <span className="px-4 py-1.5 bg-white/20 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/30">
               {article.category}
             </span>
-            <span className="text-white/80 text-sm">{article.date}</span>
+            <span className="text-white/80 text-sm">{formatDate(article.date)}</span>
             <span className="text-white/80 text-sm flex items-center gap-1">
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -94,9 +121,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <YouTubeEmbed videoId={article.youtubeId} />
           )}
 
-          <article className="prose prose-lg max-w-none prose-headings:text-[#003067] prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#003067] prose-a:text-[#003067] prose-a:no-underline hover:prose-a:underline [&_.lead]:text-xl [&_.lead]:text-gray-600 [&_.lead]:leading-relaxed [&_.lead]:mb-8">
-            {article.content}
-          </article>
+          <article
+            className="prose prose-lg max-w-none prose-headings:text-[#003067] prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#003067] prose-a:text-[#003067] prose-a:no-underline hover:prose-a:underline"
+            dangerouslySetInnerHTML={{ __html: contentHtml }}
+          />
         </div>
       </section>
 
