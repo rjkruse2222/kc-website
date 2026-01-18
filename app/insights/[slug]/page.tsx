@@ -122,7 +122,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           )}
 
           <article
-            className="prose prose-lg max-w-none prose-headings:text-[#003067] prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#003067] prose-a:text-[#003067] prose-a:no-underline hover:prose-a:underline"
+            className="prose prose-lg max-w-none prose-headings:text-[#003067] prose-headings:font-bold prose-headings:text-center prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-justify prose-li:text-gray-700 prose-ul:list-disc prose-ol:list-decimal prose-strong:text-[#003067] prose-a:text-[#003067] prose-a:no-underline hover:prose-a:underline"
             dangerouslySetInnerHTML={{ __html: contentHtml }}
           />
         </div>
