@@ -1,7 +1,7 @@
 ---
 title: "Hiring Your First CFO vs. Outsourced CFO Services"
 category: "Business Advisory"
-date: "2024-12-05"
+date: "2025-06-30"
 readTime: "7 min read"
 excerpt: "When does it make sense to hire a full-time CFO versus using fractional CFO services? Learn how growing businesses can make this decision."
 image: "/images/blog-cfo-decision.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "When to Convert to an S-Corporation"
 category: "Tax Strategy"
-date: "2025-01-05"
+date: "2026-01-03"
 readTime: "8 min read"
 excerpt: "The S-Corp election can save thousands in self-employment taxes, but timing matters. Learn how Cincinnati business owners can determine when the switch makes financial sense."
 image: "/images/blog-s-corp-conversion.jpg"

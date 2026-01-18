@@ -1,7 +1,7 @@
 ---
 title: "Consider Renting Your House to Your Corporation"
 category: "Tax Strategy"
-date: "2024-11-15"
+date: "2025-02-04"
 readTime: "5 min read"
 excerpt: "The Augusta Rule allows S-Corp owners to rent their home to their corporation for business meetings, creating tax-free income. Learn how this legitimate strategy works."
 image: "/images/blog-renting-house.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "Understanding Your Financial Statements"
 category: "Accounting"
-date: "2024-12-10"
+date: "2025-09-14"
 readTime: "9 min read"
 excerpt: "Income statement, balance sheet, cash flow statement. Learn what they mean and how to use them to make better business decisions."
 image: "/images/blog-financial-statements.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "Cost Segregation: Is It Right for Your Property?"
 category: "Tax Strategy"
-date: "2024-12-20"
+date: "2025-12-01"
 readTime: "7 min read"
 excerpt: "Cost segregation can dramatically accelerate depreciation on commercial real estate. Learn how Cincinnati property owners can evaluate if this tax strategy makes sense."
 image: "/images/blog-cost-segregation.jpg"

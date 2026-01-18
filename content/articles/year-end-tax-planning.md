@@ -1,7 +1,7 @@
 ---
 title: "Year-End Tax Planning Checklist"
 category: "Tax Strategy"
-date: "2024-12-15"
+date: "2025-10-31"
 readTime: "6 min read"
 excerpt: "Don't wait until January to think about taxes. This checklist covers the key moves Cincinnati business owners should make before December 31st."
 image: "/images/blog-year-end-tax.jpg"

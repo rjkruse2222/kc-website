@@ -1,7 +1,7 @@
 ---
 title: "The Complete Guide to R&D Tax Credits in 2025"
 category: "Tax Strategy"
-date: "2025-01-08"
+date: "2026-01-15"
 readTime: "12 min read"
 excerpt: "Many businesses miss out on R&D tax credits because they assume their work does not qualify. This comprehensive guide breaks down who qualifies, how to document activities, and how much you can save."
 image: "/images/blog-rd-tax-credits.jpg"

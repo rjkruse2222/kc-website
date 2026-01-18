@@ -1,7 +1,7 @@
 ---
 title: "Building a 13-Week Cash Flow Forecast"
 category: "Accounting"
-date: "2024-12-28"
+date: "2025-12-18"
 readTime: "10 min read"
 excerpt: "Stop being surprised by cash crunches. This step-by-step guide shows business owners how to build and maintain a rolling cash flow forecast for better financial planning."
 image: "/images/blog-cash-flow-forecast.jpg"
