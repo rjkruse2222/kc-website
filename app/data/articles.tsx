@@ -1,3 +1,5 @@
+import React from 'react';
+
 // ╔══════════════════════════════════════════════════════════════════════════════╗
 // ║                    KRUSE & CRAWFORD BLOG ARTICLE DATA                         ║
 // ║                                                                                ║
