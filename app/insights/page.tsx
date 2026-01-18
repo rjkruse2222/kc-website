@@ -338,12 +338,12 @@ export default function InsightsPage() {
                 className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100"
               >
                 {/* Ebook Cover Image */}
-                <div className="relative aspect-[3/4] max-h-[400px] overflow-hidden bg-gray-100">
+                <div className="relative aspect-[4/5] overflow-hidden">
                   <Image
                     src={ebook.image}
                     alt={ebook.title}
                     fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
                     <span className={`px-3 py-1.5 bg-gradient-to-r ${ebook.color} text-white text-xs font-semibold rounded-full shadow-lg`}>
