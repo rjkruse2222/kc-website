@@ -37,7 +37,7 @@ export async function getArticles(): Promise<Article[]> {
 
       return {
         slug,
-        title: article.title.name,
+        title: typeof article.title === 'string' ? article.title : slug,
         category: article.category,
         date: formatDate(article.date || new Date().toISOString().split('T')[0]),
         readTime: article.readTime,
@@ -66,7 +66,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
 
   return {
     slug,
-    title: article.title.name,
+    title: typeof article.title === 'string' ? article.title : slug,
     category: article.category,
     date: formatDate(article.date || new Date().toISOString().split('T')[0]),
     readTime: article.readTime,
