@@ -380,17 +380,17 @@ export default function ClientAccountingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {processSteps.map((step, idx) => (
-              <div key={idx} className="relative group">
+              <div key={idx} className="relative group h-full">
                 {/* Connector line */}
                 {idx < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-24 left-full w-full h-0.5 bg-gradient-to-r from-[#9bd9e4] to-[#9bd9e4]/20 -translate-x-4 z-0" />
                 )}
 
-                <div className="relative z-10 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <div className="relative z-10 bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
                   {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden flex-shrink-0">
                     <img
                       src={step.image}
                       alt={step.title}
@@ -402,7 +402,7 @@ export default function ClientAccountingPage() {
                     </div>
                   </div>
 
-                  <div className="p-6">
+                  <div className="p-6 flex-grow flex flex-col">
                     <h3 className="text-xl font-bold text-[#003067] mb-3">{step.title}</h3>
                     <p className="text-gray-600 leading-relaxed text-sm">{step.description}</p>
                   </div>
