@@ -152,7 +152,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
             <p>
-              ©2025 – All Rights Reserved Kruse & Crawford |{' '}
+              ©2026 – All Rights Reserved Kruse & Crawford |{' '}
               <a href="/privacy-policy" className="hover:text-[#003067] transition-colors">
                 Privacy Policy
               </a>
