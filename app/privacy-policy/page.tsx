@@ -147,10 +147,10 @@ export default function PrivacyPolicyPage() {
             </p>
             <div className="bg-gray-50 rounded-xl p-6 not-prose">
               <p className="font-semibold text-[#003067] mb-2">Kruse & Crawford CPAs</p>
-              <p className="text-gray-600 text-sm">105 E 4th St, Suite 1200</p>
+              <p className="text-gray-600 text-sm">120 E 8th St, Suite 200</p>
               <p className="text-gray-600 text-sm">Cincinnati, OH 45202</p>
               <p className="text-gray-600 text-sm mt-2">
-                Phone: <a href="tel:+15132722200" className="text-[#003067] hover:underline">(513) 272-2200</a>
+                Phone: <a href="tel:+15133812345" className="text-[#003067] hover:underline">(513) 381-2345</a>
               </p>
               <p className="text-gray-600 text-sm">
                 Email: <a href="mailto:info@kruseandcrawford.com" className="text-[#003067] hover:underline">info@kruseandcrawford.com</a>

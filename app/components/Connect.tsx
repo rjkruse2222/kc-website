@@ -83,7 +83,7 @@ export default function Connect() {
 
         {/* Contact Info */}
         <address className="mt-12 text-white/90 text-sm not-italic">
-          <p>105 E 4th St, Longworth Hall | Cincinnati, OH 45202 | <a href="tel:+15132722200" className="hover:text-[#9bd9e4] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded">(513) 272-2200</a></p>
+          <p>120 E 8th St, Suite 200 | Cincinnati, OH 45202 | <a href="tel:+15133812345" className="hover:text-[#9bd9e4] focus:outline-none focus:ring-2 focus:ring-[#9bd9e4] rounded">(513) 381-2345</a></p>
         </address>
       </div>
     </section>

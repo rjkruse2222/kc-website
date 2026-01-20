@@ -362,7 +362,7 @@ export default function ContactPage() {
                     <div>
                       <p className="font-medium text-[#003067]">Office</p>
                       <p className="text-gray-600 text-sm">
-                        105 E 4th St, Suite 1200<br />
+                        120 E 8th St, Suite 200<br />
                         Cincinnati, OH 45202
                       </p>
                     </div>
@@ -376,8 +376,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-[#003067]">Phone</p>
-                      <a href="tel:+15132722200" className="text-gray-600 text-sm hover:text-[#003067] transition-colors">
-                        (513) 272-2200
+                      <a href="tel:+15133812345" className="text-gray-600 text-sm hover:text-[#003067] transition-colors">
+                        (513) 381-2345
                       </a>
                     </div>
                   </div>
