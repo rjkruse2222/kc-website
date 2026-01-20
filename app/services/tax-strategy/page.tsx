@@ -178,8 +178,8 @@ export default function TaxStrategyPage() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
               { value: '3x+', label: 'Average ROI', sublabel: 'on tax planning investment' },
-              { value: '20+', label: 'Years Experience', sublabel: 'serving Cincinnati businesses' },
-              { value: '12+', label: 'Touchpoints Per Year', sublabel: 'proactive planning, not reactive filing' }
+              { value: '20+', label: 'Years Experience', sublabel: 'serving our clients' },
+              { value: '4', label: 'Strategic Reviews', sublabel: 'quarterly planning sessions' }
             ].map((stat, idx) => (
               <div key={idx}>
                 <div className="text-5xl font-bold text-[#003067] mb-2">{stat.value}</div>
@@ -320,11 +320,11 @@ export default function TaxStrategyPage() {
 
             <div className="text-center">
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
-                <div className="text-7xl md:text-8xl font-bold text-[#9bd9e4] mb-4">12+</div>
-                <div className="text-white text-2xl font-medium mb-2">Tax Planning Touchpoints</div>
+                <div className="text-7xl md:text-8xl font-bold text-[#9bd9e4] mb-4">4</div>
+                <div className="text-white text-2xl font-medium mb-2">Strategic Reviews</div>
                 <div className="text-white/70 mb-8">Every Year</div>
                 <p className="text-white/80">
-                  While others meet once a year to file, we meet monthly to plan. That&apos;s the difference between tax preparation and tax strategy.
+                  While others meet once a year to file, we meet quarterly to plan. That&apos;s the difference between tax preparation and tax strategy.
                 </p>
               </div>
             </div>
