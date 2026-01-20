@@ -239,9 +239,9 @@ export default function ServicesPage() {
               <div className="bg-gradient-to-br from-[#003067] to-[#004a8f] rounded-3xl p-12 text-center">
                 <div className="grid grid-cols-2 gap-8">
                   {[
-                    { value: '20', label: 'Years serving Cincinnati' },
-                    { value: '12+', label: 'Check-ins per year' },
-                    { value: '$50M', label: 'Client revenue sweet spot' },
+                    { value: '20', label: 'Years serving our clients' },
+                    { value: '365', label: 'Year-round support' },
+                    { value: 'SMB', label: 'Small to mid-market focus' },
                     { value: '100%', label: 'Financial visibility' },
                   ].map((stat, idx) => (
                     <div key={idx} className="p-4">
